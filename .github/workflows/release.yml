@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*'
+    paths-ignore:
+      - '**/README.md'
+      - '**/main.yml'
+      - '**/release.yml'
+      - '**/.gitignore'
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Debug
+        run: |
+          git config --list
+          env
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14' 
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Release
+        run: npx semantic-release
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
