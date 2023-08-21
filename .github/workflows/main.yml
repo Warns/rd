@@ -2,10 +2,7 @@ name: Deploy To DigitalOcean
 
 on:
   push:
-    branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
-
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -13,22 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout
       - name: Checkout code
         uses: actions/checkout@v2
-      # Copy files to droplet
+
+      - name: Install SSH key and rsync over SSH
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
       - name: Deploy to DO
         run: |
-          which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-          which rsync || ( apt-get update -y && apt-get install rsync -y )
-          eval $(ssh-agent -s)
-          echo "$SSH_PRIVATE_KEY" | ssh-add -
           mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
           ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
-          scp -r * root@$SERVER_IP:/var/www/html/wp-content/themes/rd
+          rsync -r * root@$SERVER_IP:/var/www/html/wp-content/themes/rd
+
     env:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
       SERVER_IP: ${{ secrets.SERVER_IP }}
-      CI: false
