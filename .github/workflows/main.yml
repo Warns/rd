@@ -25,6 +25,5 @@ jobs:
           ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
           rsync -r * root@$SERVER_IP:/var/www/html/wp-content/themes/rd
-
-    env:
-      SERVER_IP: ${{ secrets.SERVER_IP }}
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
