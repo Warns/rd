@@ -18,18 +18,20 @@ var main = {
             for( let i=0; i<ayas.length; ++i ){
                 let aya = ayas[i].getAttribute("data-number");
                 
-                console.log(i, ayas.length, aya);
+                let aa = aya.split(":");
                 
                 main.load(url + aya, 
                     function(result){
                         let data = JSON.parse(result).data;
                         
                         let html = `
-                            <div>${data.text}</div>
+                            <div class="ar">${data.text}
+                            <a target="blank" href="http://elktb.net/A/${aa[0]}/${aa[1]}">▲</a>
+                            </div>
                             <ul>
                                 <li>${data.surah.englishName}</li>
                                 <li>${data.surah.number} / ${data.numberInSurah}</li>
-                                <li>${data.surah.name}</li>
+                                <li class="ar">${data.surah.name}</li>
                             </ul>
                         `;
 
