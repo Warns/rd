@@ -14,28 +14,16 @@ on:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
-      - name: Install semver
-        run: npm install -g semver
-
-      - name: Set New Version
-        run: |
-          current_version=$(jq -r .version package.json)
-          new_version=$(semver bump patch $current_version)
-          echo "::set-output name=new_version::$new_version"
-          jq --arg new_version "$new_version" '.version = $new_version' package.json > package.json.tmp
-          mv package.json.tmp package.json
-
-      - name: Commit and Push
-        run: |
-          git add package.json
-          git commit -m "Bump version to ${{ steps.release.outputs.new_version }}"
-          git push
-
-          echo "::set-output name=new_version::${{ steps.release.outputs.new_version }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          increment: patch
