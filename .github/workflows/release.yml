@@ -25,5 +25,9 @@ jobs:
       - name: Release
         uses: cycjimmy/semantic-release-action@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           increment: patch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+
+
