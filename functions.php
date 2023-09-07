@@ -389,3 +389,17 @@ function aya_shortcode_function( $attr ) {
 	}
 }
 add_shortcode('aya', 'aya_shortcode_function');
+
+
+// Register our sidebars and widgetized areas
+
+function arphabet_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Top header',
+		'id'            => 'top_header',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+	) );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+

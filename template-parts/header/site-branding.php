@@ -57,4 +57,5 @@
 			?>
 		</nav><!-- .social-navigation -->
 	<?php endif; ?>
+	<?php dynamic_sidebar( 'top_header' ); ?>
 </div><!-- .site-branding -->
