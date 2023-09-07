@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/Warns/rd/compare/v1.0.1...v1.1.0) (2023-09-07)
+
+
+### Features
+
+* Update 404.php ([e048c3e](https://github.com/Warns/rd/commit/e048c3e0a29141e162756b1038c48967f7b918be))
+
 ### [1.0.1](https://github.com/Warns/rd/compare/v1.0.0...v1.0.1) (2023-08-21)
 
 
