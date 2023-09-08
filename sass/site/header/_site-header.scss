@@ -1,13 +1,12 @@
 // Site header
 
 .site-header {
-	padding: 1em;
 
 	&.featured-image {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		min-height: 90vh;
+		min-height: 64px;
 
 		.site-branding-container {
 			margin-bottom: auto;
@@ -16,7 +15,7 @@
 
 	@include media(tablet) {
 		margin: 0;
-		padding: 3rem 0;
+		padding: 80px 0 0 0;
 
 		&.featured-image {
 			min-height: 100vh;
@@ -36,10 +35,7 @@
 	hyphens: auto;
 	position: relative;
 	word-wrap: break-word;
-
-	@include media(tablet) {
-		margin: 0 $size__site-margins;
-	}
+	display: flex;
 }
 
 // Site logo

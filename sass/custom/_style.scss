@@ -1,4 +1,77 @@
+/* Alaa */
 
 .aya{
-    border: 1px solid red;
+    > div.ar{
+        background-color: #F5F4EF;
+        text-align: right;
+        padding: 8px 16px 8px 38px;
+        border-radius: 4px 4px 0 0;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+
+        a{
+            position: absolute;
+            text-decoration: none;
+            left: 8px;
+            top: 8px;
+            font-size: small;
+            display: block;
+            padding: 0 8px;
+        }
+    }
+
+    > ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        background-color: #ECEBE6;
+        border-radius: 0 0 4px 4px;
+
+        li{
+            padding: 0 8px;
+            font-size: small;
+            font-family: sans-serif;
+
+            &.ar{
+                text-align: right;
+                flex: 1;
+            }
+        }
+    }
+}
+  
+menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    background-color: #F5F4EF;
+    z-index: 99;
+    padding: 0 calc((100vw - 1200px)*.5);
+
+    body.admin-bar &{
+        top: 32px;
+    }
+
+    > div{
+        flex: 1;
+    }
+
+    .site-branding{
+        margin: none;
+    }
+
+    .dynamic_search label{
+        display: none;
+    }
+
+    .site-title{
+        a{
+            font-family: $font__body;
+        }
+    }
 }

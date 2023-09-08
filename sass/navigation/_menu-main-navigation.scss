@@ -2,8 +2,12 @@
 
 .main-navigation {
 
+	flex: 1;
 	display: block;
-	margin-top: #{0.25 * $size__spacing-unit};
+	margin-top: 0;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
 
 	body.page & {
 		display: block;
@@ -20,7 +24,7 @@
 		padding: 0;
 		margin: 0;
 		font-family: $font__heading;
-		font-weight: 700;
+		font-weight: 400;
 		line-height: $font__line-height-heading;
 		text-decoration: none;
 		background: transparent;
@@ -61,8 +65,9 @@
 
 			> a {
 
-				font-weight: 700;
-				color: $color__link;
+				font-weight: 400;
+				color: $color__text-main;
+				font-size: $font__size-xs;
 				margin-right: #{0.5 * $size__spacing-unit};
 
 				+ svg {

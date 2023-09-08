@@ -16,10 +16,11 @@ if ( ! is_page() ) :
 	?>
 <div class="entry-meta">
 	<?php twentynineteen_posted_by(); ?>
-	<?php twentynineteen_posted_on(); ?>
 	<?php
 		echo '<span class="updated-on">'. twentynineteen_get_icon_svg( 'edit', 16 ) . get_the_modified_date() .'</span>';
 	?>
+	<?php twentynineteen_posted_on(); ?>
+	
 
 	<span class="comment-count">
 		<?php
@@ -31,10 +32,11 @@ if ( ! is_page() ) :
 	</span>
 	<?php
 		// Edit post link.
+		/*
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Post title. Only visible to screen readers. */
+					// translators: %s: Post title. Only visible to screen readers.
 					__( 'Edit <span class="screen-reader-text">%s</span>', 'twentynineteen' ),
 					array(
 						'span' => array(
@@ -47,6 +49,7 @@ if ( ! is_page() ) :
 			'<span class="edit-link">' . twentynineteen_get_icon_svg( 'edit', 16 ),
 			'</span>'
 		);
+		*/
 	?>
 </div><!-- .entry-meta -->
 	<?php

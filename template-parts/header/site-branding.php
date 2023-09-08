@@ -60,6 +60,8 @@
 		<?php endif; ?>
 	</div><!-- .site-branding -->
 
-	<?php dynamic_sidebar( 'top_header' ); ?>
-	
+	<div class="dynamic_search">
+		<?php dynamic_sidebar( 'top_header' ); ?>
+	</div>
+
 </menu>

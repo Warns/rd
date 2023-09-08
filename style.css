@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Nirengi
+Theme Name: Twenty Nineteen
 Theme URI: https://wordpress.org/themes/twentynineteen/
 Author: the WordPress team
 Author URI: https://wordpress.org/
@@ -68,6 +68,7 @@ Colorful Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/colorful-bokeh-
  * a custom font that includes just a Hoefler Text space replacement for that
  * character instead.
  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif&display=swap");
 @font-face {
   font-family: 'NonBreakingSpaceOverride';
   src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMoAA0AAAAACDQAAALTAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCahEICjx3CywAATYCJANUBCAFhiEHgWwbXQfILgpsY+rQRRARwyAs6uL7pxzYhxEE+32b3aeHmifR6tklkS9hiZA0ewkqGRJE+H7/+6378ASViK/PGeavqJyOzsceKi1s3BCiQsiOdn1r/RBgIJYEgCUhbm/8/8/h4saPssnTNkkiWUBrTRtjmQSajw3Ui3pZ3LYDPD+XG2C3JA/yKAS8/rU5eNfuGqRf4eNNgV4YAlIIgxglEkWe6FYpq10+wi3g+/nUgvgPFczNrz/RsTgVm/zfbPuHZlsuQECxuyqBcQwKFBjFgKO8AqP4bAN9tFJtnM9xPcbNjeXS/x1wY/xU52f5W/X1+9cnH4YwKIaoRRAkUkj/YlAAeF/624foiIDBgBmgQBeGAyhBljUPZUm/l2dTvmpqcBDUOHdbPZWd8JsBAsGr4w8/EDn82/bUPx4eh0YNrQTBuHO2FjQEAGBwK0DeI37DpQVqdERS4gZBhpeUhWCfLFz7J99aEBgsJCHvUGAdAPp4IADDCAPCEFMGpMZ9AQpTfQtQGhLbGVBZFV8BaqNyP68oTZgHNj3M8kBPfXTTC9t90UuzYhy9ciH0grVlOcqyCytisvbsERsEYztiznR0WCrmTksJwbSNK6fd1Rvr25I9oLvctUoEbNOmXJbqgYgPXEHJ82IUsrCnpkxh23F1rfZ2zcRnJYoXtauB3VTFkFXQg3uoZYD5qE0kdjDtoDoF1h2bulGmev5HbYhbrjtohQSRI4aNOkffIcT+d3v6atpaYh3JvPoQsztCcqvaBkppDSPcQ3bw3KaCBo1f5CJWTZEgW3LjLofYg51MaVezrx8xZitYbQ9KYeoRaqQdVLwSEfrKXLK1otCWOKNdR/YwYAfon5Yk8O2MJfSD10dPGA5PIJJQMkah0ugMJiv6x4Dm7LEa8xnrRGGGLAg4sAlbsA07sAt76DOsXKO3hIjtIlpnnFrt1qW4kh6NhS83P/6HB/fl1SMAAA==) format("woff2"), url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUQAA0AAAAACDQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAE9AAAABwAAAAchf5yU0dERUYAAATYAAAAHAAAAB4AJwAbT1MvMgAAAaAAAABJAAAAYJAcgU5jbWFwAAACIAAAAF4AAAFqUUxBZ2dhc3AAAATQAAAACAAAAAgAAAAQZ2x5ZgAAApAAAAAyAAAAPL0n8y9oZWFkAAABMAAAADAAAAA2Fi93Z2hoZWEAAAFgAAAAHQAAACQOSgWaaG10eAAAAewAAAAzAAAAVC7TAQBsb2NhAAACgAAAABAAAAAsAOQBAm1heHAAAAGAAAAAHQAAACAAWQALbmFtZQAAAsQAAAF6AAADIYvD/Adwb3N0AAAEQAAAAI4AAADsapk2o3jaY2BkYGAA4ov5mwzj+W2+MnCzXwCKMNzgCBSB0LfbQDQ7AxuI4mBgAlEAFKQIRHjaY2BkYGD3+NvCwMDBAALsDAyMDKhAFAA3+wH3AAAAeNpjYGRgYBBl4GBgYgABEMnIABJzAPMZAAVmAGUAAAB42mNgZlJhnMDAysDCKsKygYGBYRqEZtrDYMT4D8gHSmEHjgUFOQwODAqqf9g9/rYwMLB7MNUAhRlBcsxBrMlASoGBEQAj8QtyAAAAeNrjYGBkAAGmWQwMjO8gmBnIZ2NA0ExAzNjAAFYJVn0ASBsD6VAIDZb7AtELAgANIgb9AHjaY2BgYGaAYBkGRgYQSAHyGMF8FgYPIM3HwMHAxMDGoMCwQIFLQV8hXvXP//9AcRCfAcb///h/ygPW+w/vb7olBjUHCTCyMcAFGZmABBO6AogThgZgIUsXAEDcEzcAAHjaY2BgECMCyoEgACZaAed42mNgYmRgYGBnYGNgYAZSDJqMgorCgoqCjECRXwwNrCAKSP5mAAFGBiRgyAAAi/YFBQAAeNqtkc1OwkAUhU/5M25cEhcsZick0AwlBJq6MWwgJkAgYV/KAA2lJeUn+hY+gktXvpKv4dLTMqKycGHsTZNv7px7z50ZAFd4hYHjdw1Ls4EiHjVncIFnzVnc4F1zDkWjrzmPW+NNcwGlzIRKI3fJlUyrEjZQxb3mDH2fNGfRx4vmHKqG0JzHg6E0F9DOlFBGBxUI1GEzLNT4S0aLuTtsGAEUuYcQHkyg3KmIum1bNUvKlrjbbAIleqHHnS4iSudpQcySMYtdFiXlAxzSbAwfMxK6kZoHKhbjjespMTioOPZnzI+4ucCeTVyKMVKLfeAS6vSWaTinuZwzyy/Dc7vaed+6KaV0kukdPUk6yOcctZPvvxxqksq2lEW8RvHjMEO2FCl/zy6p3NEm0R9OFSafJdldc4QVeyaaObMBO0/5cCaa6d9Ggyubxire+lEojscdjoWUR1xGOy8KD8mG2ZLO2l2paDc3A39qmU2z2W5YNv5+u79e6QfGJY/hAAB42m3NywrCMBQE0DupWp/1AYI7/6DEaLQu66Mrd35BKUWKJSlFv1+rue4cGM7shgR981qSon+ZNwUJ8iDgoYU2OvDRRQ99DDDECAHGmGCKmf80hZSx/Kik/LliFbtmN6xmt+yOjdg9GztV4tROnRwX/Bsaaw51nt4Lc7tWaZYHp/MlzKx51LZs5htNri+2AAAAAQAB//8AD3jaY2BkYGDgAWIxIGZiYARCESBmAfMYAAR6AEMAAAABAAAAANXtRbgAAAAA2AhRFAAAAADYCNuG) format("woff");
@@ -2213,14 +2214,14 @@ template {
 
 /* Typography */
 html {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #111;
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.8;
@@ -2234,7 +2235,7 @@ select,
 optgroup,
 textarea {
   color: #111;
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
   font-weight: 400;
   line-height: 1.8;
   text-rendering: optimizeLegibility;
@@ -2266,7 +2267,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .main-navigation,
@@ -2294,7 +2295,7 @@ h6 {
 }
 
 .page-title {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
 }
 
 .site-branding,
@@ -2428,7 +2429,7 @@ i {
 blockquote cite {
   font-size: 0.71111em;
   font-style: normal;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 pre {
@@ -2480,11 +2481,11 @@ html {
 }
 
 ::-moz-selection {
-  background-color: #bfdcea;
+  background-color: #aec5d0;
 }
 
 ::selection {
-  background-color: #bfdcea;
+  background-color: #aec5d0;
 }
 
 *,
@@ -2494,7 +2495,7 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: #E8E0DC;
 }
 
 a {
@@ -2524,27 +2525,7 @@ h5,
 h6 {
   clear: both;
   margin: 1rem 0;
-}
-
-h1:not(.site-title):before,
-h2:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
-h1:not(.site-title).has-text-align-center:before,
-h2.has-text-align-center:before {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1:not(.site-title).has-text-align-right:before,
-h2.has-text-align-right:before {
-  margin-left: auto;
+  font-weight: 400;
 }
 
 hr {
@@ -2615,7 +2596,7 @@ table {
   margin: 0 0 1rem;
   border-collapse: collapse;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 table td,
@@ -2636,8 +2617,8 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #E8E0DC;
+  font-family: "Inter", sans-serif;
   font-size: 0.88889em;
   font-weight: 700;
   line-height: 1.2;
@@ -2661,7 +2642,7 @@ button:visited,
 input[type="button"]:visited,
 input[type="reset"]:visited,
 input[type="submit"]:visited {
-  color: #fff;
+  color: #E8E0DC;
   text-decoration: none;
 }
 
@@ -2770,8 +2751,12 @@ a:focus {
 --------------------------------------------------------------*/
 /** === Main menu === */
 .main-navigation {
+  flex: 1;
   display: block;
-  margin-top: 0.25rem;
+  margin-top: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
   /* Un-style buttons */
   /*
 	 * Sub-menu styles
@@ -2800,8 +2785,8 @@ body.page .main-navigation {
   border: none;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   line-height: 1.2;
   text-decoration: none;
   background: transparent;
@@ -2838,8 +2823,9 @@ body.page .main-navigation {
 }
 
 .main-navigation .main-menu > li > a {
-  font-weight: 700;
-  color: #0073aa;
+  font-weight: 400;
+  color: #111;
+  font-size: 0.71111em;
   margin-right: 0.5rem;
 }
 
@@ -2911,7 +2897,7 @@ body.page .main-navigation {
 
 .main-navigation .sub-menu {
   background-color: #0073aa;
-  color: #fff;
+  color: #E8E0DC;
   list-style: none;
   padding-left: 0;
   position: absolute;
@@ -2963,7 +2949,7 @@ body.page .main-navigation {
 
 .main-navigation .sub-menu > li > a,
 .main-navigation .sub-menu > li > .menu-item-link-return {
-  color: #fff;
+  color: #E8E0DC;
   display: block;
   line-height: 1.2;
   text-shadow: none;
@@ -2985,7 +2971,7 @@ body.page .main-navigation {
 
 .main-navigation .sub-menu > li > .menu-item-link-return {
   width: 100%;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: normal;
   text-align: left;
 }
@@ -3138,14 +3124,14 @@ body.page .main-navigation {
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within] > .sub-menu .sub-menu > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu .sub-menu > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -3241,7 +3227,7 @@ body.page .main-navigation {
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):hover > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus > .sub-menu .sub-menu > li > a::before,
 .main-navigation .main-menu .menu-item-has-children.is-focused:not(.off-canvas) > .sub-menu .sub-menu > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
@@ -3587,7 +3573,7 @@ body.page .main-navigation {
 .comment-navigation .nav-next {
   min-width: 50%;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 
@@ -3734,15 +3720,11 @@ body.page .main-navigation {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
-.site-header {
-  padding: 1em;
-}
-
 .site-header.featured-image {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 90vh;
+  min-height: 64px;
 }
 
 .site-header.featured-image .site-branding-container {
@@ -3752,7 +3734,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 3rem 0;
+    padding: 80px 0 0 0;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -3768,12 +3750,7 @@ body.page .main-navigation {
   hyphens: auto;
   position: relative;
   word-wrap: break-word;
-}
-
-@media only screen and (min-width: 768px) {
-  .site-branding {
-    margin: 0 calc(10% + 60px);
-  }
+  display: flex;
 }
 
 .site-logo {
@@ -3903,7 +3880,7 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation li,
 .site-header.featured-image .entry-meta,
 .site-header.featured-image .entry-title {
-  color: #fff;
+  color: #E8E0DC;
 }
 
 .site-header.featured-image .main-navigation a,
@@ -3911,7 +3888,7 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation a,
 .site-header.featured-image .site-title a,
 .site-header.featured-image .site-featured-image a {
-  color: #fff;
+  color: #E8E0DC;
   transition: opacity 110ms ease-in-out;
 }
 
@@ -3934,7 +3911,7 @@ body.page .main-navigation {
 .site-header.featured-image .site-featured-image a:active,
 .site-header.featured-image .site-featured-image a:hover + svg,
 .site-header.featured-image .site-featured-image a:active + svg {
-  color: #fff;
+  color: #E8E0DC;
   opacity: 0.6;
 }
 
@@ -3948,7 +3925,7 @@ body.page .main-navigation {
 .site-header.featured-image .site-title a:focus + svg,
 .site-header.featured-image .site-featured-image a:focus,
 .site-header.featured-image .site-featured-image a:focus + svg {
-  color: #fff;
+  color: #E8E0DC;
 }
 
 .site-header.featured-image .main-navigation .sub-menu a {
@@ -3956,9 +3933,9 @@ body.page .main-navigation {
 }
 
 .site-header.featured-image .social-navigation a:focus {
-  color: #fff;
+  color: #E8E0DC;
   opacity: 1;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #E8E0DC;
 }
 
 .site-header.featured-image .social-navigation svg,
@@ -4017,7 +3994,7 @@ body.page .main-navigation {
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-title:before {
-  background: #fff;
+  background: #E8E0DC;
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-meta {
@@ -4073,12 +4050,12 @@ body.page .main-navigation {
 }
 
 .site-header.featured-image .custom-logo-link {
-  background: #fff;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  background: #E8E0DC;
+  box-shadow: 0 0 0 0 rgba(232, 224, 220, 0);
 }
 
 .site-header.featured-image .custom-logo-link:hover, .site-header.featured-image .custom-logo-link:active, .site-header.featured-image .custom-logo-link:focus {
-  box-shadow: 0 0 0 2px white;
+  box-shadow: 0 0 0 2px #e8e0dc;
 }
 
 .site-header.featured-image .site-branding {
@@ -4139,7 +4116,7 @@ body.page .main-navigation {
 
 @supports (mix-blend-mode: overlay) {
   .image-filters-enabled .site-header.featured-image .site-branding-container:after {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(232, 224, 220, 0.35);
   }
 }
 
@@ -4167,11 +4144,11 @@ body.page .main-navigation {
 }
 
 .site-header.featured-image ::-moz-selection {
-  background: rgba(255, 255, 255, 0.17);
+  background: rgba(232, 224, 220, 0.17);
 }
 
 .site-header.featured-image ::selection {
-  background: rgba(255, 255, 255, 0.17);
+  background: rgba(232, 224, 220, 0.17);
 }
 
 /*--------------------------------------------------------------
@@ -4212,36 +4189,13 @@ body.page .main-navigation {
 }
 
 .entry .entry-header {
-  margin: calc(3 * 1rem) 1rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
-}
-
-@media only screen and (min-width: 768px) {
-  .entry .entry-header {
-    margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
-  }
 }
 
 .entry .entry-title {
   margin: 0;
-}
-
-.entry .entry-title:before {
-  background: #767676;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
-.entry .entry-title.has-text-align-center:before {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.entry .entry-title.has-text-align-right:before {
-  margin-left: auto;
 }
 
 .entry .entry-title a {
@@ -4291,22 +4245,18 @@ body.page .main-navigation {
 
 .entry .entry-meta {
   margin: 1rem 0;
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 24px;
 }
 
 .entry .entry-footer {
-  margin: calc(2 * 1rem) 1rem 1rem;
+  max-width: 1200px;
+  margin: calc(8 * 1rem) auto;
 }
 
 @media only screen and (min-width: 768px) {
   .entry .entry-footer {
-    margin: 1rem calc(10% + 60px) calc(3 * 1rem);
-    max-width: calc(8 * (100vw / 12) - 28px);
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .entry .entry-footer {
-    max-width: calc(6 * (100vw / 12) - 28px);
+    margin: 1rem auto;
   }
 }
 
@@ -4394,19 +4344,33 @@ body.page .main-navigation {
   }
 }
 
-.entry .entry-content,
-.entry .entry-summary {
-  max-width: calc(100% - (2 * 1rem));
-  margin: 0 1rem;
+.entry .content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .entry .entry-content,
-  .entry .entry-summary {
-    max-width: 80%;
-    margin: 0 10%;
-    padding: 0 60px;
+  .entry .content-wrapper {
+    max-width: 1200px;
   }
+}
+
+.entry .entry-sidebar {
+  width: 260px;
+  position: relative;
+}
+
+.entry .entry-sidebar .entry-sidebar-inside {
+  position: sticky;
+  top: 40px;
+  left: 0;
+  height: 200px;
+}
+
+.entry .entry-content,
+.entry .entry-summary {
+  flex: 1;
 }
 
 .entry .entry-content p {
@@ -4445,7 +4409,7 @@ body.page .main-navigation {
 
 .entry .entry-content a.button:hover {
   background: #111;
-  color: #fff;
+  color: #E8E0DC;
   cursor: pointer;
 }
 
@@ -4673,7 +4637,7 @@ body.page .main-navigation {
 
 #respond > small {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   position: absolute;
   left: calc(1rem + 100%);
   top: calc(-3.5 * 1rem);
@@ -4725,7 +4689,7 @@ body.page .main-navigation {
 .comment-list .pingback .comment-body,
 .comment-list .trackback .comment-body {
   color: #767676;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.71111em;
   font-weight: 500;
   margin-top: 1rem;
@@ -4735,7 +4699,7 @@ body.page .main-navigation {
 .comment-list .pingback .comment-body a:not(.comment-edit-link),
 .comment-list .trackback .comment-body a:not(.comment-edit-link) {
   font-weight: bold;
-  font-size: 19.55556px;
+  font-size: 16px;
   line-height: 1.5;
   padding-right: 0.5rem;
   display: block;
@@ -4744,7 +4708,7 @@ body.page .main-navigation {
 .comment-list .pingback .comment-body .comment-edit-link,
 .comment-list .trackback .comment-body .comment-edit-link {
   color: #767676;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
 }
 
@@ -4961,7 +4925,7 @@ body.page .main-navigation {
 
 .comment-form .comment-notes,
 .comment-form label {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.71111em;
   color: #767676;
 }
@@ -5172,8 +5136,8 @@ body.page .main-navigation {
 .widget_recent_entries ul li,
 .widget_rss ul li {
   color: #767676;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(22px * 1.125);
+  font-family: "Inter", sans-serif;
+  font-size: calc(18px * 1.125);
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0.5rem;
@@ -5199,14 +5163,14 @@ body.page .main-navigation {
 .widget_recent_comments ul ul > li > a::before,
 .widget_recent_entries ul ul > li > a::before,
 .widget_rss ul ul > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .widget_tag_cloud .tagcloud {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
 }
 
@@ -5247,7 +5211,7 @@ body.page .main-navigation {
   margin: 0 0 1rem;
   display: table;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .widget_calendar .calendar_wrap .wp-calendar-nav span {
@@ -5503,7 +5467,7 @@ body.page .main-navigation {
   transition: background 150ms ease-in-out;
   border: none;
   font-size: 0.88889em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.2;
   box-sizing: border-box;
   font-weight: bold;
@@ -5578,8 +5542,8 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-archives li > a,
 .entry .entry-content .wp-block-categories li > a,
 .entry .entry-content .wp-block-latest-posts li > a {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(22px * 1.125);
+  font-family: "Inter", sans-serif;
+  font-size: calc(18px * 1.125);
   font-weight: bold;
   line-height: 1.2;
   text-decoration: none;
@@ -5604,14 +5568,14 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-categories ul > li > a::before {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-family: "Noto Serif", serif;
   font-weight: normal;
   content: "– " counters(submenu, "– ", none);
   counter-increment: submenu;
 }
 
 .entry .entry-content .wp-block-latest-posts .wp-block-latest-posts__post-date {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.71111em;
   color: #767676;
   line-height: 1.2;
@@ -5660,13 +5624,13 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-verse {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", Garamond, "Times New Roman", serif;
-  font-size: 22px;
+  font-family: "Noto Serif", serif;
+  font-size: 18px;
   line-height: 1.8;
 }
 
 .entry .entry-content .has-drop-cap:not(:focus):first-letter {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 3.375em;
   line-height: 1;
   font-weight: bold;
@@ -5714,7 +5678,7 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-pullquote cite {
   display: inline-block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   text-transform: none;
   color: #767676;
@@ -5768,7 +5732,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color a {
-  color: #fff;
+  color: #E8E0DC;
 }
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color cite {
@@ -5777,7 +5741,7 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
   max-width: 100%;
-  color: #fff;
+  color: #E8E0DC;
   padding-left: 0;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -5951,7 +5915,7 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-cover .wp-block-cover-image-text,
 .entry .entry-content .wp-block-cover .wp-block-cover-text,
 .entry .entry-content .wp-block-cover h2 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.6875em;
   font-weight: bold;
   line-height: 1.25;
@@ -6043,7 +6007,7 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption,
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption {
   font-size: 0.71111em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
@@ -6153,7 +6117,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-file {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button {
@@ -6162,8 +6126,8 @@ body.page .main-navigation {
   border: none;
   border-radius: 5px;
   background: #0073aa;
-  font-size: 22px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
   line-height: 1.2;
   text-decoration: none;
   font-weight: bold;
@@ -6175,7 +6139,7 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 1168px) {
   .entry .entry-content .wp-block-file .wp-block-file__button {
-    font-size: 22px;
+    font-size: 18px;
     padding: 0.875rem 1.5rem;
   }
 }
@@ -6297,7 +6261,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 
@@ -6335,7 +6299,7 @@ body.page .main-navigation {
 .entry .entry-content .has-secondary-background-color,
 .entry .entry-content .has-dark-gray-background-color,
 .entry .entry-content .has-light-gray-background-color {
-  color: #fff;
+  color: #E8E0DC;
 }
 
 .entry .entry-content .has-primary-background-color > p,
@@ -6370,7 +6334,7 @@ body.page .main-navigation {
 .entry .entry-content .has-light-gray-background-color > h5,
 .entry .entry-content .has-light-gray-background-color > h6,
 .entry .entry-content .has-light-gray-background-color > a {
-  color: #fff;
+  color: #E8E0DC;
 }
 
 .entry .entry-content .has-white-background-color {
@@ -6509,7 +6473,7 @@ svg {
 .wp-caption-text {
   color: #767676;
   font-size: 0.71111em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
@@ -6606,7 +6570,7 @@ svg {
 .gallery-caption {
   display: block;
   font-size: 0.71111em;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0.5rem;
@@ -6622,17 +6586,18 @@ svg {
   box-shadow: 0 0 0 2px #0073aa;
 }
 
-
-
-.aya > div.ar{
-  background-color: #eee;
+/* Alaa */
+/* Alaa */
+.aya > div.ar {
+  background-color: #F5F4EF;
   text-align: right;
   padding: 8px 16px 8px 38px;
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
 }
-.aya > div.ar a{
+
+.aya > div.ar a {
   position: absolute;
   text-decoration: none;
   left: 8px;
@@ -6641,21 +6606,56 @@ svg {
   display: block;
   padding: 0 8px;
 }
-.aya > ul{
+
+.aya > ul {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
   flex-direction: row;
-  background-color: #ddd;
-  border-radius: 0 0 2px 2px;
+  background-color: #ECEBE6;
+  border-radius: 0 0 4px 4px;
 }
-.aya > ul li{
+
+.aya > ul li {
   padding: 0 8px;
   font-size: small;
   font-family: sans-serif;
 }
-.aya > ul li.ar{
+
+.aya > ul li.ar {
   text-align: right;
   flex: 1;
+}
+
+menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  background-color: #F5F4EF;
+  z-index: 99;
+  padding: 0 calc((100vw - 1200px)*.5);
+}
+
+body.admin-bar menu {
+  top: 32px;
+}
+
+menu > div {
+  flex: 1;
+}
+
+menu .site-branding {
+  margin: none;
+}
+
+menu .dynamic_search label {
+  display: none;
+}
+
+menu .site-title a {
+  font-family: "Noto Serif", serif;
 }
