@@ -6580,7 +6580,7 @@ svg {
   background-color: #F5F4EF;
   text-align: left;
   padding: 8px 38px 8px 16px;
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -6602,7 +6602,7 @@ svg {
   display: flex;
   flex-direction: row;
   background-color: #ECEBE6;
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 4px 4px;
 }
 
 .aya > ul li {
@@ -6646,4 +6646,31 @@ menu .dynamic_search label {
 
 menu .site-title a {
   font-family: "Noto Serif", serif;
+}
+
+.wp-block-search__inside-wrapper {
+  padding: 4px 12px 4px 0;
+  border-right: #D6CBC7 1px solid;
+}
+
+.wp-block-search__input {
+  border: none !important;
+  background: none !important;
+  font-size: 0.88889em;
+  font-family: "Inter", sans-serif;
+}
+
+.wp-block-search__button {
+  background: transparent url(images/icons/search.svg);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: 200%;
+  border-radius: 16px;
+  border: none;
+  margin: 8px;
+}
+
+.wp-block-search__button:hover {
+  background: white url(images/icons/search.svg);
 }

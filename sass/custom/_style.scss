@@ -75,3 +75,28 @@ menu{
         }
     }
 }
+
+.wp-block-search__inside-wrapper{
+    padding: 4px 0 4px 12px;
+    border-left: #D6CBC7 1px solid;
+}
+.wp-block-search__input{
+    border: none !important;
+    background: none !important;
+    
+    font-size: $font__size-sm;
+    font-family: $font__heading;
+}
+.wp-block-search__button{
+    background: transparent url(images/icons/search.svg);
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    text-indent: 200%;
+    border-radius: 16px;
+    border: none;
+    margin: 8px;
+}
+.wp-block-search__button:hover{
+    background: rgba(0,0,0,.1) url(images/icons/search.svg);
+}

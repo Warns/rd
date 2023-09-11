@@ -6659,3 +6659,30 @@ menu .dynamic_search label {
 menu .site-title a {
   font-family: "Noto Serif", serif;
 }
+
+.wp-block-search__inside-wrapper {
+  padding: 4px 0 4px 12px;
+  border-left: #D6CBC7 1px solid;
+}
+
+.wp-block-search__input {
+  border: none !important;
+  background: none !important;
+  font-size: 0.88889em;
+  font-family: "Inter", sans-serif;
+}
+
+.wp-block-search__button {
+  background: transparent url(images/icons/search.svg);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: 200%;
+  border-radius: 16px;
+  border: none;
+  margin: 8px;
+}
+
+.wp-block-search__button:hover {
+  background: rgba(0, 0, 0, 0.1) url(images/icons/search.svg);
+}
