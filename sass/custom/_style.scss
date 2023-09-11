@@ -76,6 +76,12 @@ menu{
     }
 }
 
+.content-wrapper{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .wp-block-search__inside-wrapper{
     padding: 4px 0 4px 12px;
     border-left: #D6CBC7 1px solid;
@@ -99,4 +105,52 @@ menu{
 }
 .wp-block-search__button:hover{
     background: rgba(0,0,0,.1) url(images/icons/search.svg);
+}
+
+.right-content{
+
+    max-width: 340px;
+
+    .entry{
+        margin-top: 0;
+        border-top: 1px solid #C4C4C4;
+        padding: 8px 0 ;
+    }
+
+    article{
+        display: flex;
+
+        figure.post-thumbnail{
+            margin: 0 24px 0 0;
+            max-width: 80px;
+            
+            &::before, &::after{
+                display: none !important;
+            }
+        }
+
+        h2.entry-title{
+            padding: 0;
+            margin: 0 0 4px 0;
+            font-size: $font__size-md;
+            text-transform: uppercase;
+
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .entry-content{
+            p{
+                font-size: $font__size-xs;
+                line-height: 1.1;
+                font-family: $font__heading;
+
+                &.link-more{
+                    display: none;
+                }
+            }
+        }
+
+    }
 }

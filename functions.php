@@ -242,6 +242,11 @@ function twentynineteen_excerpt_more( $link ) {
 }
 add_filter( 'excerpt_more', 'twentynineteen_excerpt_more' );
 
+function wpdocs_custom_excerpt_length( $length ) {
+	return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

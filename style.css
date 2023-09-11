@@ -6660,6 +6660,12 @@ menu .site-title a {
   font-family: "Noto Serif", serif;
 }
 
+.content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .wp-block-search__inside-wrapper {
   padding: 4px 0 4px 12px;
   border-left: #D6CBC7 1px solid;
@@ -6685,4 +6691,48 @@ menu .site-title a {
 
 .wp-block-search__button:hover {
   background: rgba(0, 0, 0, 0.1) url(images/icons/search.svg);
+}
+
+.right-content {
+  max-width: 340px;
+}
+
+.right-content .entry {
+  margin-top: 0;
+  border-top: 1px solid #C4C4C4;
+  padding: 8px 0;
+}
+
+.right-content article {
+  display: flex;
+}
+
+.right-content article figure.post-thumbnail {
+  margin: 0 24px 0 0;
+  max-width: 80px;
+}
+
+.right-content article figure.post-thumbnail::before, .right-content article figure.post-thumbnail::after {
+  display: none !important;
+}
+
+.right-content article h2.entry-title {
+  padding: 0;
+  margin: 0 0 4px 0;
+  font-size: 1.125em;
+  text-transform: uppercase;
+}
+
+.right-content article h2.entry-title a {
+  text-decoration: none;
+}
+
+.right-content article .entry-content p {
+  font-size: 0.71111em;
+  line-height: 1.1;
+  font-family: "Inter", sans-serif;
+}
+
+.right-content article .entry-content p.link-more {
+  display: none;
 }
