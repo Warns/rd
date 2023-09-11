@@ -2755,7 +2755,7 @@ a:focus {
   display: block;
   margin-top: 0;
   padding: 0 20px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   /* Un-style buttons */
   /*
@@ -6672,5 +6672,5 @@ menu .site-title a {
 }
 
 .wp-block-search__button:hover {
-  background: white url(images/icons/search.svg);
+  background: rgba(0, 0, 0, 0.1) url(images/icons/search.svg);
 }

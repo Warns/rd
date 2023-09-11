@@ -2755,7 +2755,7 @@ a:focus {
   display: block;
   margin-top: 0;
   padding: 0 20px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   /* Un-style buttons */
   /*
@@ -3734,7 +3734,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 80px 0 0 0;
+    padding: 100px 0 0 0;
   }
   .site-header.featured-image {
     min-height: 100vh;
