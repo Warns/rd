@@ -80,6 +80,29 @@ menu{
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
+
+    .content-area{
+        border-right: 1px solid #C4C4C4;
+
+        main{
+            .entry{
+                border-bottom: 1px solid #C4C4C4;
+            }
+            .entry-header{
+                margin: 0;
+            }
+
+            .entry-content{
+                p{
+                    margin: 0;
+
+                    &.link-more{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .wp-block-search__inside-wrapper{
@@ -111,10 +134,17 @@ menu{
 
     max-width: 340px;
 
+    h3{
+        font-size: $font__size-xs;
+        text-transform: uppercase;
+        padding: 8px 0 8px 12px;
+        margin: 0;
+    }
+
     .entry{
         margin-top: 0;
         border-top: 1px solid #C4C4C4;
-        padding: 8px 0 ;
+        padding: 8px 0 8px 12px;
     }
 
     article{
@@ -145,6 +175,7 @@ menu{
                 font-size: $font__size-xs;
                 line-height: 1.1;
                 font-family: $font__heading;
+                margin: 0;
 
                 &.link-more{
                     display: none;

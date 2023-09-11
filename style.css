@@ -6666,6 +6666,26 @@ menu .site-title a {
   margin: 0 auto;
 }
 
+.content-wrapper .content-area {
+  border-right: 1px solid #C4C4C4;
+}
+
+.content-wrapper .content-area main .entry {
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.content-wrapper .content-area main .entry-header {
+  margin: 0;
+}
+
+.content-wrapper .content-area main .entry-content p {
+  margin: 0;
+}
+
+.content-wrapper .content-area main .entry-content p.link-more {
+  display: none;
+}
+
 .wp-block-search__inside-wrapper {
   padding: 4px 0 4px 12px;
   border-left: #D6CBC7 1px solid;
@@ -6697,10 +6717,17 @@ menu .site-title a {
   max-width: 340px;
 }
 
+.right-content h3 {
+  font-size: 0.71111em;
+  text-transform: uppercase;
+  padding: 8px 0 8px 12px;
+  margin: 0;
+}
+
 .right-content .entry {
   margin-top: 0;
   border-top: 1px solid #C4C4C4;
-  padding: 8px 0;
+  padding: 8px 0 8px 12px;
 }
 
 .right-content article {
@@ -6731,6 +6758,7 @@ menu .site-title a {
   font-size: 0.71111em;
   line-height: 1.1;
   font-family: "Inter", sans-serif;
+  margin: 0;
 }
 
 .right-content article .entry-content p.link-more {
