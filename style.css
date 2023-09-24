@@ -6694,6 +6694,7 @@ menu .site-title a {
 
 .content-wrapper .content-area main .entry-content p {
   margin: 0;
+  padding-right: 40px;
 }
 
 .content-wrapper .content-area main .entry-content p.link-more {
