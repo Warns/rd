@@ -55,7 +55,7 @@ get_header();
 			// Load posts loop.
 			while ( have_posts() ) {
 				the_post();
-				if( in_category('4') )
+				if( in_category('kitaplar') )
 				get_template_part( 'template-parts/content/content-book' );
 			}
 
