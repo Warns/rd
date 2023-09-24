@@ -18,6 +18,7 @@
 	</header>
 	<?php endif; ?>
 
+	<div class="content-wrapper">
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -30,6 +31,7 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+	</div>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

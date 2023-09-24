@@ -45,7 +45,7 @@
 			?>
 		</div><!-- .entry-content -->
 		<div class="entry-sidebar">
-			<div class="entry-sidebar-inside">sidebar</div>
+			<div class="entry-sidebar-inside"></div>
 		</div>
 	</div>
 
