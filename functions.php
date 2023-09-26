@@ -408,3 +408,11 @@ function arphabet_widgets_init() {
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
+function theme_enqueue_styles() {
+    // Enqueue the main stylesheet.
+    wp_enqueue_style('main-stylesheet', get_template_directory_uri() . '/style.css');
+    
+    // Enqueue the hamburger script.
+    wp_enqueue_script('hamburger-script', get_template_directory_uri() . '/hamburger.js', array('jquery'), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');

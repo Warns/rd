@@ -41,6 +41,23 @@
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 			</div><!-- .site-branding-container -->
 
+			<!-- Hamburger Icon -->
+<div id="hamburger-icon">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Slide-in Menu -->
+<div id="slide-in-menu">
+    <?php
+    wp_nav_menu(array(
+        'theme_location' => 'menu-1',
+        'container' => false,
+    ));
+    ?>
+</div>
+
 			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
 				<div class="site-featured-image">
 					<?php
