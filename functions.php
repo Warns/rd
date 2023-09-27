@@ -294,10 +294,15 @@ add_action( 'wp_enqueue_scripts', 'twentynineteen_scripts' );
 function twentynineteen_skip_link_focus_fix() {
 	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
 	?>
-	<script>
-	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-	</script>
-	<?php
+<script>
+/(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window
+    .addEventListener("hashchange", function() {
+        var t, e = location.hash.substring(1);
+        /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i
+            .test(t.tagName) || (t.tabIndex = -1), t.focus())
+    }, !1);
+</script>
+<?php
 }
 add_action( 'wp_print_footer_scripts', 'twentynineteen_skip_link_focus_fix' );
 
@@ -334,10 +339,12 @@ function twentynineteen_colors_css_wrap() {
 	}
 	?>
 
-	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-hue="' . absint( $primary_color ) . '"' : ''; ?>>
-		<?php echo twentynineteen_custom_colors_css(); ?>
-	</style>
-	<?php
+<style type="text/css" id="custom-theme-colors"
+    <?php echo is_customize_preview() ? 'data-hue="' . absint( $primary_color ) . '"' : ''; ?>>
+<?php echo twentynineteen_custom_colors_css();
+?>
+</style>
+<?php
 }
 add_action( 'wp_head', 'twentynineteen_colors_css_wrap' );
 
@@ -413,6 +420,11 @@ function theme_enqueue_styles() {
     wp_enqueue_style('main-stylesheet', get_template_directory_uri() . '/style.css');
     
     // Enqueue the hamburger script.
-    wp_enqueue_script('hamburger-script', get_template_directory_uri() . '/hamburger.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('hamburger-script', get_template_directory_uri() . '/js/hamburger.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+function enqueue_modal_script() {
+    wp_enqueue_script( 'modal-js', get_template_directory_uri() . '/js/searchModal.js', array(), time(), true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_modal_script' );

@@ -25,8 +25,8 @@
         }
         ?>
         <?php if ( has_nav_menu( 'footer' ) ) : ?>
-            <nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
-                <?php
+        <nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
+            <?php
                 wp_nav_menu(
                     array(
                         'theme_location' => 'footer',
@@ -35,7 +35,7 @@
                     )
                 );
                 ?>
-            </nav><!-- .footer-navigation -->
+        </nav><!-- .footer-navigation -->
         <?php endif; ?>
     </div><!-- .site-info -->
 </footer><!-- #colophon -->
@@ -44,7 +44,7 @@
 
 <?php wp_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/main.js?n=<?php echo time() ?>"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/main.js?n=<?php echo time() ?>"></script>
 
 </body>
+
 </html>

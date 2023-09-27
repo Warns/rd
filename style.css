@@ -8861,24 +8861,21 @@ menu .site-title a {
 }
 
 
-/* Hamburger Menu */
+/* Hamburger Button */
 @media only screen and (max-width: 768px) {
-  #hamburger-icon {
-      display: block;
-      width: 30px;
-      height: 22px;
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      cursor: pointer;
-      z-index: 998;
+
+  .hamburger-button {
+      width: 32px;
+      height: 32px;
+      background: transparent url(images/icons/hamburger.svg) no-repeat center center;
+      overflow: hidden;
+      text-indent: 200%;
+      border: none;
+      border-radius: 16px;
   }
 
-  #hamburger-icon div {
-      background: #333;
-      height: 4px;
-      margin: 5px 0;
-      transition: 0.4s;
+  .hamburger-button:hover {
+      background-color: rgba(0, 0, 0, 0.1);
   }
 
   #slide-in-menu {
@@ -8906,14 +8903,56 @@ menu .site-title a {
   }
   
   /* Remove list styles */
-#slide-in-menu ul, 
-#slide-in-menu li {
-    list-style-type: none;
+  #slide-in-menu ul, 
+  #slide-in-menu li {
+      list-style-type: none;
+  }
+
+  /* Remove any pseudo-element markers */
+  #slide-in-menu li::before, 
+  #slide-in-menu li::after {
+      content: none;
+  }
 }
 
-/* Remove any pseudo-element markers */
-#slide-in-menu li::before, 
-#slide-in-menu li::after {
-    content: none;
+/* Search Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
 }
-}  
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
