@@ -8951,8 +8951,23 @@ menu .site-title a {
   cursor: pointer;
 }
 
-.menu-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media only screen and (max-width: 768px) {
+  .menu-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  menu > div {
+    display: none;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .menu-container {
+      display: none;
+  }
 }
