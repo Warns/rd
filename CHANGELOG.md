@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.1](https://github.com/Warns/rd/compare/v1.1.0...v1.1.1) (2023-09-28)
+
+
+### Bug Fixes
+
+* menu bar search ([f40532b](https://github.com/Warns/rd/commit/f40532b932baf20ca49f9ef0335aca2cadbba2b6))
+
 ## [1.1.0](https://github.com/Warns/rd/compare/v1.0.1...v1.1.0) (2023-09-07)
 
 
