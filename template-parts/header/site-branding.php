@@ -80,10 +80,10 @@
         <!-- Modal structure -->
         <div id="searchModal" class="modal">
             <div class="modal-content">
-                <span id="closeSearchModal" class="close">&times;</span>
                 <div class="dynamic_search">
                     <?php dynamic_sidebar( 'top_header' ); ?>
                 </div>
+                <span id="closeSearchModal" class="close">&times;</span>
             </div>
         </div>
 

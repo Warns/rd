@@ -3987,6 +3987,7 @@ textarea {
   -webkit-appearance: none;
   outline-offset: 0;
   border-radius: 0;
+  width: 26.5rem;
 }
 
 input[type="text"]:focus,
@@ -8929,12 +8930,17 @@ menu .site-title a {
 }
 
 .modal-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 15px;
+  border: 0;
+  height: 48px;
+  width: 100%;
 }
 
 .close {
@@ -8972,4 +8978,38 @@ menu .site-title a {
   .menu-container {
       display: none;
   }
+}
+
+@media (max-width: 768px) {
+.wp-block-search__inside-wrapper {
+  padding: 0;
+  border-left: 0;
+}
+
+.wp-block-search__input {
+  border: none !important;
+  background: none !important;
+  font-size: 0.88889em;
+  font-family: "Inter", sans-serif;
+}
+
+.wp-block-search__button {
+  background: transparent url(images/icons/search.svg);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: 200%;
+  border-radius: 16px;
+  border: none;
+  margin: 8px;
+}
+
+.wp-element-button {
+  display: none;
+}
+
+.wp-block-search__button:hover {
+  background: rgba(0, 0, 0, 0.1) url(images/icons/search.svg);
+}
+
 }
