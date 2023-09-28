@@ -90,6 +90,7 @@
         <!-- Search Button to trigger the modal -->
         <button id="openSearchModal" class="wp-block-search__button"></button>
     </div>
+
     <div class="dynamic_search">
         <?php dynamic_sidebar( 'top_header' ); ?>
     </div>
