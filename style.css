@@ -4026,6 +4026,15 @@ textarea:focus {
   outline-offset: -4px;
 }
 
+@media (max-width: 768px) {
+  input[type="search"]:focus,
+  textarea:focus {
+    border-color: none;
+    outline: none;
+    outline-offset: none;
+}
+}
+
 input[type="search"]::-webkit-search-decoration {
   display: none;
 }
@@ -9006,19 +9015,6 @@ menu .site-title a {
     font-size: 0.88889em;
     font-family: "Inter", sans-serif;
 }
-
-@media (max-width: 768px) {
-
-.wp-block-search__input_mobile {
-  border: none !important;
-  background: none !important;
-  font-size: 0.88889em;
-  font-family: "Inter", sans-serif;
-  min-width: 80%;
-}
-}
-
-
 
 .wp-block-search__button {
   background: transparent url(images/icons/search.svg);
