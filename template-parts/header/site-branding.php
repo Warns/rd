@@ -94,4 +94,5 @@
     <div class="dynamic_search">
         <?php dynamic_sidebar( 'top_header' ); ?>
     </div>
+
 </menu>
