@@ -4,7 +4,7 @@ Theme Name: Twenty Nineteen
 Theme URI: https://wordpress.org/themes/twentynineteen/
 Author: the WordPress team
 Author URI: https://wordpress.org/
-Description: Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
+Description: Our 2019 default theme is designed to show  the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
 Tested up to: 6.2
 Requires at least: 4.9.6
 Requires PHP: 5.2.4
@@ -5856,7 +5856,13 @@ body.page .main-navigation {
   margin-top: 0;
 }
 
-.entry .entry-header {
+@media (max-width: 768px) {
+  .entry:first-of-type {
+    margin-top: 80px;
+  }
+  }
+
+.entry-header {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -8717,6 +8723,13 @@ menu .site-title a {
   border-right: 1px solid #c4c4c4;
 }
 
+@media (max-width: 768px) {
+  .content-wrapper .content-area {
+    border-right: none;
+    margin: 15px;
+  }
+}
+
 .content-wrapper .content-area main .page-header {
   margin: 0;
 }
@@ -8725,10 +8738,11 @@ menu .site-title a {
   display: none;
 }
 
-.content-wrapper .content-area main .entry {
-  border-bottom: 1px solid #c4c4c4;
-  margin-top: 32px;
-}
+@media (max-width: 768px) {
+  .content-wrapper .content-area main .entry {
+    margin-top: 10px;
+  }
+  }
 
 .content-wrapper .content-area main .entry-header {
   margin: 0;
@@ -8776,6 +8790,13 @@ menu .site-title a {
 
 .right-content {
   max-width: 340px;
+}
+
+@media (max-width: 768px) {
+  .right-content {
+    margin: 15px;
+    max-width: inherit;
+  }
 }
 
 .right-content h3 {
@@ -9035,4 +9056,20 @@ menu .site-title a {
   background: rgba(0, 0, 0, 0.1) url(images/icons/search.svg);
 }
 
+}
+
+.heading-content {
+  margin-top: 50px;
+  font-size: 0.71111em;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .site-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px solid #c4c4c4;
+    gap: 30px;}
 }

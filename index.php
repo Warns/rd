@@ -18,10 +18,11 @@ get_header();
 ?>
 
 <div class="content-wrapper">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+    <div id="primary" class="content-area">
+        <h3 id="heading" class="heading-content">Son Yazilar</h3>
+        <main id="main" class="site-main">
 
-		<?php
+            <?php
 		if ( have_posts() ) {
 
 			// Load posts loop.
@@ -42,14 +43,14 @@ get_header();
 		}
 		?>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
-	
-	<?php rewind_posts(); ?>
+        </main><!-- .site-main -->
+    </div><!-- .content-area -->
 
-	<div class="right-content">
-		<h3>Kitaplar</h3>
-		<?php
+    <?php rewind_posts(); ?>
+
+    <div class="right-content">
+        <h3>Kitaplar</h3>
+        <?php
 		if ( have_posts() ) {
 
 			// Load posts loop.
@@ -69,7 +70,7 @@ get_header();
 
 		}
 		?>
-	</div>
+    </div>
 </div>
 
 <?php

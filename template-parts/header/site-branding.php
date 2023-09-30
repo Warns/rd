@@ -76,6 +76,7 @@
 
         <!-- Hamburger Button -->
         <button id="hamburger-icon" class="hamburger-button"></button>
+        <div onclick="window.location.href='/'" style="cursor: pointer; font-family: sans-serif;">Ramazan Demir</div>
 
         <!-- Modal structure -->
         <div id="searchModal" class="modal">
