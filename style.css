@@ -6045,9 +6045,7 @@ body.page .main-navigation {
 .entry .entry-content,
 .entry .entry-summary {
   flex: 1;
-  border-top: 1px solid #c4c4c4;
 }
-
 
 .entry .entry-content p {
   word-wrap: break-word;
