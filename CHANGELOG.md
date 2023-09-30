@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.3](https://github.com/Warns/rd/compare/v1.1.2...v1.1.3) (2023-09-30)
+
+
+### Bug Fixes
+
+* margins ([c8f3250](https://github.com/Warns/rd/commit/c8f3250e132704014f754a753746e3fd7ba7990f))
+
 ### [1.1.2](https://github.com/Warns/rd/compare/v1.1.1...v1.1.2) (2023-09-29)
 
 
