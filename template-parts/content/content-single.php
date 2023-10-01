@@ -12,15 +12,21 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
-	<header class="entry-header">
-		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-	</header>
-	<?php endif; ?>
+    <?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
 
-	<div class="content-wrapper">
-		<div class="entry-content">
-			<?php
+    <div class="entry-sidebar">
+        <button class="menu-toggle tocCollapsibleButton_IbtT">İÇİNDEKİLER <span></span></button>
+        <div class="entry-sidebar-inside"></div>
+    </div>
+
+    <header class="entry-header">
+        <?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+    </header>
+    <?php endif; ?>
+
+    <div class="content-wrapper">
+        <div class="entry-content">
+            <?php
 			the_content(
 				sprintf(
 					wp_kses(
@@ -43,18 +49,16 @@
 				)
 			);
 			?>
-		</div><!-- .entry-content -->
-		<div class="entry-sidebar">
-			<div class="entry-sidebar-inside"></div>
-		</div>
-	</div>
+        </div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php twentynineteen_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    </div>
 
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
-	<?php endif; ?>
+    <footer class="entry-footer">
+        <?php twentynineteen_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
+
+    <?php if ( ! is_singular( 'attachment' ) ) : ?>
+    <?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
+    <?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

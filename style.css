@@ -6035,11 +6035,19 @@ body.page .main-navigation {
   position: relative;
 }
 
+@media (max-width: 768px) {
+   .entry .entry-sidebar {
+   width: 100%
+ }
+}
+
 .entry .entry-sidebar .entry-sidebar-inside {
   position: sticky;
   top: 40px;
   left: 0;
-  height: 200px;
+  height: 100%;
+  width: 100%;
+  background: #f5f4ee;
 }
 
 .entry .entry-content,
@@ -8852,6 +8860,13 @@ menu .site-title a {
   padding: 32px 0 32px 32px;
 }
 
+@media (max-width: 768px) {
+  .entry-sidebar {
+  border-left: none;
+  padding: 0px 0 32px 0px;
+}
+}
+
 .entry-sidebar .entry-sidebar-inside span {
   font-size: 0.71111em;
   text-transform: uppercase;
@@ -8877,6 +8892,7 @@ menu .site-title a {
 .entry-sidebar li.H3 a {
   padding-left: 10px;
   font-size: 0.88889em;
+  color: black;
 }
 
 .entry-sidebar ul.H4 a,
@@ -9092,4 +9108,100 @@ menu .site-title a {
 
 h3 {
   margin: 8px 0;
+}
+
+
+/* To properly navigate from sidebar and prevent element from falling under the header menu */
+h2.wp-block-heading::before,
+h3.wp-block-heading::before,
+h4.wp-block-heading::before {
+  content: "";
+  display: block;
+  height: 50px;
+  margin-top: -50px; 
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.menu-toggle {
+  display: block;
+  width: 100%; /* covers the full width */
+  height: 32px;
+  background-color: #767676; /* adjust to your preferred color */
+  color: #fff; /* text color */
+  border: none; /* removes default button border */
+  cursor: pointer; /* changes cursor on hover */
+  text-align: center;
+  line-height: 32px; /* centers the text vertically */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu-toggle:hover {
+  background-color: #555; /* change color on hover (optional) */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle:hover {
+background-color: #767676;
+  }
+
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {  
+  .entry-sidebar-inside {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      width: 90%;
+      position: absolute;
+      top: 42px; /* adjusted this value so it appears right below the button */
+      left: 5%;
+      background-color: #ffffff;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .entry-sidebar-inside.active {
+      max-height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .entry-sidebar-inside .desktop-title {
+      display: none !important;
+  }
+}
+
+.tocCollapsibleButton_IbtT {
+  align-items: center;
+  display: flex;
+  font-size: inherit;
+  justify-content: space-between;
+  padding: .4rem .8rem;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tocCollapsibleButton_IbtT:hover {
+  background-color: #555;
+}
+
+.tocCollapsibleButton_IbtT span:after {
+  background: var(--ifm-menu-link-sublist-icon) 50% 50%/2rem 2rem no-repeat;
+  content: "";
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+  height: 1.25rem;
+  transform: rotate(180deg);
+  transition: transform var(--ifm-transition-fast) ease-in-out;
+  width: 1.25rem;
+}
+
+.tocCollapsibleButton_IbtT.active span:after {
+  transform: rotate(0deg);
 }
