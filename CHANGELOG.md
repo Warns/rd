@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/Warns/rd/compare/v1.1.3...v1.2.0) (2023-10-01)
+
+
+### Features
+
+* navigation collapsible ([31c9ba0](https://github.com/Warns/rd/commit/31c9ba06ede9e13c0d5986cf58aaf515f1d3bdca))
+
 ### [1.1.3](https://github.com/Warns/rd/compare/v1.1.2...v1.1.3) (2023-09-30)
 
 
