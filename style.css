@@ -8892,7 +8892,7 @@ menu .site-title a {
 .entry-sidebar li.H3 a {
   padding-left: 10px;
   font-size: 0.88889em;
-  color: black;
+  color: #767676;
 }
 
 .entry-sidebar ul.H4 a,
@@ -9181,27 +9181,31 @@ background-color: #767676;
   justify-content: space-between;
   padding: .4rem .8rem;
   width: 100%;
-  background-color: #333;
-  color: #fff;
+  background-color: #ecebe5;
+  color: #000;
+  font-weight: 300;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .tocCollapsibleButton_IbtT:hover {
-  background-color: #555;
+  background-color: #ecebe5;
+  color: #000;
+  outline: none;
 }
 
 .tocCollapsibleButton_IbtT span:after {
-  background: var(--ifm-menu-link-sublist-icon) 50% 50%/2rem 2rem no-repeat;
+  display: flex;
   content: "";
-  filter: var(--ifm-menu-link-sublist-icon-filter);
-  height: 1.25rem;
-  transform: rotate(180deg);
-  transition: transform var(--ifm-transition-fast) ease-in-out;
-  width: 1.25rem;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #000; /* Change to your preferred arrow color */
+  transition: transform 0.3s ease-in-out;
 }
 
 .tocCollapsibleButton_IbtT.active span:after {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }

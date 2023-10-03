@@ -15,7 +15,7 @@
     <?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
 
     <div class="entry-sidebar">
-        <button class="menu-toggle tocCollapsibleButton_IbtT">İÇİNDEKİLER <span></span></button>
+        <button class="menu-toggle tocCollapsibleButton_IbtT">İçindekiler <span></span></button>
         <div class="entry-sidebar-inside"></div>
     </div>
 

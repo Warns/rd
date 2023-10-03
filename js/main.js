@@ -55,10 +55,10 @@ var main = {
                 let button = document.querySelector(".menu-toggle");
                 if (sidebar.classList.contains('active')) {
                     sidebar.classList.remove('active');
-                    button.classList.remove('active'); // handle button active class
+                    button.classList.remove('active');
                 } else {
                     sidebar.classList.add('active');
-                    button.classList.add('active'); // handle button active class
+                    button.classList.add('active');
                 }
             });
             
