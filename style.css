@@ -8920,11 +8920,7 @@ menu .site-title a {
   overflow-y: auto;
   z-index: 999;
 }
-
-
-/* Hamburger Button */
 @media only screen and (max-width: 768px) {
-
   .hamburger-button {
       width: 32px;
       height: 32px;
@@ -8943,13 +8939,18 @@ menu .site-title a {
       display: block;
       position: fixed;
       top: 0;
-      left: -100%;
+      left: 0;
       width: 80%;
       height: 100%;
       background: #333;
-      transition: 0.3s;
+      transition: transform 0.3s;
+      transform: translateX(-100%);
       overflow-y: auto;
       z-index: 999;
+  }
+
+  #slide-in-menu.active {
+      transform: translateX(0);
   }
 
   #slide-in-menu a {
@@ -8963,13 +8964,11 @@ menu .site-title a {
       background: #555;
   }
   
-  /* Remove list styles */
   #slide-in-menu ul, 
   #slide-in-menu li {
       list-style-type: none;
   }
 
-  /* Remove any pseudo-element markers */
   #slide-in-menu li::before, 
   #slide-in-menu li::after {
       content: none;
