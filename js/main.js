@@ -50,18 +50,6 @@ var main = {
             let ul = document.createElement("ul");
             let title = document.createElement("span");
 
-            document.querySelector(".menu-toggle").addEventListener("click", function() {
-                let sidebar = document.querySelector(".entry-sidebar-inside");
-                let button = document.querySelector(".menu-toggle");
-                if (sidebar.classList.contains('active')) {
-                    sidebar.classList.remove('active');
-                    button.classList.remove('active');
-                } else {
-                    sidebar.classList.add('active');
-                    button.classList.add('active');
-                }
-            });
-            
             if(sidebar){
                 let Hs = document.querySelectorAll(".wp-block-heading");
                 if(Hs.length > 0){
@@ -77,7 +65,6 @@ var main = {
                         ul.appendChild(li);
                     }
                     title.innerText = "İÇİNDEKİLER";
-                    title.classList.add("desktop-title"); 
                     sidebar.appendChild(title);
                     sidebar.appendChild(ul);
                 }

@@ -6035,19 +6035,11 @@ body.page .main-navigation {
   position: relative;
 }
 
-@media (max-width: 768px) {
-   .entry .entry-sidebar {
-   width: 100%
- }
-}
-
 .entry .entry-sidebar .entry-sidebar-inside {
   position: sticky;
   top: 40px;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: #f5f4ee;
+  height: 200px;
 }
 
 .entry .entry-content,
@@ -8860,13 +8852,6 @@ menu .site-title a {
   padding: 32px 0 32px 32px;
 }
 
-@media (max-width: 768px) {
-  .entry-sidebar {
-  border-left: none;
-  padding: 0px 0 32px 0px;
-}
-}
-
 .entry-sidebar .entry-sidebar-inside span {
   font-size: 0.71111em;
   text-transform: uppercase;
@@ -8892,7 +8877,6 @@ menu .site-title a {
 .entry-sidebar li.H3 a {
   padding-left: 10px;
   font-size: 0.88889em;
-  color: #767676;
 }
 
 .entry-sidebar ul.H4 a,
@@ -8920,7 +8904,11 @@ menu .site-title a {
   overflow-y: auto;
   z-index: 999;
 }
+
+
+/* Hamburger Button */
 @media only screen and (max-width: 768px) {
+
   .hamburger-button {
       width: 32px;
       height: 32px;
@@ -8939,18 +8927,13 @@ menu .site-title a {
       display: block;
       position: fixed;
       top: 0;
-      left: 0;
+      left: -100%;
       width: 80%;
       height: 100%;
       background: #333;
-      transition: transform 0.3s;
-      transform: translateX(-100%);
+      transition: 0.3s;
       overflow-y: auto;
       z-index: 999;
-  }
-
-  #slide-in-menu.active {
-      transform: translateX(0);
   }
 
   #slide-in-menu a {
@@ -8964,11 +8947,13 @@ menu .site-title a {
       background: #555;
   }
   
+  /* Remove list styles */
   #slide-in-menu ul, 
   #slide-in-menu li {
       list-style-type: none;
   }
 
+  /* Remove any pseudo-element markers */
   #slide-in-menu li::before, 
   #slide-in-menu li::after {
       content: none;
@@ -9107,109 +9092,4 @@ menu .site-title a {
 
 h3 {
   margin: 8px 0;
-}
-
-
-/* To properly navigate from sidebar and prevent element from falling under the header menu */
-h2.wp-block-heading::before,
-h3.wp-block-heading::before,
-h4.wp-block-heading::before {
-  content: "";
-  display: block;
-  height: 50px;
-  margin-top: -50px; 
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.menu-toggle {
-  display: block;
-  width: 100%; /* covers the full width */
-  height: 32px;
-  background-color: #767676; /* adjust to your preferred color */
-  color: #fff; /* text color */
-  border: none; /* removes default button border */
-  cursor: pointer; /* changes cursor on hover */
-  text-align: center;
-  line-height: 32px; /* centers the text vertically */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.menu-toggle:hover {
-  background-color: #555; /* change color on hover (optional) */
-}
-
-@media (max-width: 768px) {
-  .menu-toggle:hover {
-background-color: #767676;
-  }
-
-}
-
-/* Mobile view styles */
-@media (max-width: 768px) {  
-  .entry-sidebar-inside {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      width: 90%;
-      position: absolute;
-      top: 42px; /* adjusted this value so it appears right below the button */
-      left: 5%;
-      background-color: #ffffff;
-      z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .entry-sidebar-inside.active {
-      max-height: 500px;
-  }
-}
-@media (max-width: 768px) {
-  .entry-sidebar-inside .desktop-title {
-      display: none !important;
-  }
-}
-
-.tocCollapsibleButton_IbtT {
-  align-items: center;
-  display: flex;
-  font-size: inherit;
-  justify-content: space-between;
-  padding: .4rem .8rem;
-  width: 100%;
-  background-color: #ecebe5;
-  color: #000;
-  font-weight: 300;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.tocCollapsibleButton_IbtT:hover {
-  background-color: #ecebe5;
-  outline: none;
-}
-
-.tocCollapsibleButton_IbtT span:after {
-  display: flex;
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #000; /* Change to your preferred arrow color */
-  transition: transform 0.3s ease-in-out;
-}
-
-.tocCollapsibleButton_IbtT.active span:after {
-  transform: rotate(180deg);
-}
-
-@media (max-width: 768px) {
-  .tocCollapsibleButton_IbtT.active span:after {
-  transform: rotate(180deg);
-}
 }
