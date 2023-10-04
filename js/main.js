@@ -45,11 +45,12 @@ var main = {
             }
         },
 
-        sidebar: function(){
+        sidebar: function() {
             let sidebar = document.querySelector(".entry-sidebar-inside");
             let ul = document.createElement("ul");
             let title = document.createElement("span");
-
+        
+            // Toggle functionality for collapsible menu
             document.querySelector(".menu-toggle").addEventListener("click", function() {
                 let sidebar = document.querySelector(".entry-sidebar-inside");
                 let button = document.querySelector(".menu-toggle");
@@ -61,30 +62,29 @@ var main = {
                     button.classList.add('active');
                 }
             });
-            
+        
+            // Table of contents creation based on headings
             if(sidebar){
                 let Hs = document.querySelectorAll(".wp-block-heading");
                 if(Hs.length > 0){
                     for(var i=0; i<Hs.length; ++i){
                         let h = Hs[i];
-                        console.log(h.tagName);
                         h.setAttribute("id", "section-"+i);
-
+        
                         let li = document.createElement("li");
-                            li.setAttribute("class", h.tagName);
+                        li.setAttribute("class", h.tagName);
                         li.innerHTML = `<a href="#section-${i}">${h.innerHTML}</a>`;
-
+        
                         ul.appendChild(li);
                     }
                     title.innerText = "İÇİNDEKİLER";
                     title.classList.add("desktop-title"); 
                     sidebar.appendChild(title);
                     sidebar.appendChild(ul);
-                }
-                
+                }   
             }
         }
-    },
+           },
 
     load: function (url, success, error) {
         var xhr = new XMLHttpRequest();

@@ -3934,6 +3934,7 @@ input[type="submit"] {
   vertical-align: bottom;
 }
 
+
 .button:hover,
 button:hover,
 input[type="button"]:hover,
@@ -6045,9 +6046,15 @@ body.page .main-navigation {
   position: sticky;
   top: 40px;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: #f5f4ee;
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  .entry .entry-sidebar .entry-sidebar-inside {
+    height: 100%;
+    width: 100%;
+    background: #f5f4ee;
+  }
 }
 
 .entry .entry-content,
@@ -8888,11 +8895,19 @@ menu .site-title a {
   display: inline-block;
 }
 
-.entry-sidebar ul.H3 a,
+@media (max-width: 768px) {
+  .entry-sidebar ul.H3 a,
 .entry-sidebar li.H3 a {
   padding-left: 10px;
   font-size: 0.88889em;
   color: #767676;
+}
+}
+
+.entry-sidebar ul.H3 a,
+.entry-sidebar li.H3 a {
+  padding-left: 10px;
+  font-size: 0.88889em;
 }
 
 .entry-sidebar ul.H4 a,
@@ -9111,6 +9126,7 @@ h3 {
 
 
 /* To properly navigate from sidebar and prevent element from falling under the header menu */
+@media (max-width: 768px) {
 h2.wp-block-heading::before,
 h3.wp-block-heading::before,
 h4.wp-block-heading::before {
@@ -9121,7 +9137,9 @@ h4.wp-block-heading::before {
   visibility: hidden;
   pointer-events: none;
 }
+}
 
+@media (max-width: 768px) {
 .menu-toggle {
   display: block;
   width: 100%; /* covers the full width */
@@ -9136,9 +9154,12 @@ h4.wp-block-heading::before {
   justify-content: flex-start;
   align-items: center;
 }
+}
 
+@media (max-width: 768px) {
 .menu-toggle:hover {
   background-color: #555; /* change color on hover (optional) */
+}
 }
 
 @media (max-width: 768px) {
@@ -9173,6 +9194,7 @@ background-color: #767676;
   }
 }
 
+@media (max-width: 768px) {
 .tocCollapsibleButton_IbtT {
   align-items: center;
   display: flex;
@@ -9206,6 +9228,7 @@ background-color: #767676;
 
 .tocCollapsibleButton_IbtT.active span:after {
   transform: rotate(180deg);
+}
 }
 
 @media (max-width: 768px) {
