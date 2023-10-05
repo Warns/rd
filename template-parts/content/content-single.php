@@ -8,7 +8,6 @@
  * @subpackage Twenty_Nineteen
  * @since Twenty Nineteen 1.0
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -44,7 +43,11 @@
 			);
 			?>
         </div><!-- .entry-content -->
+
         <div class="entry-sidebar">
+            <button class="menu-toggle">
+                Icindekiler <span class="arrow">&#x25BC;</span>
+            </button>
             <div class="entry-sidebar-inside"></div>
         </div>
     </div>

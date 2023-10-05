@@ -2,6 +2,7 @@
 var main = {
     init: function(){
         this.activate();
+        this.toggleSidebar(); // Call the toggle function when initializing
     },
 
     activate: function(){
@@ -45,6 +46,23 @@ var main = {
             }
         },
 
+        toggleSidebar: function() {
+            document.querySelector(".menu-toggle").addEventListener("click", function() {
+                let sidebar = document.querySelector(".entry-sidebar-inside");
+                let button = document.querySelector(".menu-toggle");
+                let arrow = document.querySelector(".menu-toggle .arrow");
+                if (sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    button.classList.remove('active');
+                    arrow.innerHTML = '&#x25BC;'; // Arrow pointing down
+                } else {
+                    sidebar.classList.add('active');
+                    button.classList.add('active');
+                    arrow.innerHTML = '&#x25B2;'; // Arrow pointing up
+                }
+            });
+        },
+        
         sidebar: function(){
             let sidebar = document.querySelector(".entry-sidebar-inside");
             let ul = document.createElement("ul");

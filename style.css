@@ -8850,6 +8850,7 @@ menu .site-title a {
 .entry-sidebar {
   border-left: 1px solid #c4c4c4;
   padding: 32px 0 32px 32px;
+  order: 2
 }
 
 .entry-sidebar .entry-sidebar-inside span {
@@ -9093,3 +9094,85 @@ menu .site-title a {
 h3 {
   margin: 8px 0;
 }
+
+
+/* Nav Menu */
+/* Add styles for the toggle button */
+.menu-toggle {
+  display: none; /* Initially hidden, will show only on mobile */
+  background: #ecebe5;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+}
+
+.menu-toggle .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+
+  .entry-sidebar-inside {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      width: 90%;
+      position: absolute;
+      top: 42px; /* adjusted this value so it appears right below the button */
+      left: 5%;
+      background-color: #ffffff;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .entry-sidebar-inside.active {
+      max-height: 500px;
+  }
+
+  .entry-sidebar-inside .desktop-title {
+      display: none !important;
+  }
+
+  .tocCollapsibleButton_IbtT.active span:after {
+      transform: rotate(180deg);
+  }
+}
+
+
+
+
+/* Default styles for wider screens */
+.content-sidebar-wrapper {
+  display: flex;
+  flex-direction: row; /* Default value; added for clarity */
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.entry-content {
+  order: 1; /* Content first */
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .content-sidebar-wrapper {
+      flex-direction: column; /* Stack children vertically */
+  }
+
+  .entry-sidebar {
+      order: -1; /* Move sidebar above the content */
+  }
+}
+
+
+
+
+/* Your existing styles for .tocCollapsibleButton_IbtT and its states remain as they are */
