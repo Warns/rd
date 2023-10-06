@@ -8882,6 +8882,10 @@ menu .site-title a {
   outline: none;
 }
 
+.wp-block-search__input:focus {
+  outline: none;
+}
+
 .wp-block-search__button {
   background: transparent url(images/icons/search.svg);
   width: 32px;
