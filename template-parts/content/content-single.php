@@ -11,6 +11,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="entry-sidebar-mobile">
+        <button class="menu-toggle tocCollapsibleButton_IbtT">
+            İçindekiler <span></span>
+        </button>
+        <div class="entry-sidebar-inside-mobile"></div>
+    </div>
     <?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
     <header class="entry-header">
         <?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
@@ -45,10 +51,7 @@
         </div><!-- .entry-content -->
 
         <div class="entry-sidebar">
-            <button class="menu-toggle">
-                Icindekiler <span class="arrow">&#x25BC;</span>
-            </button>
-            <div class="entry-sidebar-inside"></div>
+            <div class="entry-sidebar-inside-desktop"></div>
         </div>
     </div>
 
