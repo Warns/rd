@@ -9126,7 +9126,7 @@ h3 {
     display: flex;
     font-size: inherit;
     justify-content: space-between;
-    padding: 1.1rem 1.0rem;
+    padding: 1.1rem 1rem;
     width: 100%;
     background-color: #ecebe5;
     color: #000;
@@ -9335,6 +9335,10 @@ h4.wp-block-heading::before {
 
 @media (max-width: 768px) {
   .entry-sidebar-inside-mobile.active li.H3 a {
+    color: #454545;
+  }
+
+  .entry-sidebar-inside-mobile li.H3 a {
     color: #454545;
   }
 }
