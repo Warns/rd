@@ -8893,19 +8893,6 @@ menu .site-title a {
   font-size: 0.59259em;
 }
 
-#slide-in-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100%;
-  background: #333;
-  transition: 0.3s;
-  overflow-y: auto;
-  z-index: 999;
-}
-
 /* Hamburger Button */
 @media only screen and (max-width: 768px) {
   .hamburger-button {
@@ -8935,6 +8922,10 @@ menu .site-title a {
     overflow-y: auto;
     z-index: 999;
   }
+
+  #slide-in-menu.active {
+    left: 0;
+}
 
   #slide-in-menu a {
     color: #fff;
@@ -9153,8 +9144,9 @@ h3 {
     position: inherit;
     top: 42px;
     left: 5%;
-    background-color: #ffffff;
-    z-index: 1000;
+    background: #f5f4ee;
+    font-size: 16px;
+    color: #767676;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
@@ -9165,6 +9157,8 @@ h3 {
     left: 0;
     height: 100%;
     width: 100%;
+    font-size: 16px;
+    color: #767676;
     background: #f5f4ee;
   }
 }
@@ -9215,7 +9209,7 @@ h3 {
   }
 
   a:visited {
-    color: #000;
+    color: #767676;
   }
 }
 
@@ -9306,5 +9300,24 @@ h3 {
 @media (max-width: 768px) {
   li {
     display: contents;
+  }
+
+  ul {
+    margin: auto;
+    padding-left: 10px;
+  }
+}
+
+/* To properly navigate from sidebar and prevent element from falling under the header menu */
+@media (max-width: 768px) {
+  h2.wp-block-heading::before,
+  h3.wp-block-heading::before,
+  h4.wp-block-heading::before {
+    content: "";
+    display: block;
+    height: 50px;
+    margin-top: -40px;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
