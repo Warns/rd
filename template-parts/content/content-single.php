@@ -8,17 +8,16 @@
  * @subpackage Twenty_Nineteen
  * @since Twenty Nineteen 1.0
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
-
-    <div class="entry-sidebar">
-        <button class="menu-toggle tocCollapsibleButton_IbtT">İçindekiler <span></span></button>
-        <div class="entry-sidebar-inside"></div>
+    <div class="entry-sidebar-mobile">
+        <button class="menu-toggle tocCollapsibleButton_IbtT">
+            İçindekiler <span></span>
+        </button>
+        <div class="entry-sidebar-inside-mobile"></div>
     </div>
-
+    <?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
     <header class="entry-header">
         <?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
     </header>
@@ -51,6 +50,9 @@
 			?>
         </div><!-- .entry-content -->
 
+        <div class="entry-sidebar">
+            <div class="entry-sidebar-inside-desktop"></div>
+        </div>
     </div>
 
     <footer class="entry-footer">
