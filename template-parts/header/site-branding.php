@@ -66,17 +66,24 @@
     <div class="menu-container">
         <!-- Slide-in Menu -->
         <div id="slide-in-menu">
+            <div class="navbar-sidebar__brand">Ramazan Demir
+            </div>
             <?php
     wp_nav_menu(array(
         'theme_location' => 'menu-1',
         'container' => false,
     ));
     ?>
+            <div id="menu-overlay"></div>
+
         </div>
+        <div id="menu-overlay"></div>
+
 
         <!-- Hamburger Button -->
         <button id="hamburger-icon" class="hamburger-button"></button>
-        <div onclick="window.location.href='/'" style="cursor: pointer; font-family: sans-serif;">Ramazan Demir</div>
+        <div onclick="window.location.href='/'" style="cursor: pointer; font-family: sans-serif;">Ramazan Demir
+        </div>
 
         <!-- Modal structure -->
         <div id="searchModal" class="modal">

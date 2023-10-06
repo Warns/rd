@@ -8926,7 +8926,9 @@ menu .site-title a {
 
   #slide-in-menu.active {
     transform: translateX(0);
+    background-color: #f5f4f0;
     left: 0;
+    color: #767676;
   }
 
   #slide-in-menu a {
@@ -8944,7 +8946,6 @@ menu .site-title a {
   #slide-in-menu ul,
   #slide-in-menu li {
     list-style-type: none;
-    margin-top: 1rem;
     font-family: "Inter", sans-serif;
   }
 
@@ -8952,6 +8953,22 @@ menu .site-title a {
   #slide-in-menu li::before,
   #slide-in-menu li::after {
     content: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-sidebar__brand {
+    align-items: center;
+    box-shadow: var(--ifm-navbar-shadow);
+    display: flex;
+    background-color: #333;
+    flex: 1;
+    box-shadow: 0 1px 2px 0 rgb(222, 216, 216);;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #f5f4f0;
+    height: var(--ifm-navbar-height);
+    padding: 1rem;
   }
 }
 
@@ -9308,7 +9325,8 @@ h3 {
 
   ul {
     margin: auto;
-    padding: 0.5rem 0.4rem 0.5rem 0.5rem;  }
+    padding: 0.5rem 0.4rem 0.5rem 0.5rem;
+  }
 }
 
 /* To properly navigate from sidebar and prevent element from falling under the header menu */
@@ -9344,4 +9362,19 @@ h4.wp-block-heading::before {
   .entry-sidebar-inside-mobile li.H3 a {
     color: #454545;
   }
+}
+
+#menu-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 998;
+}
+
+#menu-overlay.active {
+  display: block;
 }
