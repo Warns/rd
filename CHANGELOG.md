@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.2.1](https://github.com/Warns/rd/compare/v1.2.0...v1.2.1) (2023-10-06)
+
+
+### Bug Fixes
+
+* navigation, slide in ([13bec2c](https://github.com/Warns/rd/commit/13bec2c042e246d7459e2eccb1d526c50775fda7))
+
 ## [1.2.0](https://github.com/Warns/rd/compare/v1.1.3...v1.2.0) (2023-10-01)
 
 
