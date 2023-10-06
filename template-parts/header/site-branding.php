@@ -64,8 +64,10 @@
     </div><!-- .site-branding -->
 
     <div class="menu-container">
+        <div class="navbar-sidebar__backdrop"></div>
+
         <!-- Slide-in Menu -->
-        <div id="slide-in-menu">
+        <div class="navbar-sidebar" id="slide-in-menu">
             <div class="navbar-sidebar__brand">Ramazan Demir
             </div>
             <?php

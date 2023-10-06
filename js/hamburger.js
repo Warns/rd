@@ -1,5 +1,15 @@
 document.getElementById("hamburger-icon").addEventListener("click", function() {
-    var menu = document.getElementById("slide-in-menu");
+    var body = document.body;
+    var menu = document.querySelector(".navbar-sidebar");
+
+    // Toggle visibility class on body
+    if (body.classList.contains('navbar-sidebar--show')) {
+        body.classList.remove('navbar-sidebar--show');
+    } else {
+        body.classList.add('navbar-sidebar--show');
+    }
+
+    // Toggle animation class on menu
     if (menu.classList.contains('active')) {
         menu.classList.remove('active');
     } else {
@@ -8,9 +18,11 @@ document.getElementById("hamburger-icon").addEventListener("click", function() {
 });
 
 document.addEventListener("click", function(event) {
-    var menu = document.getElementById("slide-in-menu");
+    var body = document.body;
+    var menu = document.querySelector(".navbar-sidebar");
 
-    if (menu.classList.contains('active') && !menu.contains(event.target) && !document.getElementById("hamburger-icon").contains(event.target)) {
-        menu.classList.remove('active');
+    if (body.classList.contains('navbar-sidebar--show') && !menu.contains(event.target) && !document.getElementById("hamburger-icon").contains(event.target)) {
+        body.classList.remove('navbar-sidebar--show');
+        menu.classList.remove('active');  // Ensure the menu also removes its animation class
     }
 });
