@@ -1,12 +1,16 @@
 document.getElementById("hamburger-icon").addEventListener("click", function() {
     var body = document.body;
     var menu = document.querySelector(".navbar-sidebar");
+    var closeBtn = document.getElementById("navbar-sidebar");
+    var backdrop = document.querySelector(".navbar-sidebar__backdrop");
 
     // Toggle visibility class on body
     if (body.classList.contains('navbar-sidebar--show')) {
         body.classList.remove('navbar-sidebar--show');
+        backdrop.classList.remove('active');  // assuming there's a similar animation for the backdrop
     } else {
         body.classList.add('navbar-sidebar--show');
+        backdrop.classList.add('active');  // assuming there's a similar animation for the backdrop
     }
 
     // Toggle animation class on menu
@@ -20,9 +24,15 @@ document.getElementById("hamburger-icon").addEventListener("click", function() {
 document.addEventListener("click", function(event) {
     var body = document.body;
     var menu = document.querySelector(".navbar-sidebar");
+    var closeBtn = document.getElementById("navbar-sidebar");
+    var backdrop = document.querySelector(".navbar-sidebar__backdrop");
 
-    if (body.classList.contains('navbar-sidebar--show') && !menu.contains(event.target) && !document.getElementById("hamburger-icon").contains(event.target)) {
+    if (body.classList.contains('navbar-sidebar--show') && 
+        (!menu.contains(event.target) || event.target === closeBtn) && 
+        !document.getElementById("hamburger-icon").contains(event.target)) {
+        
         body.classList.remove('navbar-sidebar--show');
-        menu.classList.remove('active');  // Ensure the menu also removes its animation class
+        menu.classList.remove('active');
+        backdrop.classList.remove('active');  // hide the overlay using its class
     }
 });

@@ -3562,8 +3562,13 @@ html {
   visibility: hidden;
   width: var(--ifm-navbar-sidebar-width);
   transition-property: opacity, visibility, transform;
-  transition-duration: var(--ifm-transition-fast);
+  transition-duration: 200ms;
   transition-timing-function: ease-in-out;
+}
+
+.navbar-sidebar__close {
+  display: flex;
+  margin-left: auto;
 }
 
 .navbar-sidebar--show .navbar-sidebar, 
@@ -3586,7 +3591,7 @@ html {
   top: 0;
   visibility: hidden;
   transition-property: opacity, visibility;
-  transition-duration: var(--ifm-transition-fast);
+  transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
 
@@ -3611,14 +3616,14 @@ html {
 @media (max-width: 768px) {
   .navbar-sidebar__brand {
     align-items: center;
-    box-shadow: var(--ifm-navbar-shadow);
     display: flex;
+    justify-content: space-between;
     background-color: #f5f4ef;
     flex: 1;
     box-shadow: 0 1px 2px 0 rgb(222, 216, 216);
     font-family: "Inter", sans-serif;
-    font-weight: 500;
-    color: #f5f4f0;
+    font-weight: 400;
+    color: black;
     height: 3.5rem;
     padding: 1rem;
   }
@@ -8792,6 +8797,16 @@ menu {
   padding: 0 calc((100vw - 1200px) * 0.5);
 }
 
+#menu-primary-menu-1 li a {
+  color: #454545;
+}
+
+.header-logo {
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
 body.admin-bar menu {
   top: 32px;
 }
@@ -8809,7 +8824,8 @@ menu .dynamic_search label {
 }
 
 menu .site-title a {
-  font-family: "Noto Serif", serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
 .content-wrapper {
@@ -9092,14 +9108,18 @@ menu .site-title a {
   padding-left: 10px;
   padding-right: 15px;
   border: 0;
-  height: 48px;
+  height: 3.5rem;
 }
 
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  background: transparent url(images/icons/close.svg);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: 200%;
+  border-radius: 16px;
+  border: none;
+  margin: 8px;
 }
 
 .close:hover,
@@ -9135,6 +9155,7 @@ menu .site-title a {
   .wp-block-search__inside-wrapper {
     padding: 0;
     border-left: 0;
+    align-items: center;
   }
 
   .wp-block-search__input {
@@ -9172,7 +9193,7 @@ menu .site-title a {
 
 @media (max-width: 768px) {
   .heading-content {
-    margin-top: 65px;
+    margin-top: 85px;
     margin-left: 15px;
     font-size: 0.71111em;
     text-transform: uppercase;

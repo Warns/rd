@@ -68,15 +68,19 @@
 
         <!-- Slide-in Menu -->
         <div class="navbar-sidebar" id="slide-in-menu">
-            <div class="navbar-sidebar__brand">Ramazan Demir
+
+            <div onclick="window.location.href='/'" class="navbar-sidebar__brand">Ramazan Demir
+                <div id="navbar-sidebar" class="close"></div>
+
             </div>
+
             <?php
     wp_nav_menu(array(
         'theme_location' => 'menu-1',
         'container' => false,
     ));
     ?>
-            <div id="menu-overlay"></div>
+            <div id=" menu-overlay"></div>
 
         </div>
         <div id="menu-overlay"></div>
@@ -84,7 +88,8 @@
 
         <!-- Hamburger Button -->
         <button id="hamburger-icon" class="hamburger-button"></button>
-        <div onclick="window.location.href='/'" style="cursor: pointer; font-family: sans-serif;">Ramazan Demir
+        <div onclick="window.location.href='/'" class="header-logo">
+            Ramazan Demir
         </div>
 
         <!-- Modal structure -->
@@ -93,7 +98,7 @@
                 <div class="dynamic_search">
                     <?php dynamic_sidebar( 'top_header' ); ?>
                 </div>
-                <span id="closeSearchModal" class="close">&times;</span>
+                <div id="closeSearchModal" class="close"></div>
             </div>
         </div>
 
