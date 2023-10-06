@@ -8918,12 +8918,14 @@ menu .site-title a {
     width: 80%;
     height: 100%;
     background: #333;
-    transition: 0.3s;
+    transition: transform 0.3s;
+    transform: translateX(-100%);
     overflow-y: auto;
     z-index: 999;
   }
 
   #slide-in-menu.active {
+    transform: translateX(0);
     left: 0;
   }
 
@@ -8942,6 +8944,7 @@ menu .site-title a {
   #slide-in-menu ul,
   #slide-in-menu li {
     list-style-type: none;
+    margin-top: 1rem;
   }
 
   /* Remove any pseudo-element markers */
