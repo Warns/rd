@@ -9304,8 +9304,7 @@ h3 {
 
   ul {
     margin: auto;
-    padding-left: 10px;
-  }
+    padding: 0.5rem 0.4rem 0.5rem 0.5rem;  }
 }
 
 /* To properly navigate from sidebar and prevent element from falling under the header menu */
