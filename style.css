@@ -5582,7 +5582,7 @@ body.page .main-navigation {
   /* Need relative positioning to properly align layers. */
   position: relative;
   /* Add text shadow to text, to increase readability. */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); */
   /* Set white text color when featured image is set. */
   /* add focus state to social media icons */
   /* Entry header */
@@ -5600,6 +5600,12 @@ body.page .main-navigation {
   /* When image filters are inactive, a black overlay is added. */
   /* Fourth layer: overlay. */
   /* Fifth layer: readability overlay */
+}
+
+@media (max-width: 768px) {
+  .site-header.featured-image {
+    margin: 3.7rem 0rem 0rem 0rem;
+}
 }
 
 .site-header.featured-image .site-branding .site-title,
@@ -5621,7 +5627,7 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation a,
 .site-header.featured-image .site-title a,
 .site-header.featured-image .site-featured-image a {
-  color: #e8e0dc;
+  color: #000;
   transition: opacity 110ms ease-in-out;
 }
 
@@ -5681,6 +5687,7 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image {
   /* First layer: grayscale. */
+  padding: 50px;
 }
 
 .site-header.featured-image .site-featured-image .post-thumbnail img {
@@ -5708,13 +5715,13 @@ body.page .main-navigation {
   }
 }
 
-.image-filters-enabled
+/* .image-filters-enabled
   .site-header.featured-image
   .site-featured-image
   .post-thumbnail
   img {
   filter: grayscale(100%);
-}
+} */
 
 .site-header.featured-image .site-featured-image .entry-header {
   margin-top: calc(4 * 1rem);
@@ -5853,13 +5860,13 @@ body.page .main-navigation {
   position: absolute;
   top: 0;
   left: 0;
-  content: "\020";
+  /* content: "\020"; */
   width: 100%;
   height: 100%;
 }
 
 .image-filters-enabled .site-header.featured-image .site-featured-image:before {
-  background: #0073aa;
+  /* background: #0073aa; */
   mix-blend-mode: screen;
   opacity: 0.1;
 }
@@ -5905,25 +5912,25 @@ body.page .main-navigation {
 }
 
 .site-header.featured-image:after {
-  background: #000;
+  /* background: #000; */
   /**
 		 * Add a transition to the readability overlay, to add a subtle
 		 * but smooth effect when resizing the screen.
 		 */
-  transition: opacity 1200ms ease-in-out;
-  opacity: 0.7;
-  z-index: 5;
+  /* transition: opacity 1200ms ease-in-out; */
+  /* opacity: 0.7; */
+  /* z-index: 5; */
   /* When image filters are active, a blue overlay is added. */
 }
 
 .image-filters-enabled .site-header.featured-image:after {
-  background: #000e14;
-  opacity: 0.38;
+  /* background: #000e14; */
+  /* opacity: 0.38; */
 }
 
 @media only screen and (min-width: 768px) {
   .image-filters-enabled .site-header.featured-image:after {
-    opacity: 0.18;
+    /* opacity: 0.18; */
   }
 }
 
@@ -6079,7 +6086,7 @@ body.page .main-navigation {
 }
 
 .image-filters-enabled .entry .post-thumbnail .post-thumbnail-inner {
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 .image-filters-enabled .entry .post-thumbnail .post-thumbnail-inner:after {
@@ -6114,17 +6121,19 @@ body.page .main-navigation {
 }
 
 .image-filters-enabled .entry .post-thumbnail:before {
-  background: #0073aa;
+  /* background: #0073aa; */
   mix-blend-mode: screen;
   opacity: 0.1;
   z-index: 2;
+  filter: none;
 }
 
 .image-filters-enabled .entry .post-thumbnail:after {
-  background: #0073aa;
+  /* background: #0073aa; */
   mix-blend-mode: multiply;
   opacity: 0.8;
   z-index: 3;
+  filter: none;
   /* Browsers supporting mix-blend-mode don't need opacity < 1 */
 }
 
@@ -8870,8 +8879,15 @@ menu .site-title a {
 
 .content-wrapper .content-area main .page-header {
   margin: 3.5rem 0rem 0rem 0rem;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+.content-wrapper .content-area main .page-header {
+  margin: 3.5rem 0rem 0rem 0rem;
   border-bottom: 1px solid #c4c4c4;
   padding-bottom: 8px;
+}
 }
 
 .content-wrapper .content-area main .page-title b {
@@ -9515,5 +9531,4 @@ h4.wp-block-heading::before {
 
 #menu-overlay.active {
   display: block;
-}
 }
