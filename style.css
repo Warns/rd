@@ -5427,6 +5427,12 @@ body.page .main-navigation {
   clear: both;
 }
 
+.site-footer {
+  display: flex;
+    justify-content: center;
+    margin: 10rem 0rem 0rem 0rem;
+}
+
 /* Layout */
 /** === Layout === */
 #page {
@@ -6789,7 +6795,11 @@ body.page .main-navigation {
 .search .page-header .page-description {
   display: block;
   color: #111;
-  font-size: 1em;
+  font-size: 12.8px;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  padding-bottom: 7px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -8841,6 +8851,12 @@ menu .site-title a {
   }
 }
 
+.content-area {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 .content-wrapper .content-area {
   border-right: 1px solid #c4c4c4;
 }
@@ -8853,7 +8869,9 @@ menu .site-title a {
 }
 
 .content-wrapper .content-area main .page-header {
-  margin: 0;
+  margin: 3.5rem 0rem 0rem 0rem;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 8px;
 }
 
 .content-wrapper .content-area main .page-title b {
@@ -9198,6 +9216,8 @@ menu .site-title a {
     font-size: 0.71111em;
     text-transform: uppercase;
     font-family: "Inter", sans-serif;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 15px;
   }
 }
 
@@ -9212,9 +9232,9 @@ menu .site-title a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-top: 1px solid #c4c4c4;
     gap: 30px;
     margin: 15px;
+    padding-top: 7px;
   }
 }
 

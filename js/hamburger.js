@@ -1,7 +1,6 @@
 document.getElementById("hamburger-icon").addEventListener("click", function() {
     var body = document.body;
     var menu = document.querySelector(".navbar-sidebar");
-    var closeBtn = document.getElementById("navbar-sidebar");
     var backdrop = document.querySelector(".navbar-sidebar__backdrop");
 
     // Toggle visibility class on body
@@ -21,10 +20,23 @@ document.getElementById("hamburger-icon").addEventListener("click", function() {
     }
 });
 
+var closeBtn = document.getElementById("navbar-sidebar");  // Define the closeBtn variable outside to use it in multiple places
+closeBtn.addEventListener("click", function(event) {
+    event.preventDefault();  // Prevent the default action of the close button
+
+    var body = document.body;
+    var menu = document.querySelector(".navbar-sidebar");
+    var backdrop = document.querySelector(".navbar-sidebar__backdrop");
+
+    // Logic to close the navbar
+    body.classList.remove('navbar-sidebar--show');
+    menu.classList.remove('active');
+    backdrop.classList.remove('active');
+});
+
 document.addEventListener("click", function(event) {
     var body = document.body;
     var menu = document.querySelector(".navbar-sidebar");
-    var closeBtn = document.getElementById("navbar-sidebar");
     var backdrop = document.querySelector(".navbar-sidebar__backdrop");
 
     if (body.classList.contains('navbar-sidebar--show') && 
