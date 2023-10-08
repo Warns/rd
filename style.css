@@ -5619,11 +5619,11 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation li,
 .site-header.featured-image .entry-meta,
 .site-header.featured-image .entry-title {
-  color: #767676;
+  color: #e9e0db;
 }
 
 .site-header.featured-image .entry-title, h1 {
-  color: #000;
+  color: #e9e0db;
 }
 
 .site-header.featured-image .site-featured-image .entry-headersite-header.featured-image .main-navigation a,
@@ -5700,7 +5700,7 @@ body.page .main-navigation {
   max-width: 1000%;
   min-width: 100vw;
   min-height: 50%;
-  max-height: 60%;
+  max-height: 100%;
   position: absolute;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -5731,13 +5731,14 @@ body.page .main-navigation {
   }
 }
 
-/* .image-filters-enabled
+/* Book Filter */
+.image-filters-enabled
   .site-header.featured-image
   .site-featured-image
   .post-thumbnail
   img {
-  filter: grayscale(100%);
-} */
+  filter: brightness(0.3);;
+}
 
 .site-header.featured-image .site-featured-image .entry-header {
   margin-top: calc(4 * 1rem);
@@ -9549,3 +9550,33 @@ h4.wp-block-heading::before {
 #menu-overlay.active {
   display: block;
 }
+
+/* Book Image Overlay */
+.image-overlay-wrapper {
+  position: relative;
+  display: block;  /* or "block" depending on your layout needs */
+}
+
+.image-overlay-wrapper img {
+  display: block;
+  width: 100%;  /* Adjust as needed */
+  height: auto;
+}
+
+.overlay-book-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  /* 50% transparent black */
+  transition: opacity 0.3s;
+  pointer-events: none; /* Ensure the overlay doesn't interfere with click events on the image */
+}
+
+/* Optional: If you want the overlay to appear only on hover */
+/*
+.image-overlay-wrapper:hover .overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+*/
