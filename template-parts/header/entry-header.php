@@ -15,22 +15,22 @@ $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentyni
 if ( ! is_page() ) :
 	?>
 <div class="entry-meta">
-	<?php twentynineteen_posted_by(); ?>
-	<?php
+    <?php twentynineteen_posted_by(); ?>
+    <?php
 		echo '<span class="updated-on">'. twentynineteen_get_icon_svg( 'edit', 16 ) . get_the_modified_date() .'</span>';
 	?>
-	<?php twentynineteen_posted_on(); ?>
-	
+    <?php twentynineteen_posted_on(); ?>
 
-	<span class="comment-count">
-		<?php
+
+    <span class="comment-count">
+        <?php
 		if ( ! empty( $discussion ) ) {
 			twentynineteen_discussion_avatars_list( $discussion->authors );
 		}
 		?>
-		<?php twentynineteen_comment_count(); ?>
-	</span>
-	<?php
+        <?php twentynineteen_comment_count(); ?>
+    </span>
+    <?php
 		// Edit post link.
 		/*
 		edit_post_link(
@@ -52,5 +52,5 @@ if ( ! is_page() ) :
 		*/
 	?>
 </div><!-- .entry-meta -->
-	<?php
+<?php
 endif;

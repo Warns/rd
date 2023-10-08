@@ -10,25 +10,25 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main">
 
-			<?php
+        <?php
 			// Start the Loop.
 			while ( have_posts() ) :
 				the_post();
 				?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
+            <header class="entry-header">
+                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            </header><!-- .entry-header -->
 
-					<div class="entry-content">
+            <div class="entry-content">
 
-						<figure class="entry-attachment wp-block-image">
-						<?php
+                <figure class="entry-attachment wp-block-image">
+                    <?php
 							/**
 							 * Filters the default twentynineteen image attachment size.
 							 *
@@ -41,11 +41,11 @@ get_header();
 							echo wp_get_attachment_image( get_the_ID(), $image_size );
 						?>
 
-							<figcaption class="wp-caption-text"><?php the_excerpt(); ?></figcaption>
+                    <figcaption class="wp-caption-text"><?php the_excerpt(); ?></figcaption>
 
-						</figure><!-- .entry-attachment -->
+                </figure><!-- .entry-attachment -->
 
-						<?php
+                <?php
 						the_content();
 						wp_link_pages(
 							array(
@@ -59,10 +59,10 @@ get_header();
 							)
 						);
 						?>
-					</div><!-- .entry-content -->
+            </div><!-- .entry-content -->
 
-					<footer class="entry-footer">
-					<?php
+            <footer class="entry-footer">
+                <?php
 						// Retrieve attachment metadata.
 						$metadata = wp_get_attachment_metadata();
 					if ( $metadata ) {
@@ -77,12 +77,12 @@ get_header();
 					}
 					?>
 
-						<?php twentynineteen_entry_footer(); ?>
+                <?php twentynineteen_entry_footer(); ?>
 
-					</footer><!-- .entry-footer -->
-				</article><!-- #post-<?php the_ID(); ?> -->
+            </footer><!-- .entry-footer -->
+        </article><!-- #post-<?php the_ID(); ?> -->
 
-				<?php
+        <?php
 				// Parent post navigation.
 				the_post_navigation(
 					array(
@@ -99,8 +99,8 @@ get_header();
 				endwhile;
 			?>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+    </main><!-- .site-main -->
+</div><!-- .content-area -->
 
 <?php
 get_footer();

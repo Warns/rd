@@ -4132,7 +4132,7 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
   border-color: #0073aa;
-  outline: thin solid rgba(0, 115, 170, 0.15);
+  outline: none;
   outline-offset: -4px;
 }
 
@@ -5619,10 +5619,14 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation li,
 .site-header.featured-image .entry-meta,
 .site-header.featured-image .entry-title {
-  color: #e8e0dc;
+  color: #767676;
 }
 
-.site-header.featured-image .main-navigation a,
+.site-header.featured-image .entry-title, h1 {
+  color: #000;
+}
+
+.site-header.featured-image .site-featured-image .entry-headersite-header.featured-image .main-navigation a,
 .site-header.featured-image .main-navigation a + svg,
 .site-header.featured-image .social-navigation a,
 .site-header.featured-image .site-title a,
@@ -5687,15 +5691,16 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image {
   /* First layer: grayscale. */
-  padding: 50px;
+  padding: 0px;
 }
 
 .site-header.featured-image .site-featured-image .post-thumbnail img {
   height: auto;
   left: 50%;
   max-width: 1000%;
-  min-height: 100%;
   min-width: 100vw;
+  min-height: 50%;
+  max-height: 60%;
   position: absolute;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -5709,7 +5714,18 @@ body.page .main-navigation {
     height: 100%;
     left: 0;
     object-fit: cover;
-    top: 0;
+    top: 100px;
+    transform: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header.featured-image .site-featured-image .post-thumbnail img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    top: 0px;
     transform: none;
     width: 100%;
   }
@@ -5725,16 +5741,15 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image .entry-header {
   margin-top: calc(4 * 1rem);
-  margin-bottom: 0;
-  margin-left: 0;
+  margin-bottom: 100px;
+  margin-left: 1rem;
   margin-right: 0;
-  /* Entry meta */
+  width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media (max-width: 768px) {
   .site-header.featured-image .site-featured-image .entry-header {
-    margin-left: calc(10% + 60px);
-    margin-right: calc(10% + 60px);
+    margin: 10rem 0.9375rem 0rem 0.9375rem;
   }
 }
 
@@ -5849,6 +5864,7 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image .entry-header {
   position: relative;
+  margin: 0 auto;
   z-index: 9;
 }
 
@@ -8811,6 +8827,7 @@ menu {
   margin: 0;
   display: flex;
   align-items: center;
+  color: #454545;
   background-color: #f5f4ef;
   z-index: 99;
   padding: 0 calc((100vw - 1200px) * 0.5);

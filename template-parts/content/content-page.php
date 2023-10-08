@@ -12,15 +12,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
-	<header class="entry-header">
-		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-	</header>
-	<?php endif; ?>
+    <?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
+    <header class="entry-header">
+        <?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+    </header>
+    <?php endif; ?>
 
-	<div class="content-wrapper">
-	<div class="entry-content">
-		<?php
+    <div class="content-wrapper">
+        <div class="entry-content">
+            <?php
 		the_content();
 
 		wp_link_pages(
@@ -30,12 +30,12 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
-	</div>
+        </div><!-- .entry-content -->
+    </div>
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
+    <?php if ( get_edit_post_link() ) : ?>
+    <footer class="entry-footer">
+        <?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
@@ -53,6 +53,6 @@
 				'</span>'
 			);
 			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+    </footer><!-- .entry-footer -->
+    <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
