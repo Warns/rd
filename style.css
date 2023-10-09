@@ -5619,11 +5619,11 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation li,
 .site-header.featured-image .entry-meta,
 .site-header.featured-image .entry-title {
-  color: #e9e0db;
+  color: red;
 }
 
 .site-header.featured-image .entry-title, h1 {
-  color: #e9e0db;
+  color: red;
 }
 
 .site-header.featured-image .site-featured-image .entry-headersite-header.featured-image .main-navigation a,
