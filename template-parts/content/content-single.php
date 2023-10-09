@@ -25,6 +25,8 @@
 
     <div class="content-wrapper">
         <div class="entry-content">
+            <?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes" postfix_singular="minute"]'); ?>
+
             <?php
 			the_content(
 				sprintf(

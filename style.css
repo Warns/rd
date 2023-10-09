@@ -9594,3 +9594,9 @@ h4.wp-block-heading::before {
   background: rgba(0, 0, 0, 0.5);
 }
 */
+
+/* Readin time */
+.entry-content .rt-reading-time {
+  display: block !important;
+  margin: 0 !important;
+}
