@@ -16,11 +16,9 @@
 // Check if the page has the "ilkeler" category and output corresponding styles
 if ( is_page( 'İlkelerimiz' ) ) {
     echo '<style>
-    @media (min-width: 768px) {
         .entry:first-of-type {
             margin-top: 70px;
         }
-    }
     </style>';
 }
 ?>

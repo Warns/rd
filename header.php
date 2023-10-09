@@ -26,14 +26,19 @@
 
     <?php if ( is_front_page() ) : ?>
     <style>
-    body.home .site-header {
-        margin: 0 !important;
-        padding: 100px 0 0 0 !important;
+    @media (min-width: 768px) {
+
+        body.home .site-header {
+            margin: 0 !important;
+            padding: 100px 0 0 0 !important;
+        }
     }
 
-    body.home .site-header.featured-image {
-        min-height: 40vh !important;
-        margin-bottom: 3rem !important;
+    @media (min-width: 768px) {
+        body.home .site-header.featured-image {
+            min-height: 40vh !important;
+            margin-bottom: 3rem !important;
+        }
     }
     </style>
     <?php endif; ?>
