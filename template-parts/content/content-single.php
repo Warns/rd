@@ -25,8 +25,6 @@
 
     <div class="content-wrapper">
         <div class="entry-content">
-            <?php echo do_shortcode('[rt_reading_time]'); ?>
-
             <?php
 			the_content(
 				sprintf(

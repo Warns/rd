@@ -9596,7 +9596,7 @@ h4.wp-block-heading::before {
 */
 
 /* Readin time */
-.entry-content .rt-reading-time {
+.rt-reading-time {
   display: block !important;
   margin: 0 !important;
 }
