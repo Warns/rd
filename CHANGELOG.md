@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.2.2](https://github.com/Warns/rd/compare/v1.2.1...v1.2.2) (2023-10-09)
+
+
+### Bug Fixes
+
+* loading after navigation close ([5b1ddd9](https://github.com/Warns/rd/commit/5b1ddd93db768ea1d6c132232cc02a1e51646a5a))
+
 ### [1.2.1](https://github.com/Warns/rd/compare/v1.2.0...v1.2.1) (2023-10-06)
 
 
