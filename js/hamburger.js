@@ -22,7 +22,7 @@ document.getElementById("hamburger-icon").addEventListener("click", function() {
 
 var closeBtn = document.getElementById("navbar-sidebar");  // Define the closeBtn variable outside to use it in multiple places
 closeBtn.addEventListener("click", function(event) {
-    event.preventDefault();  // Prevent the default action of the close button
+    event.stopPropagation();  // Prevent the event from bubbling up
 
     var body = document.body;
     var menu = document.querySelector(".navbar-sidebar");
