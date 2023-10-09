@@ -1,5 +1,6 @@
 <?php
 /**
+ * #Yazilar
  * The template for displaying archive pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -13,19 +14,30 @@ get_header();
 ?>
 
 
-	<div class="content-wrapper">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="content-wrapper">
+    <div id="primary" class="content-area">
+        <?php
+        if ( in_category( 'yazilar' ) ) {
+        echo '<style>
+        @media (min-width: 768px) {
+			.content-wrapper .content-area {
+				border-right: none;
+			}
+        }
+        </style>';
+	}
+		?>
+        <main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+            <?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
+            <header class="page-header">
+                <?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 				?>
-			</header><!-- .page-header -->
+            </header><!-- .page-header -->
 
-			<?php
+            <?php
 			// Start the Loop.
 			while ( have_posts() ) :
 				the_post();
@@ -50,9 +62,9 @@ get_header();
 
 		endif;
 		?>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	</div>
+        </main><!-- #main -->
+    </div><!-- #primary -->
+</div>
 
 <?php
 get_footer();

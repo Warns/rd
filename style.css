@@ -8903,6 +8903,7 @@ menu .site-title a {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  flex: 1;
 }
 
 .content-wrapper .content-area {
