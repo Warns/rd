@@ -5461,7 +5461,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 100px 0 0 0;
+    padding: 50px 0 0 0;
   }
   .site-header.featured-image {
     min-height: 40vh;
@@ -6004,9 +6004,9 @@ body.page .main-navigation {
   margin-top: 10px;
 }
 
-.entry:first-of-type {
+/* .entry:first-of-type {
   margin-top: 0;
-}
+} */
 /* 
 @media (max-width: 768px) {
   .entry:first-of-type {
