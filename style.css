@@ -6114,7 +6114,7 @@ body.page .main-navigation {
 .entry .post-thumbnail .post-thumbnail-inner img {
   position: relative;
   display: block;
-  width: 50%;
+  width: 100%;
 }
 
 .image-filters-enabled .entry .post-thumbnail {
