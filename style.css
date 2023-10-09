@@ -9280,9 +9280,9 @@ menu .site-title a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
+    gap: 10px;
     margin: 15px;
-    padding-top: 7px;
+    padding-top: 0px;
   }
 }
 
