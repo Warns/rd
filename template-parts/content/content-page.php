@@ -12,6 +12,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php
+// Check if the page has the "ilkeler" category and output corresponding styles
+if ( is_page( 'İlkelerimiz' ) ) {
+    echo '<style>
+    @media (max-width: 768px) {
+        .entry:first-of-type {
+            margin-top: 70px;
+        }
+    }
+    </style>';
+}
+?>
+
     <?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
     <header class="entry-header">
         <?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
