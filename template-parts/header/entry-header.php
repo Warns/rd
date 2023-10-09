@@ -15,7 +15,7 @@ $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentyni
 if ( ! is_page() ) :
 	?>
 <div class="entry-meta">
-    <?php twentynineteen_posted_by(); ?>
+    <!-- <?php twentynineteen_posted_by(); ?> -->
     <?php
 		echo '<span class="updated-on">'. twentynineteen_get_icon_svg( 'edit', 16 ) . get_the_modified_date() .'</span>';
 	?>
