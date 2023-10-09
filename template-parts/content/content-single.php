@@ -30,6 +30,13 @@ if ( in_category( 'kitaplar' ) ) {
         }
     }
     </style>';
+    echo '<style>
+    @media (min-width: 768px) {
+        .entry:first-of-type {
+            margin-top: 50px !important;
+        }
+    }
+    </style>';
 }
 ?>
 
