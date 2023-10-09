@@ -5691,7 +5691,7 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image {
   /* First layer: grayscale. */
-  padding: 15px;
+  padding: 5rem 0 0 0;
 }
 
 .site-header.featured-image .site-featured-image .post-thumbnail img {
@@ -5865,7 +5865,7 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image .entry-header {
   position: relative;
-  margin: 0 auto;
+  margin: 15px auto;
   z-index: 9;
 }
 
