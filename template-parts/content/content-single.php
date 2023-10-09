@@ -24,9 +24,9 @@ if ( in_category( 'kitaplar' ) ) {
     </style>';
 } elseif ( in_category( 'yazilar' ) ) {
     echo '<style>
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
         .entry:first-of-type {
-            margin-top: 80px !important;
+            margin-top: 100px !important;
         }
     }
     </style>';
