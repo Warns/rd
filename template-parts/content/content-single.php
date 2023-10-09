@@ -11,6 +11,28 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <?php
+// Check for specific category and output corresponding styles
+if ( in_category( 'kitaplar' ) ) {
+    echo '<style>
+    @media (max-width: 768px) {
+        .entry:first-of-type {
+            margin-top: 10px;
+        }
+    }
+    </style>';
+} elseif ( in_category( 'yazilar' ) ) {
+    echo '<style>
+    @media (max-width: 768px) {
+        .entry:first-of-type {
+            margin-top: 80px;
+        }
+    }
+    </style>';
+}
+?>
+
     <div class="entry-sidebar-mobile">
         <button class="menu-toggle tocCollapsibleButton_IbtT">
             İçindekiler <span></span>
@@ -26,28 +48,28 @@
     <div class="content-wrapper">
         <div class="entry-content">
             <?php
-			the_content(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Post title. Only visible to screen readers. */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
+        the_content(
+            sprintf(
+                wp_kses(
+                    /* translators: %s: Post title. Only visible to screen readers. */
+                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen' ),
+                    array(
+                        'span' => array(
+                            'class' => array(),
+                        ),
+                    )
+                ),
+                get_the_title()
+            )
+        );
 
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'twentynineteen' ),
-					'after'  => '</div>',
-				)
-			);
-			?>
+        wp_link_pages(
+            array(
+                'before' => '<div class="page-links">' . __( 'Pages:', 'twentynineteen' ),
+                'after'  => '</div>',
+            )
+        );
+        ?>
         </div><!-- .entry-content -->
 
         <div class="entry-sidebar">

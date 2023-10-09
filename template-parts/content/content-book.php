@@ -16,7 +16,7 @@
     <?php twentynineteen_post_thumbnail(); ?>
 
     <div class="entry-content">
-            <?php
+        <?php
             if ( is_sticky() && is_home() && ! is_paged() ) {
                 printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'twentynineteen' ) );
             }
