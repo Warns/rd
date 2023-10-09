@@ -18,15 +18,15 @@ if ( in_category( 'kitaplar' ) ) {
     echo '<style>
     @media (max-width: 768px) {
         .entry:first-of-type {
-            margin-top: 10px;
+            margin-top: 10px !important;
         }
     }
     </style>';
 } elseif ( in_category( 'yazilar' ) ) {
     echo '<style>
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
         .entry:first-of-type {
-            margin-top: 80px;
+            margin-top: 80px !important;
         }
     }
     </style>';

@@ -5463,10 +5463,10 @@ body.page .main-navigation {
     margin: 0;
     padding: 50px 0 0 0;
   }
-  .site-header.featured-image {
+  /* .site-header.featured-image {
     min-height: 40vh;
     margin-bottom: 3rem;
-  }
+  } */
 }
 
 .site-branding {
@@ -6114,7 +6114,7 @@ body.page .main-navigation {
 .entry .post-thumbnail .post-thumbnail-inner img {
   position: relative;
   display: block;
-  width: 100%;
+  width: 50%;
 }
 
 .image-filters-enabled .entry .post-thumbnail {
