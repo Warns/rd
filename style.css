@@ -5619,11 +5619,11 @@ body.page .main-navigation {
 .site-header.featured-image .social-navigation li,
 .site-header.featured-image .entry-meta,
 .site-header.featured-image .entry-title {
-  color: #ff0000;
+  color: #e9e0db;
 }
 
 .site-header.featured-image .entry-title, h1 {
-  color: #ff0000;
+  color: #e9e0db;
 }
 
 .site-header.featured-image .site-featured-image .entry-headersite-header.featured-image .main-navigation a,
@@ -5742,7 +5742,7 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image .entry-header {
   margin-top: calc(4 * 1rem);
-  margin-bottom: 100iipx;
+  margin-bottom: 100px;
   margin-left: 1rem;
   margin-right: 0;
   width: 100%;
@@ -8203,6 +8203,8 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-file {
   font-family: "Inter", sans-serif;
+  max-width: 100%;
+  
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button {
