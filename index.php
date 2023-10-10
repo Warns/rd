@@ -23,25 +23,23 @@ get_header();
         <main id="main" class="site-main">
 
             <?php
-		if ( have_posts() ) {
+$args = array(
+	'posts_per_page' => 5,
+	'cat' => 1
+);
 
-			// Load posts loop.
-			while ( have_posts() ) {
-				the_post();
-				if( in_category('1') )
-				get_template_part( 'template-parts/content/content-excerpt' );
-			}
+$query = new WP_Query( $args );
 
-			// Previous/next page navigation.
-			twentynineteen_the_posts_navigation();
-
-		} else {
-
-			// If no content, include the "No posts found" template.
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		}
-		?>
+if ( $query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		get_template_part( 'template-parts/content/content-excerpt' );
+	}
+	echo '<a href="' . get_category_link(1) . '" class="all-articles">Tüm Yazılar</a>';
+} else {
+	get_template_part( 'template-parts/content/content', 'none' );
+}
+?>
 
         </main><!-- .site-main -->
     </div><!-- .content-area -->
