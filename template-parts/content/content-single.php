@@ -30,13 +30,6 @@ if ( in_category( 'kitaplar' ) ) {
         }
     }
     </style>';
-    echo '<style>
-        .site-main {
-            display: flex;
-            flex-direction: row !important;
-            justify-content: space-between;
-        }
-    </style>';
 } elseif ( in_category( 'yazilar' ) ) {
     echo '<style>
     @media (max-width: 768px) {
