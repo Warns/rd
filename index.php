@@ -21,6 +21,26 @@ get_header();
     <div id="primary" class="content-area">
         <h3 id="heading" class="heading-content">Son Yazilar</h3>
         <main id="main" class="site-main">
+            <?php if ( is_front_page() ) : ?>
+            <style>
+            @media (min-width: 768px) {
+
+                .content-wrapper .content-area main .entry-header {
+                    margin: 0;
+                    font-size: 12px;
+                    font-family: "Inter", sans-serif;
+                }
+            }
+
+            @media (min-width: 768) {
+                .content-wrapper .content-area main .entry-content p {
+                    margin: 0;
+                    padding-right: 40px;
+                    font-family: "Inter", sans-serif !important;
+                }
+            }
+            </style>
+            <?php endif; ?>
 
             <?php
 $args = array(
