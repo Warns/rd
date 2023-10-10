@@ -51,8 +51,8 @@ if ( in_category( 'kitaplar' ) ) {
     @media (min-width: 768px) {
         .content-wrapper .content-area main .page-header {
             margin: -42px 0 0 0;
-            padding-bottom: none;
-        }
+            flex-basis: 100%;       
+         }
     }
     </style>';
 }
