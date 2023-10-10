@@ -25,6 +25,15 @@ get_header();
 			}
         }
         </style>';
+		echo '<style>
+		@media (min-width: 768px) {
+			.content-wrapper .content-area main .entry-header {
+				margin: 0;
+				font-size: 12px;
+				font-family: "Inter", sans-serif;
+			}
+		}
+		</style>';
 	}
 		?>
         <main id="main" class="site-main">
