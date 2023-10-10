@@ -24,6 +24,7 @@ if ( in_category( 'kitaplar' ) ) {
             margin-top: 100px;
             gap: 50px;
             border-right: none;
+            flex-wrap: wrap;
         }
     }
     </style>';
@@ -41,6 +42,8 @@ if ( in_category( 'kitaplar' ) ) {
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex-basis: calc(50% - 25px); 
+            box-sizing: border-box; 
         }
     }
     </style>';
