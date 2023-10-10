@@ -9544,7 +9544,7 @@ h3.wp-block-heading::before,
 h4.wp-block-heading::before {
   content: "";
   display: block;
-  height: 50px;
+  height: 0px;
   margin-top: 0px;
   visibility: hidden;
   pointer-events: none;
