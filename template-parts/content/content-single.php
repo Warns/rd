@@ -1,5 +1,6 @@
 <?php
 /**
+ * #Icerik Sayfasi
  * Template part for displaying posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -21,6 +22,20 @@ if ( in_category( 'kitaplar' ) ) {
             margin-top: 10px !important;
         }
     }
+    </style>';
+    echo '<style>
+    @media (min-width: 768px) {
+        .entry {
+            margin-top: 50px !important;
+        }
+    }
+    </style>';
+    echo '<style>
+        .site-main {
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-between;
+        }
     </style>';
 } elseif ( in_category( 'yazilar' ) ) {
     echo '<style>
