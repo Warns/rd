@@ -1,5 +1,6 @@
 <?php
 /**
+ * #Kitaplar
  * Template part for displaying post archives and search results
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -12,6 +13,47 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php
+// Check for specific category and output corresponding styles
+if ( in_category( 'kitaplar' ) ) {
+    echo '<style>
+    @media (min-width: 768px) {
+        .site-main {
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+            gap: 50px;
+            border-right: none;
+        }
+    }
+    </style>';
+    echo '<style>
+    @media (min-width: 768px) {
+        .content-wrapper .content-area {
+            border-right: none;
+        }
+    }
+    </style>';
+    echo '<style>
+    @media (min-width: 768px) {
+        .entry {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    </style>';
+    echo '<style>
+    @media (min-width: 768px) {
+        .content-wrapper .content-area main .page-header {
+            margin: -42px 0 0 0;
+            padding-bottom: none;
+        }
+    }
+    </style>';
+}
+    ?>
     <div class="entry-header">
         <?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
