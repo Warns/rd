@@ -18,7 +18,7 @@
 <footer id="colophon" class="site-footer">
     <?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
     <div class="site-info">
-        &copy; <?php echo date("Y"); ?> Ramazan Demir
+        <?php echo date("Y"); ?> Ramazan Demir
         <?php
         if ( function_exists( 'the_privacy_policy_link' ) ) {
             the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
