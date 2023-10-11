@@ -6831,7 +6831,7 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   .hfeed .entry .entry-header {
-    margin: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
+    margin: auto 0;
   }
 }
 
@@ -7107,7 +7107,7 @@ h1 {
     > .wp-block-group
     > .wp-block-group__inner-container
     > * {
-    margin: 32px 0;
+    margin: 10px 0;
   }
 }
 
@@ -9302,6 +9302,25 @@ menu .site-title a {
   font-family: "Inter", sans-serif;
 }
 
+.home .site-main .entry-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  font-family: "Inter", sans-serif;
+}
+
+.home .entry:not(:last-of-type):not(.right-content > .entry) {
+  border-bottom: 1px solid #c4c4c4; 
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.home .entry {
+  width: 80%;
+  font-family: "inter", sans-serif;
+
+}
 
 h3 {
   margin: 8px 0;

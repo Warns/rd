@@ -21,7 +21,7 @@ get_header();
     <div id="primary" class="content-area">
         <h3 id="heading" class="heading-content">Son Yazilar</h3>
         <main id="main" class="site-main">
-            <?php if ( is_front_page() ) : ?>
+            <!-- <?php if ( is_front_page() ) : ?>
             <style>
             @media (min-width: 768px) {
 
@@ -40,9 +40,11 @@ get_header();
                 }
             }
             </style>
-            <?php endif; ?>
+            <?php endif; ?> -->
 
-            <?php
+        </main><!-- .site-main -->
+
+        <?php
 $args = array(
 	'posts_per_page' => 5,
 	'cat' => 1
@@ -61,7 +63,6 @@ if ( $query->have_posts() ) {
 }
 ?>
 
-        </main><!-- .site-main -->
     </div><!-- .content-area -->
 
     <?php rewind_posts(); ?>

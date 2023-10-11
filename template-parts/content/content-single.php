@@ -67,7 +67,7 @@ if ( in_category( 'kitaplar' ) ) {
             sprintf(
                 wp_kses(
                     /* translators: %s: Post title. Only visible to screen readers. */
-                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen' ),
+                    __( 'Okumaya devam et<span class="screen-reader-text"> "%s"</span>', 'twentynineteen' ),
                     array(
                         'span' => array(
                             'class' => array(),
