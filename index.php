@@ -55,7 +55,7 @@ if ( $query->have_posts() ) {
 		$query->the_post();
 		get_template_part( 'template-parts/content/content-excerpt' );
 	}
-	echo '<a href="' . get_category_link(1) . '" class="all-articles">Tüm Yazılar</a>';
+	echo '<a href="' . get_category_link(1) . '" class="all-articles-btn">Tüm Yazılar</a>';
 } else {
 	get_template_part( 'template-parts/content/content', 'none' );
 }

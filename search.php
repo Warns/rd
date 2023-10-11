@@ -19,7 +19,7 @@ get_header();
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php _e( 'Search results for: ', 'twentynineteen' ); ?>
+					<?php _e( 'Arama sonuçları: ', 'twentynineteen' ); ?>
 					<span class="page-description"><?php echo get_search_query(); ?></span>
 				</h1>
 			</header><!-- .page-header -->

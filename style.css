@@ -3524,10 +3524,8 @@ html {
   font-size: 18px;
 }
 
-
 /* navbar, overlay, hamburger
 	 ========================================================================== */
-
 
 /* Hamburger Button */
 @media only screen and (max-width: 768px) {
@@ -3570,7 +3568,7 @@ html {
   margin-left: auto;
 }
 
-.navbar-sidebar--show .navbar-sidebar, 
+.navbar-sidebar--show .navbar-sidebar,
 .navbar-sidebar--show .navbar-sidebar__backdrop {
   opacity: 1;
   visibility: visible;
@@ -3609,7 +3607,7 @@ html {
 }
 
 .navbar-sidebar a:hover {
-  background: #555
+  background: #555;
 }
 
 @media (max-width: 768px) {
@@ -5407,8 +5405,8 @@ body.page .main-navigation {
 
 .site-footer {
   display: flex;
-    justify-content: center;
-    margin: 10rem 0rem 0rem 0rem;
+  justify-content: center;
+  margin: 10rem 0rem 0rem 0rem;
 }
 
 /* Layout */
@@ -5583,7 +5581,7 @@ body.page .main-navigation {
 @media (max-width: 768px) {
   .site-header.featured-image {
     margin: 63px 0 0 0;
-}
+  }
 }
 
 .site-header.featured-image .site-branding .site-title,
@@ -5600,11 +5598,16 @@ body.page .main-navigation {
   color: #e8e0dc;
 }
 
-.site-header.featured-image .entry-title, h1 {
+.site-header.featured-image .entry-title,
+h1 {
   color: #e8e0dc;
 }
 
-.site-header.featured-image .site-featured-image .entry-headersite-header.featured-image .main-navigation a,
+.site-header.featured-image
+  .site-featured-image
+  .entry-headersite-header.featured-image
+  .main-navigation
+  a,
 .site-header.featured-image .main-navigation a + svg,
 .site-header.featured-image .social-navigation a,
 .site-header.featured-image .site-title a,
@@ -5715,7 +5718,7 @@ body.page .main-navigation {
   .site-featured-image
   .post-thumbnail
   img {
-  filter: brightness(0.3);;
+  filter: brightness(0.3);
 }
 
 .site-header.featured-image .site-featured-image .entry-header {
@@ -5848,15 +5851,15 @@ body.page .main-navigation {
 }
 
 @media (max-width: 768px) {
-.site-header.featured-image .site-featured-image .entry-header {
-  position: relative;
-  margin: 15px;
-  z-index: 9;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-    }
+  .site-header.featured-image .site-featured-image .entry-header {
+    position: relative;
+    margin: 15px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
 
 .site-header.featured-image .site-branding-container:after,
@@ -6000,14 +6003,14 @@ body.page .main-navigation {
 
 .entry .entry-title {
   margin: 0px;
-  color:#000;
+  color: #000;
 }
 
 @media (max-width: 768px) {
-.entry .entry-title {
-  margin-top: 20px;
-  color:#000;
-}
+  .entry .entry-title {
+    margin-top: 20px;
+    color: #000;
+  }
 }
 
 .entry .entry-title a {
@@ -6787,7 +6790,7 @@ body.page .main-navigation {
   .archive .page-header,
   .search .page-header,
   .error404 .page-header {
-    margin: 0 calc(10% + 60px) calc(3 * 1rem);
+    margin: 100px auto 0px 100px
   }
 }
 
@@ -8190,7 +8193,6 @@ body.page .main-navigation {
 .entry .entry-content .wp-block-file {
   font-family: "Inter", sans-serif;
   max-width: 100%;
-  
 }
 
 .entry .entry-content .wp-block-file .wp-block-file__button {
@@ -8785,7 +8787,7 @@ svg {
   padding: 8px 16px 8px 38px;
   border-radius: 4px 4px 0 0;
   position: relative;
-  font-family: 'Noto Naskh Arabic', Arial, Helvetica, sans-serif;
+  font-family: "Noto Naskh Arabic", Arial, Helvetica, sans-serif;
 }
 
 .aya > div.ar a {
@@ -8811,7 +8813,7 @@ svg {
 .aya > ul li {
   padding: 0 8px;
   font-size: small;
-  font-family: 'Noto Naskh Arabic', Arial, Helvetica, sans-serif;
+  font-family: "Noto Naskh Arabic", Arial, Helvetica, sans-serif;
 }
 
 .aya > ul li.ar {
@@ -8832,6 +8834,7 @@ menu {
   background-color: #f5f4ef;
   z-index: 99;
   padding: 0 calc((100vw - 1200px) * 0.5);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 #menu-primary-menu-1 li a {
@@ -8903,11 +8906,11 @@ menu .site-title a {
 }
 
 @media (max-width: 768px) {
-.content-wrapper .content-area main .page-header {
-  margin: 3.5rem 0rem 0rem 0rem;
-  border-bottom: 1px solid #c4c4c4;
-  padding-bottom: 8px;
-}
+  .content-wrapper .content-area main .page-header {
+    margin: 3.5rem 0rem 0rem 0rem;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 8px;
+  }
 }
 
 .content-wrapper .content-area main .page-title b {
@@ -8941,6 +8944,8 @@ menu .site-title a {
   padding: 4px 0 4px 12px;
   border-left: #d6cbc7 1px solid;
   height: 3.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .wp-block-search__input {
@@ -9275,6 +9280,29 @@ menu .site-title a {
   }
 }
 
+.search .site-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home .site-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -5px;
+}
+
+.home .site-main article .entry-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  font-family: "Inter", sans-serif;
+}
+
+
 h3 {
   margin: 8px 0;
 }
@@ -9557,12 +9585,12 @@ h4.wp-block-heading::before {
 /* Book Image Overlay */
 .image-overlay-wrapper {
   position: relative;
-  display: block;  /* or "block" depending on your layout needs */
+  display: block; /* or "block" depending on your layout needs */
 }
 
 .image-overlay-wrapper img {
   display: block;
-  width: 100%;  /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
   height: auto;
 }
 
@@ -9572,7 +9600,7 @@ h4.wp-block-heading::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);  /* 50% transparent black */
+  background: rgba(0, 0, 0, 0.5); /* 50% transparent black */
   transition: opacity 0.3s;
   pointer-events: none; /* Ensure the overlay doesn't interfere with click events on the image */
 }
@@ -9591,7 +9619,7 @@ h4.wp-block-heading::before {
 }
 
 /* All Articles */
-.all-articles {
+.all-articles-btn {
   display: flex;
   justify-content: center;
   font-family: "Inter", sans-serif;
@@ -9600,12 +9628,16 @@ h4.wp-block-heading::before {
 }
 
 @media (max-width: 768px) {
-.all-articles {
-  display: flex;
-  justify-content: center;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  margin-top: 1rem;
-  background-color: #f5f4ef;
+  .all-articles-btn {
+    display: flex;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin-top: 1rem;
+    background-color: #f5f4ef;
+  }
 }
+
+.separator {
+  border-top: 1px solid #c4c4c4;
 }

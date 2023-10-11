@@ -15,6 +15,7 @@ get_header();
 
 
 <div class="content-wrapper">
+	
     <div id="primary" class="content-area">
         <?php
         if ( in_category( 'yazilar' ) ) {
@@ -37,6 +38,8 @@ get_header();
 	}
 		?>
         <main id="main" class="site-main">
+		<hr class="separator" aria-hidden="true">
+
 
             <?php if ( have_posts() ) : ?>
 
@@ -44,6 +47,7 @@ get_header();
                 <?php
 					the_archive_title( '<h3 class="page-title">', '</h3>' );
 				?>
+
             </header><!-- .page-header -->
 
             <?php
@@ -72,6 +76,7 @@ get_header();
 		endif;
 		?>
         </main><!-- #main -->
+		
     </div><!-- #primary -->
 </div>
 
