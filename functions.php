@@ -231,6 +231,11 @@ function twentynineteen_excerpt_more( $link ) {
 	if ( is_admin() ) {
 		return $link;
 	}
+    
+    // Check if the post is inside the "right-content" context.
+    if ( has_category( 'Kitaplar' ) ) {
+        return ''; // No link for these posts.
+    }
 
 	$link = sprintf(
 		'<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
@@ -240,6 +245,7 @@ function twentynineteen_excerpt_more( $link ) {
 	);
 	return ' &hellip; ' . $link;
 }
+
 add_filter( 'excerpt_more', 'twentynineteen_excerpt_more' );
 
 function wpdocs_custom_excerpt_length( $length ) {

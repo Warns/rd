@@ -7107,7 +7107,7 @@ h1 {
     > .wp-block-group
     > .wp-block-group__inner-container
     > * {
-    margin: 10px 0;
+    margin: 32px 0;
   }
 }
 
@@ -9294,15 +9294,7 @@ menu .site-title a {
   margin-top: -5px;
 }
 
-.home .site-main article .entry-content p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  font-family: "Inter", sans-serif;
-}
-
-.home .site-main .entry-content {
+.home article:not(.right-content article) .entry-content p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -9319,7 +9311,21 @@ menu .site-title a {
 .home .entry {
   width: 80%;
   font-family: "inter", sans-serif;
+}
 
+.home .entry:not(.right-content .entry) .entry-content > * {
+  margin: 10px 0;
+}
+
+.home .entry-content .link-more:not(.right-content) {
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home .entry .entry-header {
+  font-size: 12px;
 }
 
 h3 {
