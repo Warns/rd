@@ -38,8 +38,6 @@ get_header();
 	}
 		?>
         <main id="main" class="site-main">
-		<hr class="separator" aria-hidden="true">
-
 
             <?php if ( have_posts() ) : ?>
 

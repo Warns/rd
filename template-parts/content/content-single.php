@@ -1,6 +1,6 @@
 <?php
 /**
- * #Icerik Sayfasi
+ * #Content Page
  * Template part for displaying posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -13,40 +13,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php
-// Check for specific category and output corresponding styles
-if ( in_category( 'kitaplar' ) ) {
-    echo '<style>
-    @media (max-width: 768px) {
-        .entry:first-of-type {
-            margin-top: 10px !important;
-        }
-    }
-    </style>';
-    echo '<style>
-    @media (min-width: 768px) {
-        .entry {
-            margin-top: 50px !important;
-        }
-    }
-    </style>';
-} elseif ( in_category( 'yazilar' ) ) {
-    echo '<style>
-    @media (max-width: 768px) {
-        .entry:first-of-type {
-            margin-top: 100px !important;
-        }
-    }
-    </style>';
-    echo '<style>
-    @media (min-width: 768px) {
-        .entry:first-of-type {
-            margin-top: 50px !important;
-        }
-    }
-    </style>';
-}
-?>
 
     <div class="entry-sidebar-mobile">
         <button class="menu-toggle tocCollapsibleButton_IbtT">

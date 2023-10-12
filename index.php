@@ -20,8 +20,6 @@ get_header();
 <div class="content-wrapper">
     <div id="primary" class="content-area">
         <h3 id="heading" class="heading-content">Son Yazilar</h3>
-        <main id="main" class="site-main">
-        </main><!-- .site-main -->
 
         <?php
         $args = array(
