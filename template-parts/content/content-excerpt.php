@@ -21,7 +21,7 @@ if ( in_category( 'kitaplar' ) ) {
         .site-main {
             display: flex;
             flex-direction: row;
-            margin-top: 100px;
+            margin-top: 95px;
             gap: 50px;
             border-right: none;
             flex-wrap: wrap;

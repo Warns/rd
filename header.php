@@ -30,7 +30,7 @@
 
         body.home .site-header {
             margin: 0 !important;
-            padding: 100px 0 0 0 !important;
+            padding: 95px 0 0 0 !important;
         }
     }
 

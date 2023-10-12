@@ -8927,13 +8927,13 @@ menu .site-title a {
 }
 
 .content-wrapper .content-area main .page-header {
-  margin: 3.5rem 0rem 0rem 0rem;
+  margin: 58px 0 0 0;
   padding-bottom: 8px;
 }
 
 @media (max-width: 768px) {
   .content-wrapper .content-area main .page-header {
-    margin: 3.5rem 0rem 0rem 0rem;
+    margin: 58px 0 0 0;
     border-bottom: 1px solid #c4c4c4;
     padding-bottom: 8px;
   }
@@ -9279,7 +9279,7 @@ menu .site-title a {
 
 @media (max-width: 768px) {
   .home .content-area .heading-content {
-    margin-top: 58px;
+    margin-top: 53px;
     font-size: 0.71111em;
     text-transform: uppercase;
     font-family: "Inter", sans-serif;
