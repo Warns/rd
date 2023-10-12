@@ -9052,6 +9052,7 @@ menu .site-title a {
 }
 
 .right-content article .entry-content p {
+  display: none;
   font-size: 0.71111em;
   line-height: 1.1;
   font-family: "Inter", sans-serif;
