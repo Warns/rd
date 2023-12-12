@@ -11,11 +11,12 @@ $transition-ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
 $transition-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 // Colors
-$c-primary: #FFFFFF;
-$c-black: #2D2D2D;
-$c-light: #8C8C8C;
+$c-black: #252525;
+$c-light: #5D5D5D;
+$c-silver: #8C8C8C;
 $c-border: #D1D1D1;
-$c-silver: #F1F1F1;
+$c-white: #F8F8F8;
+$c-snow: #FFFFFF;
 
 // Font Weights
 $fw-thin: 100;
@@ -112,3 +113,6 @@ $font-sets: (
     ),
   ),
 );
+
+
+$s-small: 24px;
