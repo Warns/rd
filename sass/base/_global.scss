@@ -1,0 +1,13 @@
+main{
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 94%;
+}
+
+h1{ @include font-set(h1); }
+h2{ @include font-set(h2); }
+h3{ @include font-set(h3); }
+
+body, p{ @include font-set(body); }
+
+small{ @include font-set(small); }

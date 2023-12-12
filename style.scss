@@ -1,0 +1,24 @@
+
+@import "sass/base/variables";
+@import "sass/base/mixins";
+@import "sass/base/typography";
+
+@import "sass/base/reset";
+
+@import "sass/base/global";
+@import "sass/layouts/header.scss";
+@import "sass/layouts/footer.scss";
+@import "sass/layouts/elements.scss";
+
+
+@media (max-width: $breakpoint-mobile-2) {
+    @import "sass/layouts/header-mobile.scss";
+    @import "sass/layouts/footer-mobile.scss";
+    @import "sass/layouts/elements-mobile.scss";
+}
+
+@media (min-width: $breakpoint-desktop-1) {
+    @import "sass/layouts/header-desktop.scss";
+    @import "sass/layouts/footer-desktop.scss";
+    @import "sass/layouts/elements-desktop.scss";
+}

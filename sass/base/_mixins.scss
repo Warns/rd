@@ -1,0 +1,34 @@
+
+// font mixin
+@mixin font-setup($device) {
+  $font-sets-device: map-get($font-sets, $device);
+  $pxToRem: map-get($px-to-rem, $device);
+
+  @each $set, $props in $font-sets-device {
+    @each $key, $val in $props {
+      @if ($key == "font-family") {
+        --ff-#{$set}: #{$val};
+      }
+
+      @if ($key == "font-size") {
+        --fs-#{$set}: #{to-fixed(divide($val, $pxToRem)) * 1rem};
+        --fs-px-#{$set}: #{$val * 1px};
+      }
+
+      @if ($key == "line-height") {
+        --lh-#{$set}: #{to-fixed(divide($val, map-get($props, font-size)))};
+      }
+
+      @if ($key == "font-weight") {
+        --fw-#{$set}: #{$val};
+      }
+    }
+  }
+}
+
+@mixin font-set($set) {
+    font-family: map-get(map-get(map-get($font-sets, mobile), $set), "font-family");
+    font-size: map-get(map-get(map-get($font-sets, mobile), $set), "font-size");
+    line-height: map-get(map-get(map-get($font-sets, mobile), $set), "line-height");
+    font-weight: map-get(map-get(map-get($font-sets, mobile), $set), "font-weight");
+}

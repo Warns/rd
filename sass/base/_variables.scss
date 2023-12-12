@@ -1,0 +1,114 @@
+
+// Breakpoints
+$breakpoint-mobile-1: 480px;
+$breakpoint-mobile-2: 1024px;
+$breakpoint-desktop-1: 1025px;
+$breakpoint-desktop-2: 1300px;
+
+// Transitions
+$transition-ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$transition-ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+$transition-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Colors
+$c-primary: #FFFFFF;
+$c-black: #2D2D2D;
+$c-light: #8C8C8C;
+$c-border: #D1D1D1;
+$c-silver: #F1F1F1;
+
+// Font Weights
+$fw-thin: 100;
+$fw-xlight: 200;
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-sbold: 600;
+$fw-bold: 700;
+$fw-xbold: 800;
+$fw-black: 900;
+$fw-xblack: 950;
+
+
+$sans: "DM Sans", sans-serif;
+$serif: "IBM Plex Serif", serif;
+
+// Font Sizes
+$font-sets: (
+  mobile: (
+    tiny: (
+      font-family: $sans,
+      font-size: 12px,
+      line-height: 1.3em,
+      font-weight: $fw-normal,
+    ),
+    small: (
+      font-family: $sans,
+      font-size: 15px,
+      line-height: 1.3em,
+      font-weight: $fw-normal,
+    ),
+    body: (
+      font-family: $serif,
+      font-size: 17px,
+      line-height: 1.3em,
+      font-weight: $fw-normal,
+    ),
+    h3: (
+      font-family: $sans,
+      font-size: 22px,
+      line-height: 1.2em,
+      font-weight: $fw-medium,
+    ),
+    h2: (
+      font-family: $sans,
+      font-size: 28px,
+      line-height: 1.2em,
+      font-weight: $fw-medium,
+    ),
+    h1: (
+      font-family: $sans,
+      font-size: 40px,
+      line-height: 1.1em,
+      font-weight: $fw-medium,
+    ),
+  ),
+  desktop: (
+    tiny: (
+      font-family: $sans,
+      font-size: 12px,
+      line-height: 1.3em,
+      font-weight: $fw-normal,
+    ),
+    small: (
+      font-family: $sans,
+      font-size: 15px,
+      line-height: 1.3em,
+      font-weight: $fw-normal,
+    ),
+    body: (
+      font-family: $serif,
+      font-size: 17px,
+      line-height: 1.3em,
+      font-weight: $fw-normal,
+    ),
+    h3: (
+      font-family: $sans,
+      font-size: 22px,
+      line-height: 1.2em,
+      font-weight: $fw-medium,
+    ),
+    h2: (
+      font-family: $sans,
+      font-size: 28px,
+      line-height: 1.2em,
+      font-weight: $fw-medium,
+    ),
+    h1: (
+      font-family: $sans,
+      font-size: 40px,
+      line-height: 1.1em,
+      font-weight: $fw-medium,
+    ),
+  ),
+);
