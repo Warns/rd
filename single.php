@@ -1,20 +1,30 @@
 <?php get_header(); ?>
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
 
-<?php
+    <?php 
 
-    $field = get_field_object('my_select');
-     foreach( $field as $value => $label ):
-        echo $label;
-    endforeach;
+    if( in_category('yazilar') ){
+        get_template_part( 'posts/single', 'article' );
+    }
+    else if( in_category('videolar') ){
+        get_template_part( 'posts/single', 'video' );
+    }
+    else if( in_category('kitaplar') ){
+        get_template_part( 'posts/single', 'book' );
+    }
+    else if( in_category('konular') ){
+        get_template_part( 'posts/single', 'topic' );
+    }
+    else{
+        get_template_part( 'posts/single', 'default' );
+    }
 
- ?>
+    ?>
 
 
 <?php if ( comments_open() && !post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
-<footer class="footer">
-<?php get_template_part( 'nav', 'below-single' ); ?>
-</footer>
+
+
 <?php get_footer(); ?>

@@ -2,11 +2,16 @@ main{
     margin: 0 auto;
     max-width: 1600px;
     width: 94%;
+    padding-top: 58px;
 }
 
 h1{ @include font-set(h1); }
 h2{ @include font-set(h2); }
 h3{ @include font-set(h3); }
+
+body{
+    background-color: $c-white;
+}
 
 body, p{ @include font-set(body); }
 
@@ -32,4 +37,36 @@ a{
     &:hover{
         text-decoration: underline;
     }
+}
+
+.icon{
+    width: 32px;
+    height: 32px;;
+
+    &.small{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.button{
+    display: inline-block;
+    background-color: $c-black;
+    color: $c-white;
+    @include font-set(tiny);
+    line-height: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+
+    &:hover{
+        text-decoration: none;
+        background-color: black;
+    }
+}
+
+.breadcrumb{
+    @include font-set(tiny);
+    padding: 24px 0;
+    
+    color: $c-silver;
 }

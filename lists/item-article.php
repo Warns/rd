@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="item-article" <?php //post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="item item-article" <?php //post_class(); ?>>
 
     <div class="left">
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
@@ -10,6 +10,9 @@
         </div>
         <div class="item-footer">
             <ul>
+                <li>
+                <?php echo 'Okuma süresi ' . do_shortcode('[rt_reading_time]') . ' dk'; ?>
+                </li>
                 <li>
                     <?php 
 

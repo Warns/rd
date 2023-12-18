@@ -38,24 +38,45 @@
     )
 ?>
 
-<?php foreach( $home_queries as $q ) : 
-        get_template_part( 'partials/section', 'head', $q );
+<section class="col-two">
+<section>
+    <?php
+        get_template_part('partials/section', 'head', array('title'=>'Kavramlar'));
 
-        $args = array(
-            'posts_per_page' => $q['number'],
-            'category_name' => $q['slug']
-        );
+        wp_tag_cloud(array(
+            'echo' => true,
+            'orderby' => 'count',
+            'order' => 'DESC',
+        ));
+    ?>
+</section>
 
-        $query = new WP_Query( $args );
-        while ( $query->have_posts() ):
-            $query->the_post();
+<?php foreach( $home_queries as $key => $q ) : ?>
+    <section>
+        <?php
+            get_template_part( 'partials/section', 'head', $q );
 
-            get_template_part( 'lists/item', $q['name'] );
-            
-            // the_title( '<h4></h4>' );
+            $args = array(
+                'posts_per_page' => $q['number'],
+                'category_name' => $q['slug']
+            );
 
-        endwhile;
-?>
+            $query = new WP_Query( $args );
+            while ( $query->have_posts() ):
+                $query->the_post();
+
+                get_template_part( 'lists/item', $q['name'] );
+
+            endwhile;
+
+            get_template_part( 'partials/section', 'foot', $q );
+        ?>
+    </section>
+        <?php
+            if ($key === array_key_first($home_queries)){
+                echo '</section>';
+            }
+        ?>
 <?php endforeach; ?>
 
 <?php get_footer(); ?>

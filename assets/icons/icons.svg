@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+<symbol id="search">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15 20C17.7614 20 20 17.7614 20 15C20 12.2386 17.7614 10 15 10C12.2386 10 10 12.2386 10 15C10 17.7614 12.2386 20 15 20ZM15 22C18.866 22 22 18.866 22 15C22 11.134 18.866 8 15 8C11.134 8 8 11.134 8 15C8 18.866 11.134 22 15 22Z" fill="#2D2D2D"/>
+    <path d="M19 20.4142L20.4142 19L24.6569 23.2426L23.2426 24.6568L19 20.4142Z" fill="#2D2D2D"/>
+</symbol>
+
+<symbol id="bookmark">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21.2L22 26V8H10V26L16 21.2ZM11.8 22.2549L16 18.8949L20.2 22.2549V9.8H11.8V22.2549Z" fill="#2D2D2D"/>
+</symbol>
+
+</svg>
