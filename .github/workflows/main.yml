@@ -1,14 +1,14 @@
 name: Deploy To DigitalOcean
 
-# on:
-#   push:
-#     branches: [main]
-#     paths-ignore:
-#       - '**/README.md'
-#       - '**/main.yml'
-#       - '**/release.yml'
-#       - '**/.gitignore'
-#   workflow_dispatch:
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**/README.md'
+      - '**/main.yml'
+      - '**/release.yml'
+      - '**/.gitignore'
+  workflow_dispatch:
 
 jobs:
   build:
