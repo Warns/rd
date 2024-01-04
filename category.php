@@ -1,18 +1,23 @@
 <?php get_header(); ?>
 
-
-    <main id="content">
     <?php 
 
     if( is_category('yazilar') ){
         get_template_part( 'lists/category', 'articles' );
+    }
+    else if( is_category('videolar') ){
+        get_template_part( 'lists/category', 'videos' );
+    }
+    else if( is_category('kitaplar') ){
+        get_template_part( 'lists/category', 'books' );
+    }
+    else if( is_category('konular') ){
+        get_template_part( 'lists/category', 'topics' );
     }
     else{
         get_template_part( 'lists/category', 'default' );
     }
 
     ?>
-    </main>
-
 
 <?php get_footer(); ?>

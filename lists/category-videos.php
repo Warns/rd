@@ -8,7 +8,7 @@
     ); 
 ?>
 
-<div class="list list-col2 articles">
+<div class="list list-col2 videos">
     <div class="list-left">
         <h3>Kavramlar</h3>
         <div class="cloud">
@@ -26,7 +26,9 @@
     </div>
     <div class="list-right">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'lists/item', 'article' ); ?>
+            <div class="box">
+                <?php get_template_part( 'lists/item', 'video' ); ?>
+            </div>
         <?php endwhile; endif; ?>
         <?php get_template_part( 'nav', 'below' ); ?>
     </div>

@@ -28,9 +28,10 @@
     </div>
 </div>
 
-    <section>
+    <section class="article">
+        <?php get_template_part( 'partials/section', 'head', array("title"=>"İlgili Yazılar") ); ?>
+        <div class="section-body">
         <?php
-            get_template_part( 'partials/section', 'head', array("title"=>"İlgili Yazılar") );
 
             $args = array(
                 'posts_per_page' => 3,
@@ -42,10 +43,13 @@
             while ( $query->have_posts() ):
                 $query->the_post();
                 
+                echo '<div class="box">';
                 get_template_part( 'lists/item', 'article' );
+                echo '</div>';
 
             endwhile;
         ?>
+        </div>
     </section>
 
 

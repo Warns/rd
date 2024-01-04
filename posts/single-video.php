@@ -26,9 +26,10 @@
     </div>
 </div>
 
-    <section>
+    <section class="video">
+        <?php get_template_part( 'partials/section', 'head', array("title"=>"İlgili Videolar") ); ?>
+        <div class="section-body">
         <?php
-            get_template_part( 'partials/section', 'head', array("title"=>"İlgili Videolar") );
 
             $args = array(
                 'posts_per_page' => 5,
@@ -40,10 +41,13 @@
             while ( $query->have_posts() ):
                 $query->the_post();
                 
+                echo '<div class="box">';
                 get_template_part( 'lists/item', 'video' );
+                echo '</div>';
 
             endwhile;
         ?>
+        </div>
     </section>
 
 

@@ -96,7 +96,6 @@ section.col-two{
 }
 
 .item-topic{
-    max-width: 480px;
     flex-direction: column;
 
     .right{
@@ -122,8 +121,6 @@ section.col-two{
 }
 
 .item-book{
-    max-width: 50%;
-
     .left{
         max-width: 100px;
         margin-right: 24px;
@@ -131,7 +128,6 @@ section.col-two{
 }
 
 .item-video{
-    max-width: 480px;
     flex-direction: column;
 
     .right{
@@ -154,7 +150,7 @@ section.col-two{
         }
     }
 
-    .home &:first-of-type{
+    .home section.video .section-body .box:first-of-type &{
         background-color: $c-black;
         padding: 20px;
         box-sizing: border-box;
@@ -387,5 +383,98 @@ section.col-two{
     }
     .right{
         max-width: 1000px;
+    }
+}
+
+.page-head{
+    border-bottom: 1px solid $c-border;
+    padding: 20px 0 40px 0;
+}
+
+.list{
+    &-col2{
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        column-gap: 30px;
+    }
+
+    &-col1{
+
+    }
+
+    .list-left{
+        margin-top: 60px;
+        h3{
+            margin-bottom: 20px;
+        }
+        .cloud{
+            display: flex;
+            flex-direction: column;
+
+            a{
+                @include font-set(body);
+                margin-bottom: 4px;
+            }
+        }
+    }
+    .list-right{
+        margin-top: 40px;
+    }
+
+    &.topics .list-right{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+        grid-gap: 60px 2%;
+    }
+    &.books .list-right{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-gap: 40px 5%;
+        .box{
+            padding-bottom: 30px;
+            border-bottom: 1px solid $c-border;
+        }
+    }
+    &.videos .list-right{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+        grid-gap: 40px 2%;
+        .box{
+            padding-bottom: 30px;
+        }
+    }
+}
+
+section{
+    &.topic .section-body{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+        grid-gap: 60px 2%;
+    }
+    &.book .section-body{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-gap: 40px 5%;
+    }
+    &.article .section-body{
+        .box{
+            border-bottom: 1px solid $c-border;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    &.video .section-body{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        grid-gap: 40px 1%;        
+
+        .home &{
+            grid-template-columns: 36% repeat(auto-fill, minmax(16%, 1fr));
+            .box:first-child{
+                grid-row: span 2;
+                margin-right: 6%;
+            }
+        }
     }
 }

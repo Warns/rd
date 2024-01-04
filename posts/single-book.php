@@ -26,24 +26,28 @@
     </div>
 </div>
 
-<section>
-        <?php
-            get_template_part( 'partials/section', 'head', array("title"=>"Diğer Kitaplar") );
+<section class="book">
+    <?php get_template_part( 'partials/section', 'head', array("title"=>"Diğer Kitaplar") ); ?>
+    <div class="section-body">
+    <?php
 
-            $args = array(
-                'posts_per_page' => 4,
-                'category_name' => 'kitaplar',
-                'post__not_in' => array($current)
-            );
+        $args = array(
+            'posts_per_page' => 4,
+            'category_name' => 'kitaplar',
+            'post__not_in' => array($current)
+        );
 
-            $query = new WP_Query( $args );
-            while ( $query->have_posts() ):
-                $query->the_post();
-                
-                get_template_part( 'lists/item', 'book' );
+        $query = new WP_Query( $args );
+        while ( $query->have_posts() ):
+            $query->the_post();
+            
+            echo '<div class="box">';
+            get_template_part( 'lists/item', 'book' );
+            echo '</div>';
 
-            endwhile;
-        ?>
+        endwhile;
+    ?>
+    </div>
 </section>
 
 

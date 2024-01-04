@@ -45,9 +45,10 @@
     </div>
 </div>
 
-<section>
+<section class="topic">
+    <?php get_template_part( 'partials/section', 'head', array("title"=>"Diğer Konular") ); ?>
+    <div class="section-body">
         <?php
-            get_template_part( 'partials/section', 'head', array("title"=>"Diğer Konular") );
 
             $args = array(
                 'posts_per_page' => 4,
@@ -63,6 +64,7 @@
 
             endwhile;
         ?>
+    </div>
 </section>
 
 

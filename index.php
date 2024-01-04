@@ -47,30 +47,36 @@
             'echo' => true,
             'orderby' => 'count',
             'order' => 'DESC',
+            'smallest'   => 17,
+            'largest' => 17,
+            'unit' => 'px',
+            'separator' => ' / '
         ));
     ?>
 </section>
 
 <?php foreach( $home_queries as $key => $q ) : ?>
-    <section>
-        <?php
-            get_template_part( 'partials/section', 'head', $q );
+    <section class="<?php echo $q['name']; ?>">
+        <?php get_template_part( 'partials/section', 'head', $q ); ?>
+        <div class="section-body">
+            <?php
+                $args = array(
+                    'posts_per_page' => $q['number'],
+                    'category_name' => $q['slug']
+                );
 
-            $args = array(
-                'posts_per_page' => $q['number'],
-                'category_name' => $q['slug']
-            );
+                $query = new WP_Query( $args );
+                while ( $query->have_posts() ):
+                    $query->the_post();
+                    
+                    echo '<div class="box">';
+                    get_template_part( 'lists/item', $q['name'] );
+                    echo '</div>';
 
-            $query = new WP_Query( $args );
-            while ( $query->have_posts() ):
-                $query->the_post();
-
-                get_template_part( 'lists/item', $q['name'] );
-
-            endwhile;
-
-            get_template_part( 'partials/section', 'foot', $q );
-        ?>
+                endwhile;
+            ?>
+        </div>
+        <?php get_template_part( 'partials/section', 'foot', $q ); ?>
     </section>
         <?php
             if ($key === array_key_first($home_queries)){
