@@ -13,6 +13,7 @@
                 <li>
                 <?php echo 'Okuma süresi ' . do_shortcode('[rt_reading_time]') . ' dk'; ?>
                 </li>
+                <!--
                 <li>
                     <?php 
 
@@ -23,7 +24,9 @@
                 
                     ?>
                 </li>
-                <li><?php the_time('j F Y'); ?></li>
+                -->
+                <li>
+                    <?php echo my_custom_date(get_the_time('j F Y')); ?></li>
             </ul>
         </div>
     </div>

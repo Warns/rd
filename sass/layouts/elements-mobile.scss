@@ -1,7 +1,98 @@
 .item-article{
+    padding: 20px 0 10px 0;
     .right{
         p{
             display: none;
         }
     }
+}
+.item-book{
+    .left{
+        max-width: 80px;
+    }
+}
+
+
+section.col-two{
+    flex-direction: column-reverse;
+}
+
+section.book .section-body{
+    grid-template-columns: 1fr;
+}
+
+section.video{
+    .section-body{
+        display: flex;
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+
+        position:relative;
+        transform: translateX(-4%);
+        width: 100vw;
+        padding: 0 4% 20px;
+        box-sizing: border-box;
+        gap: 16px;
+
+        .box{
+            min-width: 260px;
+        }
+    }
+}
+
+section{
+    section:first-child{
+        display: none;
+    }
+    .article{
+        .section-head{
+            display: none;
+        }
+        .section-body{
+            .box{
+                &:first-child{
+                    border-bottom: none;
+                    article{
+                        flex-direction: column-reverse;
+                        
+                        .left{
+                            position:relative;
+                            transform: translateX(-4%);
+                            width: 100vw;
+                            max-width: none;
+                            margin: 20px 0 10px;
+                        }
+                        .right{
+                            h3{
+                                @include font-set(h1);
+                            }
+                            p{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                article{
+                    .left{
+                        width: 90px;
+                        margin-right: 16px;
+                    }
+                    .right{
+                        p{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-foot{
+    padding: 20px 0 0 0;
+    text-align: center;
 }

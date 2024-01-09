@@ -1,0 +1,42 @@
+
+.item-video{
+    .home section.video .section-body .box:first-of-type &{
+        background-color: $c-black;
+        padding: 20px;
+        box-sizing: border-box;
+        color: $c-white;
+        height: 680px;
+
+        .right{
+            .item-footer{
+                border-bottom-color: $c-light;
+                li{ color: $c-silver; }
+            }
+
+            .item-body{
+                margin-top: 24px;
+                display: flex;
+                flex-direction: column;
+                .excerpt{
+                    display: block;
+                    flex-grow: 1;
+                }
+                a{
+                    color: $c-white;
+                }
+            }
+        }
+    }
+}
+
+section{
+    &.video .section-body{
+        .home &{
+            grid-template-columns: 36% repeat(auto-fill, minmax(16%, 1fr));
+            .box:first-child{
+                grid-row: span 2;
+                margin-right: 6%;
+            }
+        }
+    }
+}

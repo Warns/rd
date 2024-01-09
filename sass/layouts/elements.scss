@@ -149,34 +149,6 @@ section.col-two{
             }
         }
     }
-
-    .home section.video .section-body .box:first-of-type &{
-        background-color: $c-black;
-        padding: 20px;
-        box-sizing: border-box;
-        color: $c-white;
-        height: 680px;
-
-        .right{
-            .item-footer{
-                border-bottom-color: $c-light;
-                li{ color: $c-silver; }
-            }
-
-            .item-body{
-                margin-top: 24px;
-                display: flex;
-                flex-direction: column;
-                .excerpt{
-                    display: block;
-                    flex-grow: 1;
-                }
-                a{
-                    color: $c-white;
-                }
-            }
-        }
-    }
 }
 
 .post{
@@ -467,14 +439,20 @@ section{
     &.video .section-body{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-        grid-gap: 40px 1%;        
+        grid-gap: 40px 1%;
+    }
+}
 
-        .home &{
-            grid-template-columns: 36% repeat(auto-fill, minmax(16%, 1fr));
-            .box:first-child{
-                grid-row: span 2;
-                margin-right: 6%;
-            }
-        }
+.page-content{
+    max-width: 1000px;
+    margin: 0 auto;
+
+    img{
+        margin: 20px 0;
+        max-width: 100%;
+        height: auto;
+    }
+    .page-body{
+        max-width: 740px;
     }
 }

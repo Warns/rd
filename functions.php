@@ -164,3 +164,30 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+
+//ALAA
+
+function my_custom_date($date){
+    $new_date = getdate(strtotime($date));
+
+    // Array that holds customized month's name
+    $my_months=[
+        'January'   => 'Ocak',
+        'February'  => 'Şubat',
+        'March'     => 'Mart',
+        'April'     => 'Nisan',
+        'May'       => 'Mayıs',
+        'June'      => 'Haziran',
+        'July'      => 'Temmuz',
+        'August'    => 'Ağustos',
+        'September' => 'Eylül',
+        'October'   => 'Ekim',
+        'November'  => 'Kasım',
+        'December'  => 'Aralık',
+    ];
+
+    $new_date['month']= $my_months[$new_date['month']];
+    return $new_date['month'].' '.$new_date['mday']. ', '. $new_date['year'];
+
+}
