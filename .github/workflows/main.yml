@@ -1,4 +1,4 @@
-name: Deploy To DigitalOcean
+name: Deploy to AWS Lightsail
 
 on:
   push:
@@ -24,11 +24,12 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
-      - name: Deploy to DO
+      - name: Deploy to AWS Lightsail
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
-          rsync -r * root@$SERVER_IP:/var/www/html/wp-content/themes/rd
+          rsync -r * $SSH_USER@$SERVER_IP:/home/bitnami/stack/wordpress/wp-content/themes/rd
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
+          SSH_USER: ${{ secrets.SSH_USER }} # Replace with your actual SSH username
