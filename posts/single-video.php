@@ -5,7 +5,7 @@
     ?>
     <div class="left">
         <div class="embed-video">
-            <iframe src="<?php echo get_field('youtube_url'); ?>" frameborder=0 allowfullscreen></iframe>
+            <iframe id="youtube-video" src="<?php echo get_field('youtube_url').'?enablejsapi=1'; ?>" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
     <div class="right">
@@ -49,5 +49,39 @@
         ?>
         </div>
     </section>
+
+    <!-- Video Timestamp Navigation -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var timestamps = document.querySelectorAll('.post-body a.timestamp');
+
+        timestamps.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var time = convertToSeconds(e.target.getAttribute('data-time'));
+                var iframe = document.getElementById('youtube-video');
+                var videoSrc = iframe.src.split('?')[0];
+
+                // Seek to the specific time
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    "event": "command",
+                    "func": "seekTo",
+                    "args": [time, true]
+                }), videoSrc);
+
+                // Start playing the video
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    "event": "command",
+                    "func": "playVideo"
+                }), videoSrc);
+            });
+        });
+    });
+
+    function convertToSeconds(time) {
+        var parts = time.split(':');
+        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+    }
+</script>
 
 
