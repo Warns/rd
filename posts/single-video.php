@@ -49,27 +49,3 @@
         ?>
         </div>
     </section>
-
-    <!-- Video Timestamp Navigation -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Select all timestamp links
-        var timestamps = document.querySelectorAll('.post-body a.timestamp');
-
-        timestamps.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var time = e.target.getAttribute('data-time');
-                var iframe = document.getElementById('youtube-video');
-                var videoSrc = iframe.src.split('?')[0];
-                iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[' + time + ', true]}', videoSrc);
-            });
-        });
-    });
-
-    // Helper function to convert time format to seconds
-    function convertToSeconds(time) {
-        var parts = time.split(':');
-        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-    }
-</script>

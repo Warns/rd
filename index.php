@@ -57,7 +57,7 @@
 
 <?php foreach( $home_queries as $key => $q ) : ?>
     <section class="<?php echo $q['name']; ?>">
-        <?php get_template_part( 'partials/section', 'head', $q ); ?>
+        <?php get_template_part( 'partials/section', 'head', $q); ?>
         <div class="section-body">
             <?php
                 $args = array(

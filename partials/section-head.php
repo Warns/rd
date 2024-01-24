@@ -1,8 +1,7 @@
 <div class="section-head">
-    <h2>
-        <?php 
-            if( $args['title'] )
-                echo $args['title'];
-        ?>
+    <?php if( $args['title'] ) : ?>
+    <h2 id="<?php echo $args['slug']; ?>">
+        <?php echo $args['title']; ?>
     </h2>
+    <?php endif; ?>
 </div>

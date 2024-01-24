@@ -34,7 +34,7 @@ section.video{
         position:relative;
         transform: translateX(-4%);
         width: 100vw;
-        padding: 0 4% 20px;
+        padding: 0 4%;
         box-sizing: border-box;
         gap: 16px;
 
@@ -50,7 +50,9 @@ section{
     }
     .article{
         .section-head{
-            display: none;
+            margin-top: 0;
+            padding: 0 0 30px 0;
+            opacity: 0;
         }
         .section-body{
             .box{
@@ -92,7 +94,89 @@ section{
     }
 }
 
+.page-head{
+    padding: 10px 0 20px 0;
+}
+
+.section-head{
+    margin-top: 40px;
+}
+
 .section-foot{
-    padding: 20px 0 0 0;
+    padding: 30px 0 0 0;
     text-align: center;
+}
+
+.list-col2{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.list{
+    .list-left{
+        .cloud{
+            display: block;
+            a{
+                display: inline-block;
+                margin-right: 8px;
+            }
+        }
+    }
+    .list-right{
+        margin-top: 20px;
+    }
+
+    &.books{
+        .list-right{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 20px 5%;
+
+            .box{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+.category{
+    .item-article{
+        flex-direction: column;
+        padding: 0 0 40px 0;
+        .left{
+            width: 100%;
+            max-width: none;
+            margin: 0;
+        }
+    }
+}
+
+.single{
+    .post-book{
+        flex-direction: column;
+        .left{
+            padding: 0 0 30px 0;
+            img{
+                max-width: 120px;
+            }
+        }
+    }
+    .post-topic{
+        flex-direction: column;
+        .left{
+            padding: 0 0 30px 0;
+        }
+
+        &>.right{
+            .post-body{
+                .collection{
+                    padding: 20px 0;
+
+                    &>span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }

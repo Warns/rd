@@ -10,7 +10,7 @@
         <?php wp_body_open(); ?>
         <div id="wrapper" class="hfeed">
 
-            <header id="header" role="banner">
+            <header id="header" role="banner" class="">
             <div id="branding">
                 <div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                     <?php
@@ -42,11 +42,26 @@
                 </form>
             </div>
             <div id="favorites">
-                <a href="#"><small>Listem</small></a>
-                <span>3</span>
-                <svg class="icon">
-                    <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#bookmark" width="32" height="32" />
+                <a href="#">
+                    <small>Listem</small>
+                    <span>3</span>
+                    <svg class="icon">
+                        <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#bookmark" width="32" height="32" />
+                    </svg>
+                </a>
+            </div>
+            <button class="menu-trigger">
+                <svg class="burger" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.25 6.75H18.75V8.25H5.25V6.75Z" fill="#2D2D2D"/>
+                    <path d="M5.25 11.25H16.725V12.75H5.25V11.25Z" fill="#2D2D2D"/>
+                    <path d="M5.25 15.75H18.75V17.25H5.25V15.75Z" fill="#2D2D2D"/>
                 </svg>
+                <svg class="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.6967 7.7574L7.75736 6.69674L17.3033 16.2427L16.2426 17.3033L6.6967 7.7574Z" fill="#2D2D2D"/>
+                    <path d="M16.2427 6.69669L17.3033 7.75735L7.7574 17.3033L6.69674 16.2426L16.2427 6.69669Z" fill="#2D2D2D"/>
+                </svg>
+            </button>
+            <div id="tabs">
             </div>
             </header>
 
