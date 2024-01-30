@@ -55,6 +55,12 @@ $font-sets: (
       line-height: 1.4em,
       font-weight: $fw-normal,
     ),
+    large: (
+      font-family: $serif,
+      font-size: 18px,
+      line-height: 1.7em,
+      font-weight: $fw-normal,
+    ),
     h4: (
       font-family: $sans,
       font-size: 18px,
@@ -97,6 +103,12 @@ $font-sets: (
       font-family: $serif,
       font-size: 17px,
       line-height: 1.4em,
+      font-weight: $fw-normal,
+    ),
+    large: (
+      font-family: $serif,
+      font-size: 20px,
+      line-height: 1.7em,
       font-weight: $fw-normal,
     ),
     h4: (

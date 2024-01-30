@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+<?php if($post->post_name == "kavramlar") : ?>
+
+    <?php get_template_part( 'pages/page', 'terms' ); ?>
+
+<?php else: ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <div class="page-content" itemprop="mainContentOfPage">
@@ -24,6 +31,8 @@
 </article>
 
 <?php if ( comments_open() && !post_password_required() ) { comments_template( '', true ); } ?>
+
+<?php endif; ?>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

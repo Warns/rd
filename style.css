@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap");
+@use "sass:map";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -639,6 +640,10 @@ footer .inside #copyright a {
   text-align: right;
 }
 
+.section-foot.left {
+  text-align: left;
+}
+
 section.col-two {
   display: flex;
   flex-direction: row-reverse;
@@ -832,6 +837,13 @@ section.col-two .section-head {
   max-width: 740px;
 }
 
+.post > .right .post-body p {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 18px;
+  line-height: 1.7em;
+  font-weight: 400;
+}
+
 .post > .right .post-foot {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
@@ -914,9 +926,23 @@ section.col-two .section-head {
   margin-top: 40px;
 }
 
+.post-topic > .right .post-head p {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 18px;
+  line-height: 1.7em;
+  font-weight: 400;
+}
+
 .post-topic > .right .post-body {
   max-width: none;
   margin-top: 20px;
+}
+
+.post-topic > .right .post-body p {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 16px;
+  line-height: 1.4em;
+  font-weight: 400;
 }
 
 .post-topic > .right .post-body .collection {
@@ -1118,6 +1144,16 @@ section.video .section-body {
 
 .page-content .page-body {
   max-width: 740px;
+}
+
+.page-terms .page-body {
+  padding: 40px 0;
+  column-count: 3;
+  column-gap: 10%;
+}
+
+.page-terms .page-body a {
+  display: block;
 }
 
 @media (max-width: 1024px) {

@@ -2,7 +2,11 @@
 
     <?php 
 
-    if( is_category('yazilar') ){
+    $cat_name = single_term_title('',false);
+    $current = get_cat_ID($cat_name);
+    $articles = get_cat_ID('Yazılar');
+
+    if( is_category('yazilar') || cat_is_ancestor_of($articles, $current)){
         get_template_part( 'lists/category', 'articles' );
     }
     else if( is_category('videolar') ){

@@ -50,9 +50,13 @@
             'smallest'   => 17,
             'largest' => 17,
             'unit' => 'px',
-            'separator' => ' / '
+            'separator' => ' / ',
+            'number' => '15'
         ));
     ?>
+    <div class="section-foot left">
+        <a class="button" href="<?php echo home_url('/kavramlar') ?>">Tüm Kavramlar</a>
+    </div>
 </section>
 
 <?php foreach( $home_queries as $key => $q ) : ?>

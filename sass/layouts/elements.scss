@@ -8,6 +8,10 @@
 .section-foot{
     padding: 40px 0 0 0;
     text-align: right;
+
+    &.left{
+        text-align: left;
+    }
 }
 
 section.col-two{
@@ -192,6 +196,10 @@ section.col-two{
         .post-body{
             margin: 0 auto;
             max-width: 740px;
+
+            p{
+                @include font-set(large);
+            }
         }
         .post-foot{
             @include font-set(small);
@@ -263,10 +271,17 @@ section.col-two{
                 border-top: 1px solid $c-border;
                 margin-top: 40px;
             }
+            p{
+                @include font-set(large);
+            }
         }
         .post-body{
             max-width: none;
             margin-top: 20px;
+
+            p{
+                @include font-set(body);
+            }
 
             .collection{
                 position: relative;
@@ -454,5 +469,16 @@ section{
     }
     .page-body{
         max-width: 740px;
+    }
+}
+
+.page-terms{
+    .page-body{
+        padding: 40px 0;
+        column-count: 3;
+        column-gap: 10%;
+        a{
+            display: block;
+        }
     }
 }

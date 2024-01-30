@@ -28,16 +28,10 @@
                 <?php get_search_form(); ?>
                 <form class="aya-form">
                     <input type="search" list="chapters" name="Sureler" id="chapter" placeholder="Sure">
-                    <input type="search" list="verses" name="Ayet" id="verse" placeholder="Ayet">
                     <datalist id="chapters">
                         <option value="1. Fatiha">
                         <option value="2. Baqara">
                         <option value="3. Al-imran">
-                    </datalist>
-                    <datalist id="verses">
-                        <option value="1">
-                        <option value="2">
-                        <option value="3">
                     </datalist>
                 </form>
             </div>
@@ -74,7 +68,16 @@
                 echo '<a href="'.home_url().'" rel="”nofollow”">Home</a>';
                 if (is_category() || is_single()){
                     echo '&nbsp;&nbsp;/&nbsp;&nbsp;';
-                    the_category (' • ');
+
+                    // $cats = get_the_category();
+                    // if($cats[0]->category_parent){
+                    //     echo category_href($cats[0]->category_parent);
+                    //     echo '&nbsp;&nbsp;/&nbsp;&nbsp;';
+                    // }
+                    // echo category_href($cats[0]->term_id);
+
+                    the_category ('&nbsp;&nbsp;/&nbsp;&nbsp;', 'multiple');
+
                         if (is_single()) {
                             echo '&nbsp;&nbsp;/&nbsp;&nbsp;';
                             the_title();

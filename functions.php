@@ -191,3 +191,10 @@ function my_custom_date($date){
     return $new_date['month'].' '.$new_date['mday']. ', '. $new_date['year'];
 
 }
+
+function category_href($id){
+    $url = get_category_link($id);
+    $title = get_cat_name($id);
+
+    return '<a href="'.$url.'">'.$title.'</a>';
+}
