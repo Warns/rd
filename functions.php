@@ -167,6 +167,16 @@ return $count;
 
 
 //ALAA
+function aya_shortcode_function( $attr ) {
+
+	$aya = $attr['n'];
+
+	if( $aya ){
+		$output = '<div class="aya" data-number="'.$aya.'">'.$aya.'</div>';
+		return $output;
+	}
+}
+add_shortcode('aya', 'aya_shortcode_function');
 
 function my_custom_date($date){
     $new_date = getdate(strtotime($date));

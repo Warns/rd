@@ -30,9 +30,10 @@ $fw-xbold: 800;
 $fw-black: 900;
 $fw-xblack: 950;
 
-
+// Font Families
 $sans: "DM Sans", sans-serif;
 $serif: "IBM Plex Serif", serif;
+$arabic: "Lateef", serif;
 
 // Font Sizes
 $font-sets: (
@@ -58,7 +59,13 @@ $font-sets: (
     large: (
       font-family: $serif,
       font-size: 18px,
-      line-height: 1.7em,
+      line-height: 1.8em,
+      font-weight: $fw-normal,
+    ),
+    quran: (
+      font-family: $arabic,
+      font-size: 20px,
+      line-height: 1.8em,
       font-weight: $fw-normal,
     ),
     h4: (
@@ -108,7 +115,13 @@ $font-sets: (
     large: (
       font-family: $serif,
       font-size: 20px,
-      line-height: 1.7em,
+      line-height: 1.8em,
+      font-weight: $fw-normal,
+    ),
+    quran: (
+      font-family: $arabic,
+      font-size: 22px,
+      line-height: 1.8em,
       font-weight: $fw-normal,
     ),
     h4: (

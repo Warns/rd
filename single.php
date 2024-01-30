@@ -4,7 +4,9 @@
 
     <?php 
 
-    if( in_category('yazilar') ){
+    $cats = get_the_category();
+
+    if( in_category('yazilar') || $cats[0]->parent == 1){
         get_template_part( 'posts/single', 'article' );
     }
     else if( in_category('videolar') ){

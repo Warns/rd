@@ -26,7 +26,13 @@
                 </li>
                 -->
                 <li>
-                    <?php echo my_custom_date(get_the_time('j F Y')); ?></li>
+                    <?php echo my_custom_date(get_the_time('j F Y')); ?>
+                </li>
+                <li>
+                    <?php 
+                        the_category(", ");
+                    ?>
+                </li>
             </ul>
         </div>
     </div>

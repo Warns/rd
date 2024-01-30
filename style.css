@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=Amiri&display=swap");
 @use "sass:map";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -838,9 +838,10 @@ section.col-two .section-head {
 }
 
 .post > .right .post-body p {
+  padding: 10px 0;
   font-family: "IBM Plex Serif", serif;
   font-size: 18px;
-  line-height: 1.7em;
+  line-height: 1.8em;
   font-weight: 400;
 }
 
@@ -929,7 +930,7 @@ section.col-two .section-head {
 .post-topic > .right .post-head p {
   font-family: "IBM Plex Serif", serif;
   font-size: 18px;
-  line-height: 1.7em;
+  line-height: 1.8em;
   font-weight: 400;
 }
 
@@ -943,6 +944,7 @@ section.col-two .section-head {
   font-size: 16px;
   line-height: 1.4em;
   font-weight: 400;
+  padding: 0;
 }
 
 .post-topic > .right .post-body .collection {
@@ -1162,6 +1164,43 @@ section.video .section-body {
 
 .page-terms .page-body h3:first-child {
   margin-top: 0;
+}
+
+.aya {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.aya div {
+  background-color: #D1D1D1;
+  padding: 16px;
+  font-family: "Lateef", serif;
+  font-size: 20px;
+  line-height: 1.8em;
+  font-weight: 400;
+  text-align: right;
+}
+
+.aya ul {
+  background-color: #8C8C8C;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  display: flex;
+}
+
+.aya ul li {
+  margin: 0 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-weight: 400;
+  color: #F8F8F8;
+}
+
+.aya ul li:last-child {
+  flex: 1;
+  text-align: right;
 }
 
 @media (max-width: 1024px) {

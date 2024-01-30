@@ -16,6 +16,7 @@
                     </li>
                     <li><?php the_time('j F Y'); ?></li>
                     <li>Son güncelleme <?php echo get_the_modified_date('j F Y'); ?></li>
+                    <li><?php the_category(", "); ?></li>
                 </ul>
             </div>
         </div>
