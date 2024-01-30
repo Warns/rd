@@ -10,6 +10,11 @@
         </div>
         <div class="item-footer">
             <ul>
+                <li class="zero">
+                    <svg class="icon" viewBox="0 0 32 32">
+                        <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#topic" />
+                    </svg>
+                </li>
                 <li>
                     <?php 
 

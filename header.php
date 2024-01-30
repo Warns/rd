@@ -39,8 +39,8 @@
                 <a href="#">
                     <small>Listem</small>
                     <span>3</span>
-                    <svg class="icon">
-                        <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#bookmark" width="32" height="32" />
+                    <svg class="icon large" viewBox="0 0 32 32">
+                        <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#bookmark" />
                     </svg>
                 </a>
             </div>

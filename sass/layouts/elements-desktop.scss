@@ -11,6 +11,10 @@
             .item-footer{
                 border-bottom-color: $c-light;
                 li{ color: $c-silver; }
+
+                svg{
+                    fill: $c-white;
+                }
             }
 
             .item-body{

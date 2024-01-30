@@ -11,7 +11,20 @@
         <div class="item-footer">
             <ul>
                 <li>
-                    read
+                    <a class="button light dir" href="">
+                        <svg class="icon" viewBox="0 0 32 32">
+                            <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#read" />
+                        </svg>
+                        Online oku
+                    </a>
+                </li>
+                <li>
+                    <a class="button light dir" href="">
+                        <svg class="icon" viewBox="0 0 32 32">
+                            <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#download" />
+                        </svg>
+                        PDF indir
+                    </a>
                 </li>
             </ul>
         </div>

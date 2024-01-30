@@ -58,21 +58,25 @@ section.col-two{
         .item-footer ul{
             
             list-style: none;
-            padding: 8px 0;
+            padding: 8px 0 12px 0;
             margin: 0;
-
-            display: flex;
 
             li{
                 list-style: none;
                 padding: 0;
                 margin: 0;
                 margin-right: $s-small;
+                display: inline-block;
+                vertical-align: middle;
+
+                &.zero{
+                    font-size: 0;
+                    margin-right: 4px;
+                }
             }
 
             li, a{
                 @include font-set(tiny);
-                color: $c-light;
             }
         }
     }

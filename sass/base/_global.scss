@@ -40,12 +40,12 @@ a{
 }
 
 .icon{
-    width: 32px;
-    height: 32px;;
+    width: 24px;
+    height: 24px;;
 
-    &.small{
-        width: 24px;
-        height: 24px;
+    &.large{
+        width: 32px;
+        height: 32px;
     }
 }
 
@@ -57,10 +57,36 @@ a{
     line-height: 16px;
     padding: 10px 20px;
     border-radius: 4px;
+    position: relative;
+
+    &.light{
+        background-color: $c-border;
+        color: $c-ink;
+
+        &:hover{
+            background-color: $c-silver;
+            color: $c-snow;
+        }
+    }
 
     &:hover{
         text-decoration: none;
         background-color: black;
+    }
+
+    &.dir{
+        svg{
+            display: block;
+            content: "";
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        padding-left: 38px;
     }
 }
 

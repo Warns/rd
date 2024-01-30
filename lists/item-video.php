@@ -15,8 +15,13 @@
         </div>
         <div class="item-footer">
             <ul>
+                <li class="zero">
+                    <svg class="icon" viewBox="0 0 32 32">
+                        <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#play" />
+                    </svg>
+                </li>
                 <li>
-                <?php echo get_field('duration'); ?>
+                    <?php echo get_field('duration'); ?>
                 </li>
                 <li><?php the_time('j F Y'); ?></li>
             </ul>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=Amiri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=Lateef&display=swap");
 @use "sass:map";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -413,13 +413,13 @@ a:hover {
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
-}
-
-.icon.small {
   width: 24px;
   height: 24px;
+}
+
+.icon.large {
+  width: 32px;
+  height: 32px;
 }
 
 .button {
@@ -433,11 +433,37 @@ a:hover {
   line-height: 16px;
   padding: 10px 20px;
   border-radius: 4px;
+  position: relative;
+}
+
+.button.light {
+  background-color: #D1D1D1;
+  color: #000000;
+}
+
+.button.light:hover {
+  background-color: #8C8C8C;
+  color: #FFFFFF;
 }
 
 .button:hover {
   text-decoration: none;
   background-color: black;
+}
+
+.button.dir {
+  padding-left: 38px;
+}
+
+.button.dir svg {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .breadcrumb {
@@ -687,9 +713,8 @@ section.col-two .section-head {
 
 .item .right .item-footer ul {
   list-style: none;
-  padding: 8px 0;
+  padding: 8px 0 12px 0;
   margin: 0;
-  display: flex;
 }
 
 .item .right .item-footer ul li {
@@ -697,6 +722,13 @@ section.col-two .section-head {
   padding: 0;
   margin: 0;
   margin-right: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.item .right .item-footer ul li.zero {
+  font-size: 0;
+  margin-right: 4px;
 }
 
 .item .right .item-footer ul li, .item .right .item-footer ul a {
@@ -704,7 +736,6 @@ section.col-two .section-head {
   font-size: 12px;
   line-height: 1.3em;
   font-weight: 400;
-  color: #5D5D5D;
 }
 
 .item-article {
@@ -1455,6 +1486,9 @@ section.video .section-body {
   }
   .home section.video .section-body .box:first-of-type .item-video .right .item-footer li {
     color: #8C8C8C;
+  }
+  .home section.video .section-body .box:first-of-type .item-video .right .item-footer svg {
+    fill: #F8F8F8;
   }
   .home section.video .section-body .box:first-of-type .item-video .right .item-body {
     margin-top: 24px;
