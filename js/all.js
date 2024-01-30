@@ -88,13 +88,14 @@ var app = {
             if(container){
                 let terms = container.querySelectorAll("a");
                 let last = "";
-                for(let i=terms.length-1; i>-1; --i){
+                for(let i=0; i<terms.length; ++i){
                     let letter = terms[i].innerHTML.charAt(0);
+                    
                     if(letter != last){
                         last = letter;
                         let span = document.createElement("h3");
                             span.innerText = letter;
-                        container.insertBefore(span, container.childNodes[i]);
+                        container.insertBefore(span, terms[i]);
                     }
                 }
             }
