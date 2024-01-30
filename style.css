@@ -1148,12 +1148,20 @@ section.video .section-body {
 
 .page-terms .page-body {
   padding: 40px 0;
-  column-count: 3;
+  column-count: 4;
   column-gap: 10%;
 }
 
 .page-terms .page-body a {
   display: block;
+}
+
+.page-terms .page-body h3 {
+  margin-top: 20px;
+}
+
+.page-terms .page-body h3:first-child {
+  margin-top: 0;
 }
 
 @media (max-width: 1024px) {

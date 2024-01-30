@@ -475,10 +475,17 @@ section{
 .page-terms{
     .page-body{
         padding: 40px 0;
-        column-count: 3;
+        column-count: 4;
         column-gap: 10%;
         a{
             display: block;
+        }
+        h3{
+            margin-top: 20px;
+
+            &:first-child{
+                margin-top: 0;
+            }
         }
     }
 }
