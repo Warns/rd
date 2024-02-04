@@ -255,12 +255,12 @@ const cookies = {
     selectElement: function(el, set){
         if(set){
             el.innerHTML = `<svg class="icon" viewBox="0 0 32 32">
-                                <use href="/ramazandemir/wp-content/themes/rd/assets/icons/icons.svg#bookmark-full" />
+                                <use href="/wp-content/themes/rd/assets/icons/icons.svg#bookmark-full" />
                             </svg>`;
             el.classList.add("active");
         }else{
             el.innerHTML = `<svg class="icon" viewBox="0 0 32 32">
-                                <use href="/ramazandemir/wp-content/themes/rd/assets/icons/icons.svg#bookmark-add" />
+                                <use href="/wp-content/themes/rd/assets/icons/icons.svg#bookmark-add" />
                             </svg>`;
             el.classList.remove("active");
         }
