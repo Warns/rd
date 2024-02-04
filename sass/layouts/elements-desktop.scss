@@ -28,6 +28,13 @@
                 a{
                     color: $c-white;
                 }
+
+                .terms div{ 
+                    display: block;
+                    svg{
+                        fill: $c-white;
+                    }
+                }
             }
         }
     }

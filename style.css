@@ -475,6 +475,10 @@ a:hover {
   color: #8C8C8C;
 }
 
+a.bookmark {
+  display: block;
+}
+
 header {
   background-color: #FFFFFF;
   border-bottom: 1px solid #D1D1D1;
@@ -815,6 +819,11 @@ section.col-two .section-head {
 
 .item-video .right .item-body .terms a {
   color: #8C8C8C;
+}
+
+.item-video .right .item-body .terms div {
+  float: right;
+  display: none;
 }
 
 .post > .left {
@@ -1501,6 +1510,12 @@ section.video .section-body {
   }
   .home section.video .section-body .box:first-of-type .item-video .right .item-body a {
     color: #F8F8F8;
+  }
+  .home section.video .section-body .box:first-of-type .item-video .right .item-body .terms div {
+    display: block;
+  }
+  .home section.video .section-body .box:first-of-type .item-video .right .item-body .terms div svg {
+    fill: #F8F8F8;
   }
   .home section.video .section-body {
     grid-template-columns: 36% repeat(auto-fill, minmax(16%, 1fr));

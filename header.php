@@ -36,9 +36,9 @@
                 </form>
             </div>
             <div id="favorites">
-                <a href="#">
+                <a href="<?php echo home_url('/listem') ?>">
                     <small>Listem</small>
-                    <span>3</span>
+                    <span></span>
                     <svg class="icon large" viewBox="0 0 32 32">
                         <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#bookmark" />
                     </svg>

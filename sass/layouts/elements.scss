@@ -154,6 +154,11 @@ section.col-two{
                 margin-top: 20px;
                 @include font-set(tiny);
                 a{ color: $c-silver; }
+
+                div{
+                    float: right;
+                    display: none;
+                }
             }
         }
     }

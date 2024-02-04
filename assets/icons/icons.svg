@@ -36,13 +36,13 @@
     </symbol>
 
     <symbol id="bookmark-add">
-        <path d="M11.8 22.2548V9.79994H15V7.99994H10V25.9999L16 21.1999L22 25.9999V14.9999H20.2V22.2548L16 18.8948L11.8 22.2548Z" fill="#2D2D2D"/>
-        <path d="M17 8H25V10H17V8Z" fill="#2D2D2D"/>
-        <path d="M20 5H22V13H20V5Z" fill="#2D2D2D"/>
+        <path d="M11.8 22.2548V9.79994H15V7.99994H10V25.9999L16 21.1999L22 25.9999V14.9999H20.2V22.2548L16 18.8948L11.8 22.2548Z" />
+        <path d="M17 8H25V10H17V8Z" />
+        <path d="M20 5H22V13H20V5Z" />
     </symbol>
 
     <symbol id="bookmark-full">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21.2L22 26V8H10V26L16 21.2Z" fill="#2D2D2D"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21.2L22 26V8H10V26L16 21.2Z" />
     </symbol>
 
     <symbol id="share">

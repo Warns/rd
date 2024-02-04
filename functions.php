@@ -208,3 +208,10 @@ function category_href($id){
 
     return '<a href="'.$url.'">'.$title.'</a>';
 }
+
+function bookmark_icon($id){
+    $html = '<div><a class="bookmark" href="javascript:void(0);" data-id="'.$id.'"><svg class="icon" viewBox="0 0 32 32">';
+    $html .= '<use href="'. get_template_directory_uri() .'/assets/icons/icons.svg#bookmark-add" /></svg></a></div>';
+
+    echo $html;
+}

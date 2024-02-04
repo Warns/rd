@@ -37,4 +37,6 @@
         </div>
     </div>
 
+    <?php bookmark_icon(get_the_ID()); ?>
+
 </article>

@@ -6,6 +6,10 @@
 
     <?php get_template_part( 'pages/page', 'terms' ); ?>
 
+<?php elseif($post->post_name == "listem") : ?>
+
+    <?php get_template_part( 'pages/page', 'favorites' ); ?>
+
 <?php else: ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

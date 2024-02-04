@@ -39,7 +39,9 @@ var app = {
           };
         }
     },
-    load: function (url, success, error) {
+    load: function (url, success, error, method, query) {
+        var method = method || "GET";
+        var query = query || null;
         var xhr = new XMLHttpRequest();
         xhr.al
         xhr.onreadystatechange = function () {
@@ -51,8 +53,8 @@ var app = {
             }
           }
         };
-        xhr.open("GET", url, true);
-        xhr.send();
+        xhr.open(method, url, true);
+        xhr.send(query);
     },
     actions:{
         menu: function(){
@@ -149,8 +151,125 @@ var app = {
     }
 }
 
+const cookies = {
+    data: [],
+    opts: {
+        element: '#favorites a span',
+        name: 'rd_favz',
+        days: 1,
+    },
+    init: function(){
+        const _this = this;
+
+        _this.favs = document.querySelector(_this.opts.element);
+
+        _this.check();
+    },
+    remove: function(id, el){
+        const _this = this;
+        let n = _this.data.indexOf(id);
+        if(n > -1){
+            _this.data.splice(n, 1);
+            _this.set();
+            _this.selectElement(el, false);
+        }
+    },
+    add: function(id, el){
+        const _this = this;
+        let n = _this.data.indexOf(id);
+        if(n < 0){
+            _this.data.push(id);
+            let value = _this.data.toString();
+            _this.set();
+            _this.selectElement(el, true);
+        }
+    },
+    set: function(){
+        let value = this.data.toString();
+        Cookies.set(this.opts.name, value, {expires: this.opts.days});
+        this.favs.innerHTML = this.data.length || "";
+    },
+    check: function(){
+        const _this = this;
+        let c = Cookies.get(_this.opts.name);
+
+        if(c){
+            _this.data = c.split(',').map(Number);
+            _this.favs.innerHTML = this.data.length;
+
+            let page = document.querySelector(".page-favorits .page-body");
+            if(page){
+                app.load(
+                    "/ramazandemir/listem?post_ids="+_this.data.toString(),
+                    function(data){ 
+
+                        var html = document.createElement("html");
+                            html.innerHTML = data;
+
+                        var list = html.querySelector(".page-body");
+                        
+                        page.innerHTML = list.innerHTML;
+
+                        _this.activate();
+                    }, 
+                    function(error){
+                        console.log(error);
+                    }, 
+                    "GET", 
+                    "post_ids="+_this.data.toString()
+                );
+            }
+            else{
+                _this.activate();
+            }
+
+        }else{
+            _this.favs.innerHTML = "";
+            _this.activate();
+        }
+    },
+    activate: function(){
+        const _this = this;
+
+        _this.links = [...document.querySelectorAll("a.bookmark")];
+        for(var i=0; i<_this.data.length; ++i){
+            let _id = _this.data[i];
+
+            const found = _this.links.find(el => el.getAttribute("data-id") == _id);
+
+            if(found){
+                _this.selectElement(found, true);
+            }
+        }
+        for(var i=0; i<_this.links.length; ++i){
+            let el = _this.links[i];
+            el.addEventListener("click", function(){
+                if(el.classList.contains("active")){
+                    _this.remove(parseInt(el.getAttribute("data-id")), el);
+                }else{
+                    _this.add(parseInt(el.getAttribute("data-id")), el);
+                }
+            }, false);
+        }
+    },
+    selectElement: function(el, set){
+        if(set){
+            el.innerHTML = `<svg class="icon" viewBox="0 0 32 32">
+                                <use href="/ramazandemir/wp-content/themes/rd/assets/icons/icons.svg#bookmark-full" />
+                            </svg>`;
+            el.classList.add("active");
+        }else{
+            el.innerHTML = `<svg class="icon" viewBox="0 0 32 32">
+                                <use href="/ramazandemir/wp-content/themes/rd/assets/icons/icons.svg#bookmark-add" />
+                            </svg>`;
+            el.classList.remove("active");
+        }
+    }
+}
+
 window.addEventListener("load", function () {
     app.init();
+    cookies.init();
 });
 
 // Video Timestamp Navigation
