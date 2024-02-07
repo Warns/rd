@@ -12,7 +12,20 @@
             <div class="post-meta">
                 <ul>
                     <li>
-                        Read
+                        <a class="button light dir" href="<?php echo get_field('pdf_file') ?>">
+                            <svg class="icon" viewBox="0 0 32 32">
+                                <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#read" />
+                            </svg>
+                            Online oku
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button light dir" href="<?php echo get_field('pdf_file') ?>" download>
+                            <svg class="icon" viewBox="0 0 32 32">
+                                <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#download" />
+                            </svg>
+                            PDF indir
+                        </a>
                     </li>
                 </ul>
             </div>

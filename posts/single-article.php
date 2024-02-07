@@ -16,7 +16,8 @@
                     </li>
                     <li><?php the_time('j F Y'); ?></li>
                     <li>Son güncelleme <?php echo get_the_modified_date('j F Y'); ?></li>
-                    <li><?php the_category(", "); ?></li>
+                    <li class="extend"><?php the_category(", "); ?></li>
+                    <li><?php bookmark_icon(get_the_ID()); ?></li>
                 </ul>
             </div>
         </div>

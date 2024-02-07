@@ -9,11 +9,12 @@ h1{ @include font-set(h1); }
 h2{ @include font-set(h2); }
 h3{ @include font-set(h3); }
 
+body, p{ @include font-set(body); }
+
 body{
     background-color: $c-white;
+    line-height: 1;
 }
-
-body, p{ @include font-set(body); }
 
 p{
     margin: 8px 0;
@@ -99,4 +100,13 @@ a{
 
 a.bookmark{
     display: block;
+}
+
+.fadeout{
+    transition: opacity .455s ease;
+    opacity: 0;
+}
+
+#container{
+    min-height: 55vh;
 }

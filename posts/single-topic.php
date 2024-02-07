@@ -35,9 +35,10 @@
                 );
 
                 $cat = get_the_category();
+                $cat_name = $translate[$cat[0]->slug] ;
 
                 echo '<div class="collection"><span>'.($key+1).'</span>';
-                get_template_part( 'lists/item', $translate[$cat[0]->slug] );
+                get_template_part( 'lists/item', $cat_name == NULL ? 'article' : $cat_name );
                 echo '</div>';
             }
         ?>

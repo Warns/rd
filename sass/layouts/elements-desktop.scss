@@ -31,10 +31,14 @@
 
                 .terms div{ 
                     display: block;
-                    svg{
-                        fill: $c-white;
-                    }
                 }
+            }
+        }
+        .bookmark-holder{
+            bottom: 16px;
+            right: 20px;
+            svg{
+                fill: $c-white;
             }
         }
     }

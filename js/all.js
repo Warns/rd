@@ -156,7 +156,7 @@ const cookies = {
     opts: {
         element: '#favorites a span',
         name: 'rd_favz',
-        days: 1,
+        days: 365,
     },
     init: function(){
         const _this = this;
@@ -172,6 +172,12 @@ const cookies = {
             _this.data.splice(n, 1);
             _this.set();
             _this.selectElement(el, false);
+
+            if(_this.page){
+                let parent = document.querySelector("#post-"+id).parentElement;
+                parent.classList.add("fadeout");
+                setTimeout(function(){ parent.remove(); }, 500);
+            }
         }
     },
     add: function(id, el){
@@ -197,8 +203,8 @@ const cookies = {
             _this.data = c.split(',').map(Number);
             _this.favs.innerHTML = this.data.length;
 
-            let page = document.querySelector(".page-favorits .page-body");
-            if(page){
+            _this.page = document.querySelector(".page-favorits .page-body");
+            if(_this.page){
                 app.load(
                     "/ramazandemir/listem?post_ids="+_this.data.toString(),
                     function(data){ 
@@ -208,7 +214,7 @@ const cookies = {
 
                         var list = html.querySelector(".page-body");
                         
-                        page.innerHTML = list.innerHTML;
+                        _this.page.innerHTML = list.innerHTML;
 
                         _this.activate();
                     }, 
@@ -253,14 +259,15 @@ const cookies = {
         }
     },
     selectElement: function(el, set){
+        let svgpath = el.querySelector("use").getAttribute("href");
         if(set){
             el.innerHTML = `<svg class="icon" viewBox="0 0 32 32">
-                                <use href="/wp-content/themes/rd/assets/icons/icons.svg#bookmark-full" />
+                                <use href="${svgpath.split("#")[0]}#bookmark-full" />
                             </svg>`;
             el.classList.add("active");
         }else{
             el.innerHTML = `<svg class="icon" viewBox="0 0 32 32">
-                                <use href="/wp-content/themes/rd/assets/icons/icons.svg#bookmark-add" />
+                                <use href="${svgpath.split("#")[0]}#bookmark-add" />
                             </svg>`;
             el.classList.remove("active");
         }

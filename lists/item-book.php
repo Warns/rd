@@ -11,7 +11,7 @@
         <div class="item-footer">
             <ul>
                 <li>
-                    <a class="button light dir" href="">
+                    <a class="button light dir" href="<?php the_permalink(); ?>">
                         <svg class="icon" viewBox="0 0 32 32">
                             <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#read" />
                         </svg>
@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="button light dir" href="">
+                    <a class="button light dir" href="<?php echo get_field('pdf_file') ?>" download>
                         <svg class="icon" viewBox="0 0 32 32">
                             <use href="<?php echo get_template_directory_uri(); ?>/assets/icons/icons.svg#download" />
                         </svg>

@@ -11,7 +11,6 @@
             </div>
             <div class="terms">
                 <?php the_tags(''); ?>
-                <?php bookmark_icon(get_the_ID()); ?>
             </div>
         </div>
         <div class="item-footer">
@@ -28,5 +27,7 @@
             </ul>
         </div>
     </div>
+
+    <?php bookmark_icon(get_the_ID()); ?>
 
 </article>

@@ -13,7 +13,8 @@
             <h1><?php the_title(); ?></h1>
             <div class="post-meta">
                 <ul>
-                    <li><?php the_time('j F Y'); ?></li>
+                    <li class="extend"><?php the_time('j F Y'); ?></li>
+                    <li><?php bookmark_icon(get_the_ID()); ?></li>
                 </ul>
             </div>
         </div>
