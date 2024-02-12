@@ -22,10 +22,12 @@
     <div class="page-body">
 
     <?php
-    
+
         $ids = base64_decode($id);
 
         $ids = explode(",", $ids);
+
+        echo $ids;
 
         foreach( $ids as $i ){
 
