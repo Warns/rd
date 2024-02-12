@@ -25,11 +25,15 @@
 
         $ids = base64_decode($id);
 
+        echo $ids . "\n";
+
         $ids = explode(",", $ids);
 
-        echo $ids;
+        var_dump($ids);
 
         foreach( $ids as $i ){
+
+            echo ' / ' . $i;
 
             $post = get_post($i);
 
