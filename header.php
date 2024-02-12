@@ -28,12 +28,10 @@
                 <?php get_search_form(); ?>
                 <form class="aya-form">
                     <input type="search" list="chapters" name="Sureler" id="chapter" placeholder="Sure">
-                    <datalist id="chapters">
-                        <option value="1. Fatiha">
-                        <option value="2. Baqara">
-                        <option value="3. Al-imran">
-                    </datalist>
                 </form>
+                <div class="sura-list">
+                    <ul></ul>
+                </div>
             </div>
             <div id="favorites">
                 <a href="<?php echo home_url('/listem') ?>">

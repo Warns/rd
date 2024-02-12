@@ -23,6 +23,8 @@ let el = {
     }
 }
 
+const base_url = "http://localhost:8888/ramazandemir";
+
 
 var app = {
     init: function(){
@@ -100,6 +102,64 @@ var app = {
                 }, false);
             }
         },
+        suraFilter: function(){
+            let listholder = document.querySelector(".sura-list ul");
+            let searchInput = document.querySelector(".aya-form input");
+
+            let check = function(e){
+                let holder = document.querySelector(".sura-list");
+                if(!holder.contains(e.target) && !searchInput.contains(e.target)){
+                    close();
+                }
+            }
+            let close = function(){
+                let holder = document.querySelector(".sura-list")
+                holder.style.display = "none";
+                window.removeEventListener("click", check);
+            }
+            let open = function(){
+                let holder = document.querySelector(".sura-list")
+                holder.style.display = "block";
+
+                setTimeout( function(){ window.addEventListener("click", check, false); }, 300);
+            }
+
+            searchInput.addEventListener("focus", open);
+
+
+            app.load(
+                base_url + "/wp-content/themes/rd/js/save.json",
+                function(response){
+                    let data = JSON.parse(response).data;
+
+                    data.forEach(function(val, index){
+                        let item = document.createElement("li");
+
+
+
+                        item.innerHTML = `<span>${val.id}</span><a href="${base_url}/sure-arama/?id=${val.ids}&c=${val.name}">${val.name}</a>`;
+                        if(val.count > 0){
+                            item.classList.add("on");
+                        }
+                        listholder.appendChild(item);
+                    });
+                }
+            );
+
+            searchInput.addEventListener("input", function(e){
+                var filter = translateCharacters(e.target.value);
+                var li = listholder.querySelectorAll("li");
+
+                for(let i=0; i<li.length; ++i){
+                    let textValue = translateCharacters(li[i].innerText);
+                    if(textValue.indexOf(filter) > -1){
+                        li[i].classList.remove("off");
+                    }else{
+                        li[i].classList.add("off");
+                    }
+                }
+            });
+        },
         terms: function(){
             let container = document.querySelector(".page-terms .page-body");
             if(container){
@@ -156,7 +216,7 @@ const cookies = {
     opts: {
         element: '#favorites a span',
         name: 'rd_favz',
-        days: 365,
+        days: 777,
     },
     init: function(){
         const _this = this;
@@ -206,7 +266,7 @@ const cookies = {
             _this.page = document.querySelector(".page-favorits .page-body");
             if(_this.page){
                 app.load(
-                    "/ramazandemir/listem?post_ids="+_this.data.toString(),
+                    base_url + "/listem?id="+_this.data.toString(),
                     function(data){ 
 
                         var html = document.createElement("html");
@@ -222,7 +282,7 @@ const cookies = {
                         console.log(error);
                     }, 
                     "GET", 
-                    "post_ids="+_this.data.toString()
+                    "id="+_this.data.toString()
                 );
             }
             else{
@@ -301,4 +361,24 @@ document.addEventListener('DOMContentLoaded', function() {
 function convertToSeconds(time) {
     var parts = time.split(':');
     return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+}
+
+function translateCharacters(text){
+    let chars = [
+        ["İ", "I"],
+        ["Î", "I"],
+        ["Ü", "U"],
+        ["Û", "U"],
+        ["Â", "A"],
+        ["Ş", "S"],
+        ["Ç", "C"],
+        ["Ö", "O"],
+        ["'", ""],
+        ["-", ""]
+    ];
+    let out = text.toUpperCase();
+    for(var i=0; i<chars.length; ++i){
+        out = out.replaceAll(chars[i][0], chars[i][1]);
+    }
+    return out;
 }

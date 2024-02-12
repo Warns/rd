@@ -43,6 +43,11 @@
             }
         ?>
         </div>
+
+        <?php wp_reset_postdata(); ?>
+        
+        <?php get_template_part( 'partials/page', 'foot' ); ?>
+
     </div>
 </div>
 

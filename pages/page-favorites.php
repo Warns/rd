@@ -1,6 +1,6 @@
 <?php
 
-$id = $_GET['post_ids'];
+$id = $_GET['id'];
 
 if($id) : ?>
 

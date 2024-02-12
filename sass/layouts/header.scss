@@ -85,10 +85,7 @@ header{
         .aya-form{
             display: flex;
             input[type=search]{
-                width: 140px;
-                &:last-of-type{
-                    width: 100px;
-                }
+                width: 200px;
             }
         }
     }

@@ -215,3 +215,52 @@ function bookmark_icon($id){
 
     echo $html;
 }
+
+function run_my_function( $post_id ) {
+    // if ( wp_is_post_revision( $post_id ) ){
+    //     //update
+    // } else {
+    //     //if is new post
+    // }
+
+    $suras = "Fâtiha|Bakara|Âl-i İmrân|Nisâ|Mâide|En'âm|A'râf|Enfâl|Tevbe|Yûnus|Hûd|Yûsuf|Ra'd|İbrâhîm|Hicr|Nahl|İsrâ|Kehf|Meryem|Tâhâ|Enbiyâ|Hac|Mü'minûn|Nûr|Furkân|Şuarâ|Neml|Kasas|Ankebût|Rûm|Lokmân|Secde|Ahzâb|Sebe'|Fâtır|Yâsîn|Sâffât|Sâd|Zümer|Mü'min|Fussilet|Şûrâ|Zuhruf|Duhân|Câsiye|Ahkâf|Muhammed|Fetih|Hucurât|Kâf|Zâriyât|Tûr|Necm|Kamer|Rahmân|Vâkıa|Hadîd|Mücâdele|Haşr|Mümtehine|Saf|Cuma|Münâfikûn|Tegâbün|Talâk|Tahrîm|Mülk|Kalem|Hâkka|Meâric|Nûh|Cin|Müzzemmil|Müddessir|Kıyâmet|İnsân|Mürselât|Nebe|Naziât|Abese|Tekvîr|İnfitâr|Mutaffifîn|İnşikâk|Burûc|Târık|A'lâ|Gâşiye|Fecr|Beled|Şems|Leyl|Duhâ|İnşirâh|Tîn|Alak|Kadir|Beyyine|Zilzâl|Âdiyât|Kâria|Tekâsür|Asr|Hümeze|Fîl|Kureyş|Maûn|Kevser|Kâfirûn|Nasr|Tebbet|İhlâs|Felak|Nâs";
+    $suras = explode("|", $suras);
+
+    $obj = array();
+
+    foreach($suras as $key=>$val){
+        $posts = get_posts(array(
+            'post_type' => 'post',
+            'numberposts'=>-1,
+            'orderby' => 'title',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+                array(
+                    'key' => 'sure_select',
+                    'value' => $key+1,
+                    'compare' => 'LIKE'
+                )
+            )
+        ));
+
+        $totalCount = count( $posts );
+
+        $ids = [];
+
+        foreach($posts as $post){
+            array_push($ids, $post->ID);
+        }
+
+        $ids = implode(",", $ids);
+
+        array_push($obj, array("id"=>$key+1, "name"=>$val, "count"=>$totalCount, "ids"=>base64_encode($ids)) );
+    }
+      
+    $json = json_encode($obj, JSON_UNESCAPED_UNICODE);
+
+    file_put_contents( ABSPATH . "/wp-content/themes/rd/js/save.json", '{"data":'. $json . '}');
+
+    
+  }
+  add_action( 'save_post', 'run_my_function' );

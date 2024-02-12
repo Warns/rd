@@ -10,6 +10,10 @@
 
     <?php get_template_part( 'pages/page', 'favorites' ); ?>
 
+<?php elseif($post->post_name == "sure-arama") : ?>
+
+    <?php get_template_part( 'pages/page', 'surasearch' ); ?>
+
 <?php else: ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -33,9 +33,9 @@
         <div class="post-body">
             <?php the_content(); ?>
         </div>
-        <div class="post-foot">
-            <?php the_tags(''); ?>
-        </div>
+        
+        <?php get_template_part( 'partials/page', 'foot' ); ?>
+
     </div>
 </div>
 
