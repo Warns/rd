@@ -259,7 +259,7 @@ function run_my_function( $post_id ) {
       
     $json = json_encode($obj, JSON_UNESCAPED_UNICODE);
 
-    file_put_contents( ABSPATH . "/wp-content/themes/rd/js/save.json", '{"data":'. $json . '}');
+    file_put_contents( ABSPATH . "/wp-content/themes/rd/js/save.json", 'test');
 
     
   }
