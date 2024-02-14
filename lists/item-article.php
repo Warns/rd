@@ -2,7 +2,7 @@
 
     <div class="left">
         <?php
-            if(get_post_time() > strtotime('-1 week')){
+            if(get_post_time() > strtotime('-2 week')){
                 echo '<span>Yeni</span>';
             }
         ?>

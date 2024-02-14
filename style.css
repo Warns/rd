@@ -689,6 +689,7 @@ section.col-two section:first-child {
   min-width: 380px;
   margin-left: calc(min(8%, 100px));
   max-width: 25%;
+  line-height: 1.6em;
 }
 
 section.col-two section:nth-child(2) {
