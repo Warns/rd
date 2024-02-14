@@ -23,8 +23,8 @@ let el = {
     }
 }
 
-const base_url = "https://ramazandemir.org";
-// const base_url = "http://localhost:8888/ramazandemir";
+// const base_url = "https://ramazandemir.org";
+const base_url = "http://localhost:8888/ramazandemir";
 
 
 var app = {

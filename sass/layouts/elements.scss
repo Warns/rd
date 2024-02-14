@@ -157,6 +157,45 @@ section.col-two{
     flex-direction: column;
     position: relative;
 
+    .left{
+        &::before{
+            display: block;
+            content: "";
+            width: 54px;
+            height: 54px;
+            background-color: rgba(0,0,0,.4);
+            border-radius: 27px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &::after{
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 6px);
+            transform: translate(-50%, -50%);
+            border: 10px solid transparent;
+            border-left: 16px solid rgba(255,255,255,.8);
+
+        }
+    }
+
+    &:hover{
+        .left{
+            &::before{
+                background-color: rgba(0,0,0,.5);
+            }
+            &:after{
+                border-left: 16px solid rgba(255,255,255,.9);
+            }
+        }
+    }
+
     .right{
         flex-direction: column-reverse;
 
