@@ -79,6 +79,10 @@ section{
                             h3{
                                 @include font-set(h1);
                             }
+                            .item-body p{
+                                -webkit-line-clamp: 4;
+                                max-width: 740px;
+                            }
                             .item-footer ul{
                                 padding: 2px 0;
                             }

@@ -11,6 +11,10 @@ h3{ @include font-set(h3); }
 
 body, p{ @include font-set(body); }
 
+html{
+    background-color: $c-black;
+}
+
 body{
     background-color: $c-white;
     line-height: 1;

@@ -15,11 +15,10 @@
         </div>
         <div class="item-footer">
             <ul>
-                <li>
-                <?php echo 'Okuma süresi ' . do_shortcode('[rt_reading_time]') . ' dk'; ?>
+                <li class="duration">
+                    <?php echo 'Okuma süresi ' . do_shortcode('[rt_reading_time]') . ' dk'; ?>
                 </li>
-                <!--
-                <li>
+                <li class="categories">
                     <?php 
 
                         $category = get_the_category();
@@ -29,15 +28,16 @@
                 
                     ?>
                 </li>
-                -->
-                <li>
+                <li class="date">
                     <?php echo my_custom_date(get_the_time('j F Y')); ?>
                 </li>
-                <li>
+                <!--
+                <li class="categories">
                     <?php 
                         the_category(", ");
                     ?>
                 </li>
+                -->
             </ul>
         </div>
     </div>

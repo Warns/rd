@@ -33,3 +33,16 @@
     line-height: map-get(map-get(map-get($font-sets, mobile), $set), "line-height");
     font-weight: map-get(map-get(map-get($font-sets, mobile), $set), "font-weight");
 }
+
+// @mixin font-set($set) {
+//   $font-family: map-get(
+//     map-get(map-get($font-sets, mobile), $set),
+//     "font-family"
+//   );
+//   @if ($font-family) {
+//     font-family: var(--ff-#{$set});
+//   }
+//   font-size: var(--fs-#{$set});
+//   line-height: var(--lh-#{$set});
+//   font-weight: var(--fw-#{$set});
+// }
