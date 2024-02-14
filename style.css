@@ -1508,7 +1508,7 @@ section.video .section-body {
     padding: 16px 10px;
   }
   header #tabs ul li.active a {
-    border-bottom: 3px solid #252525;
+    border-bottom: 4px solid #252525;
   }
   header.active #tabs {
     display: none;
