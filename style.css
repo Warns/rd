@@ -686,9 +686,9 @@ section.col-two {
 }
 
 section.col-two section:first-child {
-  min-width: 280px;
-  margin-left: calc(min(8%, 160px));
-  max-width: 20%;
+  min-width: 380px;
+  margin-left: calc(min(8%, 100px));
+  max-width: 25%;
 }
 
 section.col-two section:nth-child(2) {
@@ -704,9 +704,27 @@ section.col-two .section-head {
   display: flex;
 }
 
+.item .left {
+  position: relative;
+}
+
 .item .left img {
   max-width: 100%;
   height: auto;
+}
+
+.item .left span {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  background-color: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-weight: 400;
+  padding: 2px 8px;
+  border-radius: 2px;
+  color: #252525;
 }
 
 .item .right {
@@ -1447,7 +1465,7 @@ section.video .section-body {
     display: block;
     padding: 10px 10px;
   }
-  header #tabs ul li:first-child a {
+  header #tabs ul li.active a {
     border-bottom: 3px solid #252525;
   }
   header.active #tabs {
@@ -1485,6 +1503,12 @@ section.video .section-body {
     display: block;
   }
   header.active .menu-trigger svg.burger {
+    display: none;
+  }
+  html {
+    margin-top: 0 !important;
+  }
+  #wpadminbar {
     display: none;
   }
   footer .inside {
@@ -1675,5 +1699,39 @@ section.video .section-body {
   .home section.video .section-body .box:first-child {
     grid-row: span 2;
     margin-right: 6%;
+  }
+  section .article .section-body .box:first-child {
+    background-color: #D1D1D1;
+    margin-bottom: 32px;
+  }
+  section .article .section-body .box:first-child article {
+    position: relative;
+    padding: 24px;
+    flex-direction: row-reverse;
+  }
+  section .article .section-body .box:first-child article .left {
+    width: 50%;
+    max-width: 50%;
+    margin: 0;
+  }
+  section .article .section-body .box:first-child article .left img {
+    width: 100%;
+  }
+  section .article .section-body .box:first-child article .right {
+    padding-right: 56px;
+  }
+  section .article .section-body .box:first-child article .right h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 28px;
+    line-height: 1.1em;
+    font-weight: 500;
+  }
+  section .article .section-body .box:first-child article .right .item-footer ul {
+    padding: 2px 0;
+  }
+  section .article .section-body .box:first-child article .bookmark-holder {
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 24px;
   }
 }

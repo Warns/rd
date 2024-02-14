@@ -1,6 +1,11 @@
 <article id="post-<?php the_ID(); ?>" class="item item-article" <?php //post_class(); ?>>
 
     <div class="left">
+        <?php
+            if(get_post_time() > strtotime('-1 week')){
+                echo '<span>Yeni</span>';
+            }
+        ?>
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
     </div>
     <div class="right">

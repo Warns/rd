@@ -67,13 +67,16 @@ var app = {
         },
         homeTabs: function(){
             let _this = this;
-            if(mobile.check()){
+            let body = document.body;
+            if(mobile.check() && body.classList.contains("home")){
+                
                 let heads = document.querySelectorAll(".section-head h2");
                     heads = Array.from(heads);
                 let li = "<ul>";
                 heads.forEach((elm, index) => {
+                    let active = index == 1 ? "active" : "";
                     if(elm.getAttribute("id")){
-                        li += '<li><a href="#'+elm.getAttribute("id")+'">'+elm.innerHTML+'</a></li>';
+                        li += `<li class="${active}"><a href="#${elm.getAttribute("id")}">${elm.innerHTML}</a></li>`;
                     }
                 });
 
@@ -81,26 +84,30 @@ var app = {
 
                 heads.splice(0, 1);
 
-                let focus = 0;
+                let focus = -1;
 
-                ts = document.querySelectorAll(el.tabs+" li");
+                ts = tabs.querySelectorAll("li");
+                ts = Array.from(ts);
 
-                console.log(ts);
-
-                window.addEventListener("scroll", function(){
+                const onScroll = function(){
                     var s = window.scrollY;
                     for(var i=heads.length-1; i>-1; --i){
-                        if(heads[i].offsetTop < s){
+                        if(heads[i].offsetTop - 50 < s){
                             if(i != focus){
                                 focus = i;
 
-                                ts[i].classList.add("active");
-                                console.log(focus);
+                                let current = tabs.querySelector("li.active");
+                                if(current)
+                                    current.classList.remove("active");
+                                ts[focus].classList.add("active");
                             }
                             break;
                         }
                     }
-                }, false);
+                };
+
+                window.addEventListener("scroll", onScroll, false);
+                onScroll();
             }
         },
         suraFilter: function(){

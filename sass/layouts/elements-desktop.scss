@@ -54,4 +54,43 @@ section{
             }
         }
     }
+
+    .article{
+        .section-body{
+            .box{
+                &:first-child{
+                    background-color: $c-border;
+                    margin-bottom: 32px;
+                    article{
+                        position: relative;
+                        padding: 24px;
+                        flex-direction: row-reverse;
+                        .left{
+                            width: 50%;
+                            max-width: 50%;
+                            margin: 0;
+
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .right{
+                            padding-right: 56px;
+                            h3{
+                                @include font-set(h1);
+                            }
+                            .item-footer ul{
+                                padding: 2px 0;
+                            }
+                        }
+                        .bookmark-holder{
+                            position: absolute;
+                            left: calc(50% - 50px);
+                            bottom: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

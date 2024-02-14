@@ -58,7 +58,7 @@ header{
                     padding: 10px 10px;
                 }
 
-                &:first-child a{
+                &.active a{
                     border-bottom: 3px solid $c-black;
                 }
             }
@@ -109,4 +109,11 @@ header{
             }
         }
     }
+}
+
+html{
+    margin-top: 0 !important;
+}
+#wpadminbar{
+    display: none;
 }

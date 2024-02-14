@@ -19,9 +19,9 @@ section.col-two{
     flex-direction: row-reverse;
 
     section:first-child{
-        min-width: 280px;
-        margin-left: calc(min(8%, 160px));
-        max-width: 20%;
+        min-width: 380px;
+        margin-left: calc(min(8%, 100px));
+        max-width: 25%;
     }
 
     section:nth-child(2){
@@ -38,9 +38,20 @@ section.col-two{
     display: flex;
 
     .left{
+        position: relative;
         img{
             max-width: 100%;
             height: auto;
+        }
+        span{
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            background-color: $c-snow;
+            @include font-set(tiny);
+            padding: 2px 8px;
+            border-radius: 2px;
+            color: $c-black;
         }
     }
 
