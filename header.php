@@ -115,4 +115,7 @@
                 echo '</div>';
             }
 
+        $log_path = file_put_contents( ABSPATH . "wp-content/themes/rd/js/save.json", '{log}');
+        var_dump($log_path);
+
         ?>
