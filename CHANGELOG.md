@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.2.5](https://github.com/Warns/rd/compare/v1.2.4...v1.2.5) (2024-02-17)
+
+
+### Bug Fixes
+
+* fixed save.json path ([a822551](https://github.com/Warns/rd/commit/a822551557e23e4b9a59a5fdfc2c03691f72366b))
+
 ### [1.2.4](https://github.com/Warns/rd/compare/v1.2.3...v1.2.4) (2024-02-17)
 
 
