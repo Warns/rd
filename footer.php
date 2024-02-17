@@ -15,7 +15,7 @@
 </footer>
 
 </div>
-<?php wp_footer(); ?>
+<?php wp_footer(); echo ABSPATH ?>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/all.js"></script>
 </body>
