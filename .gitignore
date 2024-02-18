@@ -1,4 +1,4 @@
 node_modules/
 .DS_Store
-**/save.json
-/rd/js/save.json
+.idea
+js/save.json
