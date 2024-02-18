@@ -185,30 +185,67 @@ var app = {
                 }
             }
         },
-        aya: function(){
-            let url = "https://api.alquran.cloud/v1/ayah/";
-            let ayas = document.querySelectorAll("div.aya");
+        // aya: function(){
+        //     let url = "https://api.alquran.cloud/v1/ayah/";
+        //     let ayas = document.querySelectorAll("div.aya");
 
-            for( let i=0; i<ayas.length; ++i ){
+        //     for( let i=0; i<ayas.length; ++i ){
+        //         let aya = ayas[i].getAttribute("data-number");
+                
+        //         console.log(i, ayas.length, aya);
+                
+        //         app.load(url + aya, 
+        //             function(result){
+        //                 let data = JSON.parse(result).data;
+                        
+        //                 let html = `
+        //                     <div>${data.text}</div>
+        //                     <ul>
+        //                         <li>${data.surah.englishName}</li>
+        //                         <li>${data.surah.number} / ${data.numberInSurah}</li>
+        //                         <li>${data.surah.name}</li>
+        //                     </ul>
+        //                 `;
+
+        //                 ayas[i].innerHTML = html;
+
+        //             },
+        //             function(error){
+        //                 console.log(error);
+        //             }
+        //         )
+        //     }
+        // }
+
+
+        aya: function(){
+            // New base URL for Quran.com API
+            let url = "https://api.quran.com/api/v4/verses/by_key?";
+        
+            let ayas = document.querySelectorAll("div.aya");
+        
+            for(let i = 0; i < ayas.length; ++i){
                 let aya = ayas[i].getAttribute("data-number");
                 
                 console.log(i, ayas.length, aya);
                 
-                app.load(url + aya, 
+                // Adjust URL for new API
+                let finalUrl = `${url}verse_key=${aya}&language=en&words=true`;
+        
+                app.load(finalUrl, 
                     function(result){
-                        let data = JSON.parse(result).data;
+                        let data = JSON.parse(result).verse; // Adjust for the new API's response structure
                         
                         let html = `
-                            <div>${data.text}</div>
+                            <div>${data.text_uthmani}</div>
                             <ul>
-                                <li>${data.surah.englishName}</li>
-                                <li>${data.surah.number} / ${data.numberInSurah}</li>
-                                <li>${data.surah.name}</li>
+                                <li>${data.verse_key.split(':')[0]}</li> <!-- Chapter number -->
+                                <li>${data.verse_key}</li> <!-- Verse key -->
+                                <li>${data.text_uthmani}</li> <!-- Uthmani text -->
                             </ul>
                         `;
-
+        
                         ayas[i].innerHTML = html;
-
                     },
                     function(error){
                         console.log(error);
