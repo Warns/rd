@@ -185,72 +185,45 @@ var app = {
                 }
             }
         },
-        // aya: function(){
-        //     let url = "https://api.alquran.cloud/v1/ayah/";
-        //     let ayas = document.querySelectorAll("div.aya");
-
-        //     for( let i=0; i<ayas.length; ++i ){
-        //         let aya = ayas[i].getAttribute("data-number");
-                
-        //         console.log(i, ayas.length, aya);
-                
-        //         app.load(url + aya, 
-        //             function(result){
-        //                 let data = JSON.parse(result).data;
-                        
-        //                 let html = `
-        //                     <div>${data.text}</div>
-        //                     <ul>
-        //                         <li>${data.surah.englishName}</li>
-        //                         <li>${data.surah.number} / ${data.numberInSurah}</li>
-        //                         <li>${data.surah.name}</li>
-        //                     </ul>
-        //                 `;
-
-        //                 ayas[i].innerHTML = html;
-
-        //             },
-        //             function(error){
-        //                 console.log(error);
-        //             }
-        //         )
-        //     }
-        // }
-
 
         aya: function(){
-            let url = "https://api.quran.com/api/v4/quran/verses/uthmani?verse_key=";
+            // Fetch Surah names first
+            app.load("/wp-content/themes/rd/js/suras.json", function(response){
+                let surahNames = JSON.parse(response).data;
+                let url = "https://api.quran.com/api/v4/quran/verses/uthmani?verse_key=";
         
-            let ayas = document.querySelectorAll("div.aya");
+                let ayas = document.querySelectorAll("div.aya");
         
-            for(let i = 0; i < ayas.length; ++i){
-                let verseKey = ayas[i].getAttribute("data-number");
-                
-                console.log(i, ayas.length, verseKey);
-                
-                app.load(url + verseKey, 
-                    function(result){
-                        // Parse the result and extract verse text
-                        let data = JSON.parse(result);
-                        if (data.verses && data.verses.length > 0) {
-                            let verse = data.verses[0]; // Assuming you're fetching one verse at a time
-                            
-                            let html = `
-                                <div>${verse.text_uthmani}</div>
-                                <ul>
-                                    <li>${verse.verse_key.split(':')[0]}</li> <!-- Surah number -->
-                                    <li>${verse.verse_key}</li> <!-- Verse key -->
-                                </ul>
-                            `;
+                for(let i = 0; i < ayas.length; ++i){
+                    let verseKey = ayas[i].getAttribute("data-number");
         
-                            ayas[i].innerHTML = html;
+                    console.log(i, ayas.length, verseKey);
+        
+                    app.load(url + verseKey, 
+                        function(result){
+                            let data = JSON.parse(result);
+                            if (data.verses && data.verses.length > 0) {
+                                let verse = data.verses[0];
+                                let surahNumber = verseKey.split(':')[0];
+                                let surahName = surahNames.find(surah => surah.id.toString() === surahNumber).name;
+                                
+                                let html = `
+                                    <div>${verse.text_uthmani}</div>
+                                    <ul>
+                                        <li>${surahName}</li> <!-- Surah name -->
+                                        <li>${verse.verse_key}</li> <!-- Verse key -->
+                                    </ul>
+                                `;
+        
+                                ayas[i].innerHTML = html;
+                            }
+                        },
+                        function(error){
+                            console.log(error);
                         }
-                    },
-                    function(error){
-                        console.log(error);
-                    }
-                )
-            }
+                    )
+                }
+            });
         }
     }
 }
