@@ -219,33 +219,32 @@ var app = {
 
 
         aya: function(){
-            // New base URL for Quran.com API
-            let url = "https://api.quran.com/api/v4/verses/by_key?";
+            let url = "https://api.quran.com/api/v4/quran/verses/uthmani?verse_key=";
         
             let ayas = document.querySelectorAll("div.aya");
         
             for(let i = 0; i < ayas.length; ++i){
-                let aya = ayas[i].getAttribute("data-number");
+                let verseKey = ayas[i].getAttribute("data-number");
                 
-                console.log(i, ayas.length, aya);
+                console.log(i, ayas.length, verseKey);
                 
-                // Adjust URL for new API
-                let finalUrl = `${url}verse_key=${aya}&language=en&words=true`;
-        
-                app.load(finalUrl, 
+                app.load(url + verseKey, 
                     function(result){
-                        let data = JSON.parse(result).verse; // Adjust for the new API's response structure
-                        
-                        let html = `
-                            <div>${data.text_uthmani}</div>
-                            <ul>
-                                <li>${data.verse_key.split(':')[0]}</li> <!-- Chapter number -->
-                                <li>${data.verse_key}</li> <!-- Verse key -->
-                                <li>${data.text_uthmani}</li> <!-- Uthmani text -->
-                            </ul>
-                        `;
+                        // Parse the result and extract verse text
+                        let data = JSON.parse(result);
+                        if (data.verses && data.verses.length > 0) {
+                            let verse = data.verses[0]; // Assuming you're fetching one verse at a time
+                            
+                            let html = `
+                                <div>${verse.text_uthmani}</div>
+                                <ul>
+                                    <li>${verse.verse_key.split(':')[0]}</li> <!-- Surah number -->
+                                    <li>${verse.verse_key}</li> <!-- Verse key -->
+                                </ul>
+                            `;
         
-                        ayas[i].innerHTML = html;
+                            ayas[i].innerHTML = html;
+                        }
                     },
                     function(error){
                         console.log(error);
