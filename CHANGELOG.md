@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/Warns/rd/compare/v1.2.5...v1.3.0) (2024-02-18)
+
+
+### Features
+
+* new verses api ([4febd12](https://github.com/Warns/rd/commit/4febd12d7445f3044c5b0eaa674b616c86612526))
+
 ### [1.2.5](https://github.com/Warns/rd/compare/v1.2.4...v1.2.5) (2024-02-17)
 
 
