@@ -218,39 +218,39 @@ var app = {
         // }
 
 
-        aya: function() {
-            let urlBase = "https://api.quran.com/api/v4/quran/verses/uthmani?verse_key=";
+        aya: function(){
+            let url = "https://api.quran.com/api/v4/quran/verses/uthmani?verse_key=";
+        
             let ayas = document.querySelectorAll("div.aya");
         
-            ayas.forEach((ayaElement) => {
-                let verseKeys = ayaElement.getAttribute("data-number").split(',');
+            for(let i = 0; i < ayas.length; ++i){
+                let verseKey = ayas[i].getAttribute("data-number");
                 
-                verseKeys.forEach((verseKey) => {
-                    let apiUrl = `${urlBase}${verseKey}`;
-                    
-                    app.load(apiUrl, 
-                        function(result) {
-                            let data = JSON.parse(result);
-                            if (data.verses && data.verses.length > 0) {
-                                let verse = data.verses[0];
-                                let htmlContent = `
-                                    <div>${verse.text_uthmani}</div>
-                                    <ul>
-                                        <li>${verse.verse_key.split(':')[0]}</li> <!-- Surah number -->
-                                        <li>${verse.verse_key}</li> <!-- Verse key -->
-                                    </ul>
-                                `;
-                                
-                                // Append or set innerHTML depending on your needs
-                                ayaElement.innerHTML += htmlContent;
-                            }
-                        },
-                        function(error) {
-                            console.log(error);
+                console.log(i, ayas.length, verseKey);
+                
+                app.load(url + verseKey, 
+                    function(result){
+                        // Parse the result and extract verse text
+                        let data = JSON.parse(result);
+                        if (data.verses && data.verses.length > 0) {
+                            let verse = data.verses[0]; // Assuming you're fetching one verse at a time
+                            
+                            let html = `
+                                <div>${verse.text_uthmani}</div>
+                                <ul>
+                                    <li>${verse.verse_key.split(':')[0]}</li> <!-- Surah number -->
+                                    <li>${verse.verse_key}</li> <!-- Verse key -->
+                                </ul>
+                            `;
+        
+                            ayas[i].innerHTML = html;
                         }
-                    );
-                });
-            });
+                    },
+                    function(error){
+                        console.log(error);
+                    }
+                )
+            }
         }
     }
 }
