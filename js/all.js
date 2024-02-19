@@ -198,8 +198,11 @@ var app = {
                     function(result){
                         let data = JSON.parse(result).data;
                         
+                        // Remove the specified string from the text
+                        let text = data.text.replace('بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ', '').trim();
+                        
                         let html = `
-                            <div>${data.text}</div>
+                            <div>${text}</div>
                             <ul>
                                 <li>${data.surah.englishName}</li>
                                 <li>${data.surah.number} / ${data.numberInSurah}</li>
