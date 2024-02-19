@@ -198,7 +198,7 @@ var app = {
                     function(result){
                         let data = JSON.parse(result).data;
                         
-                        // Remove the specified string from the text
+                        // To remove Bismillah from the beginning of the verse
                         let text = data.text.replace('بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ', '').trim();
                         
                         let html = `
@@ -219,7 +219,6 @@ var app = {
                 )
             }
         }
-
 
         // aya: function(){
         //     // Fetch Surah names first
@@ -245,8 +244,8 @@ var app = {
         //                         let html = `
         //                             <div>${verse.text_uthmani}</div>
         //                             <ul>
-        //                                 <li>${surahName}</li> <!-- Surah name -->
-        //                                 <li>${verse.verse_key}</li> <!-- Verse key -->
+        //                                 <li>${surahName}</li>
+        //                                 <li>${verse.verse_key}</li>
         //                             </ul>
         //                         `;
         
