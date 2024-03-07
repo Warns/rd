@@ -1027,6 +1027,12 @@ section.col-two .section-head {
   position: relative;
 }
 
+@media screen and (max-width: 1400px) {
+  .post-article .right .sidebar {
+    display: none;
+  }
+}
+
 .post-article .right .sidebar ul {
   position: sticky;
   top: 90px;
@@ -1043,15 +1049,16 @@ section.col-two .section-head {
 }
 
 .post-article .right .sidebar ul li {
-  margin-bottom: 8px;
+  padding: 0 0 8px 8px;
+  border-left: 1px solid #D1D1D1;
 }
 
 .post-article .right .sidebar ul li.aH3 {
-  padding-left: 8px;
+  padding-left: 16px;
 }
 
 .post-article .right .sidebar ul li.aH4 {
-  padding-left: 16px;
+  padding-left: 24px;
 }
 
 .post-article .right .sidebar ul li.aH4 a {
@@ -1062,7 +1069,7 @@ section.col-two .section-head {
 }
 
 .post-article .right .sidebar ul li.aH5 {
-  padding-left: 24px;
+  padding-left: 32px;
 }
 
 .post-article .right .sidebar ul li.aH5 a {
@@ -1073,7 +1080,7 @@ section.col-two .section-head {
 }
 
 .post-article .right .sidebar ul li.aH6 {
-  padding-left: 32px;
+  padding-left: 40px;
 }
 
 .post-article .right .sidebar ul li.aH6 a {

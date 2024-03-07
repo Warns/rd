@@ -319,6 +319,10 @@ section.col-two{
             background-color: red;
             position: relative;
 
+            @media screen and (max-width: 1400px) {
+                display: none;
+            }
+
             ul{
                 position: sticky;
                 top: 90px;
@@ -334,19 +338,20 @@ section.col-two{
                 }
                 
                 li{
-                    margin-bottom: 8px;
+                    padding: 0 0 8px 8px;
+                    border-left: 1px solid $c-border;
 
-                    &.aH3{ padding-left: 8px; }
+                    &.aH3{ padding-left: 16px; }
                     &.aH4{ 
-                        padding-left: 16px;
-                        a{ @include font-set(tiny); }
-                    }
-                    &.aH5{ 
                         padding-left: 24px;
                         a{ @include font-set(tiny); }
                     }
-                    &.aH6{ 
+                    &.aH5{ 
                         padding-left: 32px;
+                        a{ @include font-set(tiny); }
+                    }
+                    &.aH6{ 
+                        padding-left: 40px;
                         a{ @include font-set(tiny); }
                     }
 
