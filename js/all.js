@@ -226,8 +226,11 @@ var app = {
                     function(result){
                         let data = JSON.parse(result).data;
                         
+                        // To remove Bismillah from the beginning of the verse
+                        let text = data.text.replace('بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ', '').trim();
+                        
                         let html = `
-                            <div>${data.text}</div>
+                            <div>${text}</div>
                             <ul>
                                 <li>${data.surah.englishName}</li>
                                 <li>${data.surah.number} / ${data.numberInSurah}</li>
@@ -244,6 +247,46 @@ var app = {
                 )
             }
         }
+
+        // aya: function(){
+        //     // Fetch Surah names first
+        //     app.load("/wp-content/themes/rd/js/suras.json", function(response){
+        //         let surahNames = JSON.parse(response).data;
+        //         let url = "https://api.quran.com/api/v4/quran/verses/uthmani?verse_key=";
+        
+        //         let ayas = document.querySelectorAll("div.aya");
+        
+        //         for(let i = 0; i < ayas.length; ++i){
+        //             let verseKey = ayas[i].getAttribute("data-number");
+        
+        //             console.log(i, ayas.length, verseKey);
+        
+        //             app.load(url + verseKey, 
+        //                 function(result){
+        //                     let data = JSON.parse(result);
+        //                     if (data.verses && data.verses.length > 0) {
+        //                         let verse = data.verses[0];
+        //                         let surahNumber = verseKey.split(':')[0];
+        //                         let surahName = surahNames.find(surah => surah.id.toString() === surahNumber).name;
+                                
+        //                         let html = `
+        //                             <div>${verse.text_uthmani}</div>
+        //                             <ul>
+        //                                 <li>${surahName}</li>
+        //                                 <li>${verse.verse_key}</li>
+        //                             </ul>
+        //                         `;
+        
+        //                         ayas[i].innerHTML = html;
+        //                     }
+        //                 },
+        //                 function(error){
+        //                     console.log(error);
+        //                 }
+        //             )
+        //         }
+        //     });
+        // }
     }
 }
 

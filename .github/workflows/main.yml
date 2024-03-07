@@ -30,6 +30,7 @@ jobs:
           ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
           rsync -r * $SSH_USER@$SERVER_IP:/home/bitnami/stack/wordpress/wp-content/themes/rd
+          echo $SSH_USER
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           SSH_USER: ${{ secrets.SSH_USER }} # Replace with your actual SSH username
