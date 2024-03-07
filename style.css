@@ -950,7 +950,7 @@ section.col-two .section-head {
 }
 
 .post > .right .post-head h1 {
-  margin: 40px auto;
+  margin: 40px auto 10px;
   max-width: 740px;
   width: 100%;
 }
@@ -995,10 +995,6 @@ section.col-two .section-head {
   font-weight: 400;
 }
 
-.post > .right .post-body h2, .post > .right .post-body h3 {
-  padding-top: 24px;
-}
-
 .post > .right .post-foot {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
@@ -1015,6 +1011,10 @@ section.col-two .section-head {
 .post-article .right {
   max-width: 1000px;
   display: flex;
+}
+
+.post-article .right .post-body h2, .post-article .right .post-body h3 {
+  padding-top: 24px;
 }
 
 .post-article .right .inside {
@@ -1757,13 +1757,16 @@ section.video .section-body {
   section .article .section-body .box article .right .item-footer .date {
     display: none;
   }
+  .post > .right .post-head .post-meta {
+    position: relative;
+  }
   .post > .right .post-head .post-meta ul {
     display: block;
-    column-count: 2;
+    column-count: 1;
   }
   .post > .right .post-head .post-meta ul li:last-child {
     position: absolute;
-    top: 0;
+    top: 14px;
     right: 0;
   }
   .page-head {
@@ -1814,7 +1817,7 @@ section.video .section-body {
     padding: 0 0 30px 0;
   }
   .single .post-book .left img {
-    max-width: 120px;
+    max-width: 200px;
   }
   .single .post-topic {
     flex-direction: column;
