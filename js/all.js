@@ -110,6 +110,34 @@ var app = {
                 onScroll();
             }
         },
+        article: function(){
+            let _this = this;
+            let article = document.querySelector(".post-article");
+            if( article ){
+                let header = document.querySelector("header");
+                let progress = document.createElement("span");
+                    progress.className = "progress";
+                header.appendChild(progress);
+                let article_height = article.getBoundingClientRect().height;
+
+                const onScroll = function(){
+                    var s = window.scrollY;
+                    var p = s/article_height;
+                    
+                    progress.style.cssText = 'transform: scaleX(' + p + ')';
+                    if(p > 1 && !progress.classList.contains("fade")){
+                        progress.classList.add("fade");
+                    }else if( p <= 1 && progress.classList.contains("fade")){
+                        progress.classList.remove("fade");
+                    }
+                };
+
+                sidebar.init(article);
+
+                window.addEventListener("scroll", onScroll, false);
+                onScroll();
+            }
+        },
         suraFilter: function(){
             let listholder = document.querySelector(".sura-list ul");
             let searchInput = document.querySelector(".aya-form input");
@@ -215,6 +243,33 @@ var app = {
                     }
                 )
             }
+        }
+    }
+}
+
+const sidebar = {
+    init: function(c){
+        this.container = document.querySelector(".sidebar");
+        this.subnav = document.createElement("ul");
+
+        this.headings = c.querySelectorAll("h2,h3,h4,h5,h6");
+
+        if(this.headings.length > 0){
+            this.subnav.innerHTML = "<h3>Başlıklar</h3>";
+            this.container.appendChild(this.subnav);
+            this.build();
+        }
+    },
+    build: function(){
+        for(var i=0; i<this.headings.length; ++i){
+
+            this.headings[i].setAttribute("id", "head-"+i);
+
+            let li = document.createElement("li");
+                li.className = "a"+this.headings[i].tagName;
+                li.innerHTML = `<a href="#head-${i}">${this.headings[i].innerText}</a>`;
+
+            this.subnav.appendChild(li);
         }
     }
 }

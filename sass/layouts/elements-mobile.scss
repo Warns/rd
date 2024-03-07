@@ -26,6 +26,14 @@ section.book .section-body{
     }
 }
 
+.item-book{
+    .right{
+        .item-footer{
+            display: none;
+        }
+    }
+}
+
 section.video{
     .section-body{
         display: flex;
@@ -104,6 +112,28 @@ section{
                                 display: none;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post{
+    &>.left{
+        
+    }
+    &>.right{
+        .post-head{
+            .post-meta{
+                ul{
+                    display: block;
+                    column-count: 2;
+
+                    li:last-child{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
                     }
                 }
             }

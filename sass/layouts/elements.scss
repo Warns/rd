@@ -219,6 +219,7 @@ section.col-two{
             .terms{
                 margin-top: 20px;
                 @include font-set(tiny);
+                padding-right: 28px;
                 a{ color: $c-silver; }
 
                 div{
@@ -290,6 +291,9 @@ section.col-two{
                 padding: 10px 0;
                 @include font-set(large);
             }
+            h2, h3{
+                padding-top: 24px
+            }
         }
         .post-foot{
             @include font-set(small);
@@ -305,6 +309,55 @@ section.col-two{
     }
     .right{
         max-width: 1000px;
+        display: flex;
+        .inside{
+            flex: 1;
+        }
+
+        .sidebar{
+            width: 0px;
+            background-color: red;
+            position: relative;
+
+            ul{
+                position: sticky;
+                top: 90px;
+                list-style: none;
+                margin: 110px 0 0 0;
+                padding: 0;
+                display: block;
+                width: calc((100vw - 1100px) * .5);
+                max-width: 300px;
+
+                h3{
+                    padding-bottom: 24px;
+                }
+                
+                li{
+                    margin-bottom: 8px;
+
+                    &.aH3{ padding-left: 8px; }
+                    &.aH4{ 
+                        padding-left: 16px;
+                        a{ @include font-set(tiny); }
+                    }
+                    &.aH5{ 
+                        padding-left: 24px;
+                        a{ @include font-set(tiny); }
+                    }
+                    &.aH6{ 
+                        padding-left: 32px;
+                        a{ @include font-set(tiny); }
+                    }
+
+                    &.aH2 a{ @include font-set(body); }
+
+                    a{
+                        @include font-set(small);
+                    }
+                }
+            }
+        }
     }
 }
 

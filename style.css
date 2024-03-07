@@ -622,6 +622,21 @@ header .menu-trigger {
   display: none;
 }
 
+header .progress {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #007bee;
+  bottom: -4px;
+  left: 0;
+  transform-origin: 0 0;
+  transition: opacity .5s ease;
+}
+
+header .progress.fade {
+  opacity: 0;
+}
+
 footer {
   margin-top: 160px;
   background-color: #252525;
@@ -896,6 +911,7 @@ section.col-two .section-head {
   font-size: 12px;
   line-height: 1.3em;
   font-weight: 400;
+  padding-right: 28px;
 }
 
 .item-video .right .item-body .terms a {
@@ -979,6 +995,10 @@ section.col-two .section-head {
   font-weight: 400;
 }
 
+.post > .right .post-body h2, .post > .right .post-body h3 {
+  padding-top: 24px;
+}
+
 .post > .right .post-foot {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
@@ -994,6 +1014,87 @@ section.col-two .section-head {
 
 .post-article .right {
   max-width: 1000px;
+  display: flex;
+}
+
+.post-article .right .inside {
+  flex: 1;
+}
+
+.post-article .right .sidebar {
+  width: 0px;
+  background-color: red;
+  position: relative;
+}
+
+.post-article .right .sidebar ul {
+  position: sticky;
+  top: 90px;
+  list-style: none;
+  margin: 110px 0 0 0;
+  padding: 0;
+  display: block;
+  width: calc((100vw - 1100px) * .5);
+  max-width: 300px;
+}
+
+.post-article .right .sidebar ul h3 {
+  padding-bottom: 24px;
+}
+
+.post-article .right .sidebar ul li {
+  margin-bottom: 8px;
+}
+
+.post-article .right .sidebar ul li.aH3 {
+  padding-left: 8px;
+}
+
+.post-article .right .sidebar ul li.aH4 {
+  padding-left: 16px;
+}
+
+.post-article .right .sidebar ul li.aH4 a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+.post-article .right .sidebar ul li.aH5 {
+  padding-left: 24px;
+}
+
+.post-article .right .sidebar ul li.aH5 a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+.post-article .right .sidebar ul li.aH6 {
+  padding-left: 32px;
+}
+
+.post-article .right .sidebar ul li.aH6 a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+.post-article .right .sidebar ul li.aH2 a {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 16px;
+  line-height: 1.4em;
+  font-weight: 400;
+}
+
+.post-article .right .sidebar ul li a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.3em;
+  font-weight: 400;
 }
 
 .post-book {
@@ -1579,6 +1680,9 @@ section.video .section-body {
   section.book .section-body .right .item-footer {
     display: none;
   }
+  .item-book .right .item-footer {
+    display: none;
+  }
   section.video .section-body {
     display: flex;
     overflow-x: scroll;
@@ -1645,6 +1749,15 @@ section.video .section-body {
   }
   section .article .section-body .box article .right .item-footer .date {
     display: none;
+  }
+  .post > .right .post-head .post-meta ul {
+    display: block;
+    column-count: 2;
+  }
+  .post > .right .post-head .post-meta ul li:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   .page-head {
     padding: 10px 0 20px 0;
