@@ -110,6 +110,25 @@ var app = {
                 onScroll();
             }
         },
+        video: function(){
+            let _this = this;
+            let video = document.querySelector(".post-video");
+            if( video ){
+                let timestamps = document.querySelectorAll(".timestamps li a");
+                if(timestamps)
+                    timestamps.forEach(function(link) {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            var time = e.target.getAttribute('data-time');
+                            var iframe = document.getElementById('youtube-video');
+                            if (iframe) {
+                                var videoSrc = iframe.src.split('?')[0];
+                                iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[' + time + ', true]}', videoSrc);
+                            }
+                        });
+                    });
+            }
+        },
         article: function(){
             let _this = this;
             let article = document.querySelector(".post-article");
@@ -443,24 +462,6 @@ const cookies = {
 window.addEventListener("load", function () {
     app.init();
     cookies.init();
-});
-
-// Video Timestamp Navigation
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all timestamp links
-    var timestamps = document.querySelectorAll('.post-body a.timestamp');
-
-    timestamps.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var time = e.target.getAttribute('data-time');
-            var iframe = document.getElementById('youtube-video');
-            if (iframe) {
-                var videoSrc = iframe.src.split('?')[0];
-                iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[' + time + ', true]}', videoSrc);
-            }
-        });
-    });
 });
 
 // Helper function to convert time format to seconds

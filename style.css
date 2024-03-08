@@ -1313,6 +1313,36 @@ section.col-two .section-head {
   max-width: 1000px;
 }
 
+.post-video .right .timestamps {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #D1D1D1;
+}
+
+.post-video .right .timestamps li {
+  border-top: 1px solid #D1D1D1;
+  padding: 8px 0;
+}
+
+.post-video .right .timestamps li a {
+  display: grid;
+  grid-template-columns: 48px 100px 1fr;
+  align-items: top;
+}
+
+.post-video .right .timestamps li a * {
+  pointer-events: none;
+}
+
+.post-video .right .timestamps li a small {
+  line-height: 32px;
+}
+
+.post-video .right .timestamps li a p {
+  padding: 0;
+  margin: 0;
+}
+
 .page-head {
   border-bottom: 1px solid #D1D1D1;
   padding: 20px 0 40px 0;

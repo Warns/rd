@@ -550,6 +550,35 @@ section.col-two{
     }
     .right{
         max-width: 1000px;
+
+        .timestamps{
+            list-style: none;
+            padding: 0;
+            border-bottom: 1px solid $c-border;
+
+            li{
+                border-top: 1px solid $c-border;
+                padding: 8px 0;
+                a{
+                    display: grid;
+                    grid-template-columns: 48px 100px 1fr;
+                    align-items: top;
+
+                    *{
+                        pointer-events: none;
+                    }
+
+                    small{
+                        line-height: 32px;
+                    }
+
+                    p{
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
