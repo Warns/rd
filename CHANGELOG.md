@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.1](https://github.com/Warns/rd/compare/v1.4.0...v1.4.1) (2024-03-08)
+
+
+### Bug Fixes
+
+* typo ([5e57c5d](https://github.com/Warns/rd/commit/5e57c5dfe07f657ffced1bb86874eb5a31b1b737))
+
 ## [1.4.0](https://github.com/Warns/rd/compare/v1.3.0...v1.4.0) (2024-03-08)
 
 
