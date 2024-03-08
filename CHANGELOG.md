@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.2](https://github.com/Warns/rd/compare/v1.4.1...v1.4.2) (2024-03-08)
+
+
+### Bug Fixes
+
+* mobile style fix ([76c9b5a](https://github.com/Warns/rd/commit/76c9b5a8ebd06ece9ab486d1bf2f43ec99822edc))
+
 ### [1.4.1](https://github.com/Warns/rd/compare/v1.4.0...v1.4.1) (2024-03-08)
 
 
