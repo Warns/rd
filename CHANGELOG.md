@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/Warns/rd/compare/v1.3.0...v1.4.0) (2024-03-08)
+
+
+### Features
+
+* video page time stamps ([1ff02a3](https://github.com/Warns/rd/commit/1ff02a334d3c37fb4d9ee0b6b58f9589b9d96ee0))
+
 ## [1.3.0](https://github.com/Warns/rd/compare/v1.2.5...v1.3.0) (2024-02-18)
 
 
