@@ -21,7 +21,7 @@
         <div class="post-body">
             <?php the_content(); ?>
             <?php
-                $table = get_field('time_stamp');
+                $table = get_field('time_stamps');
 
                 function addzero($k){
                     return $k <= 9 ? "0" . $k : $k;
