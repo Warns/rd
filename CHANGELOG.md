@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.3](https://github.com/Warns/rd/compare/v1.4.2...v1.4.3) (2024-03-11)
+
+
+### Bug Fixes
+
+* timestamp fix ([910d755](https://github.com/Warns/rd/commit/910d7554c186c6c0ed9fbb2c969ab4755b4ba2cf))
+
 ### [1.4.2](https://github.com/Warns/rd/compare/v1.4.1...v1.4.2) (2024-03-08)
 
 
