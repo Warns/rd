@@ -24,6 +24,17 @@ header{
         display: none;
     }
 
+    #search{
+        input[type=search]{
+            margin: 0;
+        }
+        .aya-form{
+            input[type=search]{
+                width: 100%;
+            }
+        }
+    }
+
     .menu-trigger{
         display: block;
         position: absolute;
@@ -46,6 +57,7 @@ header{
     }
 
     #tabs{
+        display: block;
         border-top: 1px solid $c-border;
         ul{
             list-style: none;
@@ -87,14 +99,16 @@ header{
         }
 
         #search{
-            display: block;
+            display: flex;
+            gap: 8px;
             margin: 0 0 20px 0;
+            
             .search-form{
                 margin-right: 0;
             }
             .aya-form{
                 input, input:last-of-type{
-                    width: auto;
+                    width: 100%;
                 }
             }
         }
@@ -109,6 +123,36 @@ header{
             }
         }
     }
+
+    &.searchisopen{
+
+        #menu{
+            display: none;
+        }
+        #search .aya-form{
+            display: none;
+        }
+        #branding{
+            border: none;
+        }
+    }
+
+    &.ayaisopen{
+
+        #menu{
+            display: none;
+        }
+        #search{
+            flex-direction: column;
+            .search-form{
+                display: none;
+            }
+        }
+        #branding{
+            border: none;
+        }
+
+    }
 }
 
 html{
@@ -116,4 +160,42 @@ html{
 }
 #wpadminbar{
     display: none;
+}
+
+.sura-list{
+    display: none;
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 400px;
+    background-color: $c-snow;
+    padding: 0;
+    transform: none;
+    border-radius: 0;
+
+
+    ul{
+        list-style: none;
+        margin: 30px 0 0 0;
+        padding: 0;
+        column-count: 2;
+        column-gap: 40px;
+
+        li{
+            &.off{
+                display: none;
+            }
+        }
+    }
+
+    &:not(.filtered){
+        ul li{
+            display: none;
+
+            &.on{
+                display: block;
+            }
+        }
+    }
 }

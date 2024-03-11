@@ -540,6 +540,10 @@ header nav ul li:last-child {
   margin-right: 0;
 }
 
+header #tabs {
+  display: none;
+}
+
 header #search {
   flex: 1;
   display: flex;
@@ -591,7 +595,7 @@ header #search .search-form input[type=search] {
 }
 
 header #search .aya-form {
-  display: flex;
+  flex: 1;
 }
 
 header #search .aya-form input[type=search] {
@@ -636,6 +640,71 @@ header .progress {
 
 header .progress.fade {
   opacity: 0;
+}
+
+.sura-list {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  width: 1020px;
+  min-height: 400px;
+  background-color: #FFFFFF;
+  padding: 20px 40px 50px;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+.sura-list ul {
+  list-style: none;
+  margin: 30px 0 0 0;
+  padding: 0;
+  column-count: 6;
+  column-gap: 40px;
+}
+
+.sura-list ul li {
+  position: relative;
+  margin-bottom: 12px;
+  transition: opacity .3s ease;
+  opacity: 1;
+}
+
+.sura-list ul li span {
+  text-align: right;
+  display: block;
+  background-color: #FFFFFF;
+  width: 24px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.3em;
+  font-weight: 400;
+  position: absolute;
+  pointer-events: none;
+}
+
+.sura-list ul li a {
+  padding-left: 32px;
+  pointer-events: none;
+}
+
+.sura-list ul li.off {
+  opacity: .3;
+}
+
+.sura-list ul li.on a {
+  pointer-events: all;
+}
+
+.sura-list ul li.on a::after {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #252525;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
 footer {
@@ -1525,71 +1594,6 @@ section.video .section-body {
   text-align: right;
 }
 
-.sura-list {
-  display: none;
-  position: absolute;
-  left: 50%;
-  top: 70px;
-  width: 1020px;
-  min-height: 400px;
-  background-color: #FFFFFF;
-  padding: 20px 40px 50px;
-  transform: translateX(-50%);
-  border-radius: 4px;
-}
-
-.sura-list ul {
-  list-style: none;
-  margin: 30px 0 0 0;
-  padding: 0;
-  column-count: 6;
-  column-gap: 40px;
-}
-
-.sura-list ul li {
-  position: relative;
-  margin-bottom: 12px;
-  transition: opacity .3s ease;
-  opacity: 1;
-}
-
-.sura-list ul li span {
-  text-align: right;
-  display: block;
-  background-color: #FFFFFF;
-  width: 24px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 12px;
-  line-height: 1.3em;
-  font-weight: 400;
-  position: absolute;
-  pointer-events: none;
-}
-
-.sura-list ul li a {
-  padding-left: 32px;
-  pointer-events: none;
-}
-
-.sura-list ul li.off {
-  opacity: .3;
-}
-
-.sura-list ul li.on a {
-  pointer-events: all;
-}
-
-.sura-list ul li.on a::after {
-  display: inline-block;
-  content: "";
-  width: 5px;
-  height: 5px;
-  background-color: #252525;
-  border-radius: 3px;
-  vertical-align: middle;
-  margin-left: 8px;
-}
-
 @media (max-width: 1024px) {
   header {
     flex-direction: column;
@@ -1613,6 +1617,12 @@ section.video .section-body {
   header #search, header #menu {
     display: none;
   }
+  header #search input[type=search] {
+    margin: 0;
+  }
+  header #search .aya-form input[type=search] {
+    width: 100%;
+  }
   header .menu-trigger {
     display: block;
     position: absolute;
@@ -1632,6 +1642,7 @@ section.video .section-body {
     display: none;
   }
   header #tabs {
+    display: block;
     border-top: 1px solid #D1D1D1;
   }
   header #tabs ul {
@@ -1671,14 +1682,15 @@ section.video .section-body {
     margin-bottom: 10px;
   }
   header.active #search {
-    display: block;
+    display: flex;
+    gap: 8px;
     margin: 0 0 20px 0;
   }
   header.active #search .search-form {
     margin-right: 0;
   }
   header.active #search .aya-form input, header.active #search .aya-form input:last-of-type {
-    width: auto;
+    width: 100%;
   }
   header.active .menu-trigger svg.close {
     display: block;
@@ -1686,11 +1698,60 @@ section.video .section-body {
   header.active .menu-trigger svg.burger {
     display: none;
   }
+  header.searchisopen #menu {
+    display: none;
+  }
+  header.searchisopen #search .aya-form {
+    display: none;
+  }
+  header.searchisopen #branding {
+    border: none;
+  }
+  header.ayaisopen #menu {
+    display: none;
+  }
+  header.ayaisopen #search {
+    flex-direction: column;
+  }
+  header.ayaisopen #search .search-form {
+    display: none;
+  }
+  header.ayaisopen #branding {
+    border: none;
+  }
   html {
     margin-top: 0 !important;
   }
   #wpadminbar {
     display: none;
+  }
+  .sura-list {
+    display: none;
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 400px;
+    background-color: #FFFFFF;
+    padding: 0;
+    transform: none;
+    border-radius: 0;
+  }
+  .sura-list ul {
+    list-style: none;
+    margin: 30px 0 0 0;
+    padding: 0;
+    column-count: 2;
+    column-gap: 40px;
+  }
+  .sura-list ul li.off {
+    display: none;
+  }
+  .sura-list:not(.filtered) ul li {
+    display: none;
+  }
+  .sura-list:not(.filtered) ul li.on {
+    display: block;
   }
   footer .inside {
     width: 92%;

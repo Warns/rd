@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?> <?php blankslate_schema_type(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <?php wp_head(); ?>
     </head>
 
@@ -45,7 +45,7 @@
             <div id="search">
                 <?php get_search_form(); ?>
                 <form class="aya-form">
-                    <input type="search" list="chapters" name="Sureler" id="chapter" placeholder="Sure">
+                    <input class="aya-field" type="search" list="chapters" name="Sureler" id="chapter" placeholder="Sure">
                 </form>
                 <div class="sura-list">
                     <ul></ul>

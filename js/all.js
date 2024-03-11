@@ -13,6 +13,8 @@ let el = {
         tabs: "header #tabs ul",
         footer: "footer",
         trigger: ".menu-trigger",
+        searchInput: "header .search-field",
+        ayaInput: "header .aya-field"
     },
     init: function(){
         let _this = this;
@@ -23,8 +25,8 @@ let el = {
     }
 }
 
-const base_url = "https://ramazandemir.org";
-// const base_url = "http://localhost:8888/ramazandemir";
+// const base_url = "https://ramazandemir.org";
+const base_url = "http://localhost:8888/ramazandemir";
 
 
 var app = {
@@ -62,7 +64,15 @@ var app = {
     actions:{
         menu: function(){
             el.trigger.addEventListener("click", function(){
-                el.header.classList.toggle("active");
+                if(!el.header.classList.contains("active"))
+                    el.header.classList.toggle("active");
+                else
+                    el.header.className = "";
+            }, false);
+
+            el.searchInput.addEventListener("mousedown", function(){
+                if(!el.header.classList.contains("searchisopen"))
+                    el.header.classList.add("searchisopen");
             }, false);
         },
         homeTabs: function(){
@@ -158,23 +168,24 @@ var app = {
             }
         },
         suraFilter: function(){
+            let holder = document.querySelector(".sura-list");
             let listholder = document.querySelector(".sura-list ul");
             let searchInput = document.querySelector(".aya-form input");
 
             let check = function(e){
-                let holder = document.querySelector(".sura-list");
                 if(!holder.contains(e.target) && !searchInput.contains(e.target)){
                     close();
                 }
             }
             let close = function(){
-                let holder = document.querySelector(".sura-list")
                 holder.style.display = "none";
                 window.removeEventListener("click", check);
             }
             let open = function(){
-                let holder = document.querySelector(".sura-list")
                 holder.style.display = "block";
+
+                if(!el.header.classList.contains("ayaisopen"))
+                    el.header.classList.add("ayaisopen");
 
                 setTimeout( function(){ window.addEventListener("click", check, false); }, 300);
             }
@@ -205,6 +216,11 @@ var app = {
                 var filter = translateCharacters(e.target.value);
                 var li = listholder.querySelectorAll("li");
 
+                if(filter == "")
+                    holder.classList.remove("filtered");
+                else
+                    holder.classList.add("filtered");
+
                 for(let i=0; i<li.length; ++i){
                     let textValue = translateCharacters(li[i].innerText);
                     if(textValue.indexOf(filter) > -1){
@@ -213,6 +229,7 @@ var app = {
                         li[i].classList.add("off");
                     }
                 }
+                
             });
         },
         terms: function(){
