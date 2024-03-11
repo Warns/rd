@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.4](https://github.com/Warns/rd/compare/v1.4.3...v1.4.4) (2024-03-11)
+
+
+### Bug Fixes
+
+* mobile open header search ([384f883](https://github.com/Warns/rd/commit/384f8832dcf82dd75b1c8c3da8e6e3b43713cbf0))
+
 ### [1.4.3](https://github.com/Warns/rd/compare/v1.4.2...v1.4.3) (2024-03-11)
 
 
