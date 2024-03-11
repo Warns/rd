@@ -418,6 +418,7 @@ a:hover {
 }
 
 .icon {
+  fill: #252525;
   width: 24px;
   height: 24px;
 }

@@ -23,18 +23,27 @@
             <?php
                 $table = get_field('time_stamps');
 
-                function addzero($k){
-                    return $k <= 9 ? "0" . $k : $k;
-                }
+                // function addzero($k){
+                //     return $k <= 9 ? "0" . $k : $k;
+                // }
 
-                function timeformat($n){
+                // function timeformat($n){
 
-                    $hours = floor($n/60/60);
-                    $minutes = floor(($n-($hours*60*60))/60);
-                    $seconds = floor(($n-($hours*60*60)-($minutes*60)));
+                //     $hours = floor($n/60/60);
+                //     $minutes = floor(($n-($hours*60*60))/60);
+                //     $seconds = floor(($n-($hours*60*60)-($minutes*60)));
 
-                    return $hours . ":" . addzero($minutes) . ":" . addzero($seconds);
+                //     return $hours . ":" . addzero($minutes) . ":" . addzero($seconds);
 
+                // }
+
+                function timetoseconds($n){
+                    $arr = explode(":", $n);
+                    $secs = 0;
+                    foreach($arr as $key=>$t){
+                        $secs += intval($t) * pow(60, (2-$key));
+                    }
+                    return $secs;
                 }
               
                 if ( ! empty ( $table ) ) {
@@ -45,10 +54,10 @@
                                 echo "<li>";
                                 foreach ( $tr as $td ) {
                                 if($n == 0){
-                                    $time = intval($td['c']);
+                                    $time = timetoseconds($td['c']);
                                     echo '<a href="javascript:void(0);" data-time="'. $time .'">';
                                     echo '<svg class="icon" viewBox="0 0 32 32"><use href="' . get_template_directory_uri() .'/assets/icons/icons.svg#time-stamp" /></svg>';
-                                    echo '<small>'. timeformat( $time ) .'</small>';
+                                    echo '<small>'. $td['c'] .'</small>';
                                 }else if($n == 1){
                                     echo '<p>'. $td['c'] .'</p></a>';
                                 }
