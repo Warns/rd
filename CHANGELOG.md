@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.5](https://github.com/Warns/rd/compare/v1.4.4...v1.4.5) (2024-03-11)
+
+
+### Bug Fixes
+
+* sura link ([c71a40b](https://github.com/Warns/rd/commit/c71a40b0f4979665e53590b620e471c35823a0c1))
+
 ### [1.4.4](https://github.com/Warns/rd/compare/v1.4.3...v1.4.4) (2024-03-11)
 
 
