@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.5.3](https://github.com/Warns/rd/compare/v1.5.2...v1.5.3) (2024-03-12)
+
+
+### Bug Fixes
+
+* pagination added ([a06def5](https://github.com/Warns/rd/commit/a06def58a3612d3f9d026a9b433026242241ea6c))
+
 ### [1.5.2](https://github.com/Warns/rd/compare/v1.5.1...v1.5.2) (2024-03-12)
 
 
