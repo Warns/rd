@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.5.4](https://github.com/Warns/rd/compare/v1.5.3...v1.5.4) (2024-03-12)
+
+
+### Bug Fixes
+
+* video tags ([37c9e0b](https://github.com/Warns/rd/commit/37c9e0bbbcb0dba23948a37c54125f4f29d2a405))
+
 ### [1.5.3](https://github.com/Warns/rd/compare/v1.5.2...v1.5.3) (2024-03-12)
 
 
