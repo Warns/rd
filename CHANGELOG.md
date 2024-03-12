@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/Warns/rd/compare/v1.4.5...v1.5.0) (2024-03-12)
+
+
+### Features
+
+* Elktb links added to aya boxes ([d7cf6ad](https://github.com/Warns/rd/commit/d7cf6ad25707a69042f90b1b976516cd8c7229a1))
+
 ### [1.4.5](https://github.com/Warns/rd/compare/v1.4.4...v1.4.5) (2024-03-11)
 
 
