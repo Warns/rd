@@ -39,23 +39,25 @@
 ?>
 
 <section class="col-two">
-<section>
-    <?php
-        get_template_part('partials/section', 'head', array('title'=>'Kavramlar'));
+<section class="tags">
+    <div>
+        <?php
+            get_template_part('partials/section', 'head', array('title'=>'Kavramlar'));
 
-        wp_tag_cloud(array(
-            'echo' => true,
-            'orderby' => 'count',
-            'order' => 'DESC',
-            'smallest'   => 17,
-            'largest' => 17,
-            'unit' => 'px',
-            'separator' => ' / ',
-            'number' => '15'
-        ));
-    ?>
-    <div class="section-foot left">
-        <a class="button" href="<?php echo home_url('/kavramlar') ?>">Tüm Kavramlar</a>
+            wp_tag_cloud(array(
+                'echo' => true,
+                'orderby' => 'count',
+                'order' => 'DESC',
+                'smallest'   => 17,
+                'largest' => 17,
+                'unit' => 'px',
+                'separator' => ' / ',
+                'number' => '15'
+            ));
+        ?>
+        <div class="section-foot left">
+            <a class="button" href="<?php echo home_url('/kavramlar') ?>">Tüm Kavramlar</a>
+        </div>
     </div>
 </section>
 

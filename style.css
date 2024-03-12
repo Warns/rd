@@ -2019,4 +2019,12 @@ section.video .section-body {
     left: calc(50% - 50px);
     bottom: 24px;
   }
+  .tags {
+    position: relative;
+  }
+  .tags > div {
+    position: sticky;
+    top: 80px;
+    left: 0;
+  }
 }

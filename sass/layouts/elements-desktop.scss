@@ -98,3 +98,12 @@ section{
         }
     }
 }
+
+.tags{
+    position: relative;
+    &>div{
+        position: sticky;
+        top: 80px;
+        left: 0;
+    }
+}
