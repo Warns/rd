@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.5.1](https://github.com/Warns/rd/compare/v1.5.0...v1.5.1) (2024-03-12)
+
+
+### Bug Fixes
+
+* homepage tags sticky ([1334436](https://github.com/Warns/rd/commit/1334436b0ae69791d3d5cdf3d616447b8786215e))
+
 ## [1.5.0](https://github.com/Warns/rd/compare/v1.4.5...v1.5.0) (2024-03-12)
 
 
