@@ -1547,6 +1547,7 @@ section.video .section-body {
 
 .page-terms .page-body a {
   display: block;
+  padding: 4px 0;
 }
 
 .page-terms .page-body h3 {

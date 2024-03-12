@@ -38,9 +38,11 @@
                     'order' => 'DESC',
                     'smallest'   => 17,
                     'largest' => 17,
-                    'unit' => 'px'
+                    'unit' => 'px',
+                    'number' => '20'
                 ));
             ?>
+            <a href="<?php echo home_url('/kavramlar') ?>">...</a>
         </div>
     </div>
     <div class="list-right">
