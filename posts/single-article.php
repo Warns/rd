@@ -41,7 +41,7 @@
         <?php
 
             $args = array(
-                'posts_per_page' => 3,
+                'posts_per_page' => 5,
                 'category_name' => 'yazilar',
                 'post__not_in' => array($current)
             );

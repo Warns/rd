@@ -722,6 +722,16 @@ section{
 .aya{
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
+
+    &>a{
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+    }
 
     div{
         background-color: $c-border;

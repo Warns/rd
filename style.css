@@ -1560,6 +1560,16 @@ section.video .section-body {
 .aya {
   border-radius: 4px;
   overflow: hidden;
+  position: relative;
+}
+
+.aya > a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
 }
 
 .aya div {

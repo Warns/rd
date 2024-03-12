@@ -256,8 +256,6 @@ var app = {
             for( let i=0; i<ayas.length; ++i ){
                 let aya = ayas[i].getAttribute("data-number");
                 
-                console.log(i, ayas.length, aya);
-                
                 app.load(url + aya, 
                     function(result){
                         let data = JSON.parse(result).data;
@@ -267,6 +265,11 @@ var app = {
                         
                         let html = `
                             <div>${text}</div>
+                            <a target="blank" href="https://www.elktb.net/A/${data.surah.number}/${data.numberInSurah}">
+                                <svg class="icon" viewBox="0 0 32 32">
+                                    <use href="${base_url}/wp-content/themes/rd/assets/icons/icons.svg#link-out" />
+                                </svg>
+                            </a>
                             <ul>
                                 <li>${data.surah.englishName}</li>
                                 <li>${data.surah.number} / ${data.numberInSurah}</li>
