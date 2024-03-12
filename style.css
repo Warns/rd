@@ -1605,6 +1605,30 @@ section.video .section-body {
   text-align: right;
 }
 
+.navigation {
+  grid-column: 1 / -1;
+}
+
+.navigation .nav-links > span, .navigation .nav-links a {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+.navigation .nav-links > span {
+  background-color: #252525;
+  color: #F8F8F8;
+}
+
+.navigation .nav-links a:hover {
+  background-color: #D1D1D1;
+  text-decoration: none;
+}
+
 @media (max-width: 1024px) {
   header {
     flex-direction: column;

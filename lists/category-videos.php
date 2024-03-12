@@ -32,5 +32,6 @@
         <?php endwhile; endif; ?>
         <?php get_template_part( 'nav', 'below' ); ?>
     </div>
+    
 </div>
     

@@ -760,3 +760,24 @@ section{
     }
 }
 
+.navigation{
+    grid-column: 1 / -1;
+
+    .nav-links{
+        &>span, a{
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            @include font-set(small);
+        }
+        &>span{
+            background-color: $c-black;
+            color: $c-white;
+        }
+
+        a:hover{
+            background-color: $c-border;
+            text-decoration: none;
+        }
+    }
+}
