@@ -216,6 +216,13 @@ function bookmark_icon($id){
     echo $html;
 }
 
+//
+function db_search_form_placeholder( $html ) {
+    $html = str_replace( 'placeholder="Search', 'placeholder="Ara', $html );
+    return $html;
+}
+add_filter( 'get_search_form', 'db_search_form_placeholder' );
+
 function run_my_function( $post_id ) {
     // if ( wp_is_post_revision( $post_id ) ){
     //     //update
