@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.5.5](https://github.com/Warns/rd/compare/v1.5.4...v1.5.5) (2024-03-14)
+
+
+### Bug Fixes
+
+* search placeholder ([442434c](https://github.com/Warns/rd/commit/442434ccfe6a4a3f725c31894124987e3d239402))
+
 ### [1.5.4](https://github.com/Warns/rd/compare/v1.5.3...v1.5.4) (2024-03-12)
 
 
