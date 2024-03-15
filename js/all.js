@@ -349,9 +349,23 @@ const sidebar = {
 
             let li = document.createElement("li");
                 li.className = "a"+this.headings[i].tagName;
-                li.innerHTML = `<a href="#head-${i}">${this.headings[i].innerText}</a>`;
+                li.innerHTML = `<a href="javascript:void(0);" data-target="head-${i}">${this.headings[i].innerText}</a>`;
 
             this.subnav.appendChild(li);
+        }
+        this.events();
+    },
+    events: function(){
+        let links = this.subnav.querySelectorAll("a");
+        for(var i=0; i<links.length; ++i){
+            links[i].addEventListener("click", function(e){
+                let id = e.target.getAttribute("data-target");
+                let target = document.getElementById(id);
+                if(target){
+                    e.preventDefault();
+                    window.scrollTo(0,offset(target).top - 80);
+                }
+            }, false);
         }
     }
 }
@@ -508,4 +522,12 @@ function translateCharacters(text){
         out = out.replaceAll(chars[i][0], chars[i][1]);
     }
     return out;
+}
+
+// element position relative to document
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
