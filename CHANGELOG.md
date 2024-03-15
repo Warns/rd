@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.6.1](https://github.com/Warns/rd/compare/v1.6.0...v1.6.1) (2024-03-15)
+
+
+### Bug Fixes
+
+* related articles ([8e07d7d](https://github.com/Warns/rd/commit/8e07d7d7f04e1aea445c47240ce42973eea4627b))
+
 ## [1.6.0](https://github.com/Warns/rd/compare/v1.5.5...v1.6.0) (2024-03-15)
 
 
