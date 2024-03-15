@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0](https://github.com/Warns/rd/compare/v1.5.5...v1.6.0) (2024-03-15)
+
+
+### Features
+
+* sidebar links + related articles ([8a753c4](https://github.com/Warns/rd/commit/8a753c4fe35a75c15c4e3e38e3cc163c9501b81a))
+
 ### [1.5.5](https://github.com/Warns/rd/compare/v1.5.4...v1.5.5) (2024-03-14)
 
 
